@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'PlatformTest-OSX' target in the 'PlatformTest-OSX' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+	#import <WebKit/WebKit.h>
+#endif

@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FFC1FCD1778B12600500691 /* Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFC1FCC1778B12600500691 /* Image.png */; };
+		48B6D84317691786008B25DE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B6D84217691786008B25DE /* Cocoa.framework */; };
+		48B6D84D17691786008B25DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D84B17691786008B25DE /* InfoPlist.strings */; };
+		48B6D84F17691786008B25DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B6D84E17691786008B25DE /* main.m */; };
+		48B6D85317691786008B25DE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D85117691786008B25DE /* Credits.rtf */; };
+		48B6D85617691786008B25DE /* JBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B6D85517691786008B25DE /* JBAppDelegate.m */; };
+		48B6D85917691786008B25DE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D85717691786008B25DE /* MainMenu.xib */; };
+		48B6D868176917D7008B25DE /* libUPPlatformSDK-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B6D867176917CC008B25DE /* libUPPlatformSDK-OSX.a */; };
+		48B6D86C17691842008B25DE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B6D86B17691842008B25DE /* WebKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48B6D864176917CC008B25DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48B6D85F176917CC008B25DE /* UPPlatformSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E3E46C0017173670009CCA56;
+			remoteInfo = UPPlatformSDK;
+		};
+		48B6D866176917CC008B25DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48B6D85F176917CC008B25DE /* UPPlatformSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 48FA5F891768CA7900025723;
+			remoteInfo = "UPPlatformSDK-OSX";
+		};
+		48B6D869176917DD008B25DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48B6D85F176917CC008B25DE /* UPPlatformSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 48FA5F881768CA7900025723;
+			remoteInfo = "UPPlatformSDK-OSX";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FFC1FCC1778B12600500691 /* Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image.png; sourceTree = "<group>"; };
+		48B6D83F17691786008B25DE /* PlatformTest-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlatformTest-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48B6D84217691786008B25DE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		48B6D84517691786008B25DE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		48B6D84617691786008B25DE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		48B6D84717691786008B25DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		48B6D84A17691786008B25DE /* PlatformTest-OSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlatformTest-OSX-Info.plist"; sourceTree = "<group>"; };
+		48B6D84C17691786008B25DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		48B6D84E17691786008B25DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48B6D85017691786008B25DE /* PlatformTest-OSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlatformTest-OSX-Prefix.pch"; sourceTree = "<group>"; };
+		48B6D85217691786008B25DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		48B6D85417691786008B25DE /* JBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBAppDelegate.h; sourceTree = "<group>"; };
+		48B6D85517691786008B25DE /* JBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBAppDelegate.m; sourceTree = "<group>"; };
+		48B6D85817691786008B25DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		48B6D85F176917CC008B25DE /* UPPlatformSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UPPlatformSDK.xcodeproj; path = ../UPPlatformSDK/UPPlatformSDK.xcodeproj; sourceTree = "<group>"; };
+		48B6D86B17691842008B25DE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48B6D83C17691786008B25DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48B6D86C17691842008B25DE /* WebKit.framework in Frameworks */,
+				48B6D868176917D7008B25DE /* libUPPlatformSDK-OSX.a in Frameworks */,
+				48B6D84317691786008B25DE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48B6D83617691786008B25DE = {
+			isa = PBXGroup;
+			children = (
+				48B6D84817691786008B25DE /* PlatformTest-OSX */,
+				48B6D84117691786008B25DE /* Frameworks */,
+				48B6D84017691786008B25DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		48B6D84017691786008B25DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48B6D83F17691786008B25DE /* PlatformTest-OSX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48B6D84117691786008B25DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48B6D85F176917CC008B25DE /* UPPlatformSDK.xcodeproj */,
+				48B6D86B17691842008B25DE /* WebKit.framework */,
+				48B6D84217691786008B25DE /* Cocoa.framework */,
+				48B6D84417691786008B25DE /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48B6D84417691786008B25DE /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48B6D84517691786008B25DE /* AppKit.framework */,
+				48B6D84617691786008B25DE /* CoreData.framework */,
+				48B6D84717691786008B25DE /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		48B6D84817691786008B25DE /* PlatformTest-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				1FFC1FCC1778B12600500691 /* Image.png */,
+				48B6D85417691786008B25DE /* JBAppDelegate.h */,
+				48B6D85517691786008B25DE /* JBAppDelegate.m */,
+				48B6D85717691786008B25DE /* MainMenu.xib */,
+				48B6D84917691786008B25DE /* Supporting Files */,
+			);
+			path = "PlatformTest-OSX";
+			sourceTree = "<group>";
+		};
+		48B6D84917691786008B25DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48B6D84A17691786008B25DE /* PlatformTest-OSX-Info.plist */,
+				48B6D84B17691786008B25DE /* InfoPlist.strings */,
+				48B6D84E17691786008B25DE /* main.m */,
+				48B6D85017691786008B25DE /* PlatformTest-OSX-Prefix.pch */,
+				48B6D85117691786008B25DE /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48B6D860176917CC008B25DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48B6D865176917CC008B25DE /* libUPPlatformSDK.a */,
+				48B6D867176917CC008B25DE /* libUPPlatformSDK-OSX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48B6D83E17691786008B25DE /* PlatformTest-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48B6D85C17691786008B25DE /* Build configuration list for PBXNativeTarget "PlatformTest-OSX" */;
+			buildPhases = (
+				48B6D83B17691786008B25DE /* Sources */,
+				48B6D83C17691786008B25DE /* Frameworks */,
+				48B6D83D17691786008B25DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48B6D86A176917DD008B25DE /* PBXTargetDependency */,
+			);
+			name = "PlatformTest-OSX";
+			productName = "PlatformTest-OSX";
+			productReference = 48B6D83F17691786008B25DE /* PlatformTest-OSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48B6D83717691786008B25DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JB;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Jawbone;
+			};
+			buildConfigurationList = 48B6D83A17691786008B25DE /* Build configuration list for PBXProject "PlatformTest-OSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 48B6D83617691786008B25DE;
+			productRefGroup = 48B6D84017691786008B25DE /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 48B6D860176917CC008B25DE /* Products */;
+					ProjectRef = 48B6D85F176917CC008B25DE /* UPPlatformSDK.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				48B6D83E17691786008B25DE /* PlatformTest-OSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		48B6D865176917CC008B25DE /* libUPPlatformSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUPPlatformSDK.a;
+			remoteRef = 48B6D864176917CC008B25DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		48B6D867176917CC008B25DE /* libUPPlatformSDK-OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libUPPlatformSDK-OSX.a";
+			remoteRef = 48B6D866176917CC008B25DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48B6D83D17691786008B25DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48B6D84D17691786008B25DE /* InfoPlist.strings in Resources */,
+				48B6D85317691786008B25DE /* Credits.rtf in Resources */,
+				48B6D85917691786008B25DE /* MainMenu.xib in Resources */,
+				1FFC1FCD1778B12600500691 /* Image.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48B6D83B17691786008B25DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48B6D84F17691786008B25DE /* main.m in Sources */,
+				48B6D85617691786008B25DE /* JBAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48B6D86A176917DD008B25DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UPPlatformSDK-OSX";
+			targetProxy = 48B6D869176917DD008B25DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		48B6D84B17691786008B25DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48B6D84C17691786008B25DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		48B6D85117691786008B25DE /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48B6D85217691786008B25DE /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		48B6D85717691786008B25DE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48B6D85817691786008B25DE /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48B6D85A17691786008B25DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		48B6D85B17691786008B25DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		48B6D85D17691786008B25DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlatformTest-OSX/PlatformTest-OSX-Prefix.pch";
+				HEADER_SEARCH_PATHS = ../UPPlatformSDK/UPPlatformSDK/Classes;
+				INFOPLIST_FILE = "PlatformTest-OSX/PlatformTest-OSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		48B6D85E17691786008B25DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlatformTest-OSX/PlatformTest-OSX-Prefix.pch";
+				HEADER_SEARCH_PATHS = ../UPPlatformSDK/UPPlatformSDK/Classes;
+				INFOPLIST_FILE = "PlatformTest-OSX/PlatformTest-OSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48B6D83A17691786008B25DE /* Build configuration list for PBXProject "PlatformTest-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48B6D85A17691786008B25DE /* Debug */,
+				48B6D85B17691786008B25DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48B6D85C17691786008B25DE /* Build configuration list for PBXNativeTarget "PlatformTest-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48B6D85D17691786008B25DE /* Debug */,
+				48B6D85E17691786008B25DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48B6D83717691786008B25DE /* Project object */;
+}
