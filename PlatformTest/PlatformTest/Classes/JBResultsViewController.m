@@ -16,9 +16,9 @@
 
 @implementation JBResultsViewController
 
-- (void)setResults:(NSString *)results
+- (void)viewDidLoad
 {
-	self.textView.text = results;
+	self.textView.text = self.results;
 }
 
 @end

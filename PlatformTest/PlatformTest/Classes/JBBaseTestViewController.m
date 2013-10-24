@@ -19,8 +19,8 @@
 - (void)showResults:(id)resultObject
 {
 	JBResultsViewController *resultVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Results"];
+	resultVC.results = [NSString stringWithFormat:@"%@", resultObject];
 	[self.navigationController pushViewController:resultVC animated:YES];
-	[resultVC setResults:[NSString stringWithFormat:@"%@", resultObject]];
 }
 
 @end

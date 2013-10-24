@@ -14,7 +14,7 @@
 #import "UPURLResponse.h"
 #import "UPUserAPI.h"
 
-#if !(TARGET_OS_MAC && !TARGET_IPHONE_SIMULATOR)
+#if !(!TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR)
 @interface UPPlatform () <UPAuthViewControllerDelegate>
 #else
 @interface UPPlatform () <NSWindowDelegate>
@@ -27,7 +27,7 @@
 
 @property (nonatomic, copy) UPPlatformSessionCompletion sessionCompletion;
 
-#if !(TARGET_OS_MAC && !TARGET_IPHONE_SIMULATOR)
+#if !(!TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR)
 @property (nonatomic, strong) UPAuthViewController *authViewController;
 #else
 @property (nonatomic, strong) NSWindow *authWindow;
@@ -110,7 +110,7 @@ static UPPlatform *_instance = nil;
     }
 }
 
-#if TARGET_OS_MAC && !TARGET_IPHONE_SIMULATOR
+#if !TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
 
 - (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret webView:(WebView *)webView completion:(UPPlatformSessionCompletion)completion
 {
@@ -260,7 +260,7 @@ static UPPlatform *_instance = nil;
 
 #pragma mark - Auth View Controller Delegate
 
-#if !(TARGET_OS_MAC && !TARGET_IPHONE_SIMULATOR)
+#if !(!TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR)
 
 - (void)authViewController:(UPAuthViewController *)viewController didCompleteWithAuthCode:(NSString *)code
 {

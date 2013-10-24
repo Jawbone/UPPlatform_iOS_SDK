@@ -67,7 +67,7 @@ NSString const *APIMultipartBoundary = @"t5abJf886c95bfexhOzryaoq2xuedO34ru8osiq
             }
             
             NSData *imageData = nil;
-#if TARGET_OS_MAC && !TARGET_IPHONE_SIMULATOR
+#if !TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
             //NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:(CGImageRef)image];
             NSBitmapImageRep *bitmapRep = (NSBitmapImageRep *)[image bestRepresentationForRect:NSMakeRect(0, 0, image.size.width, image.size.height) context:nil hints:nil];
             imageData = [bitmapRep representationUsingType:NSJPEGFileType properties:@{ NSImageCompressionFactor: @(1.0) }];

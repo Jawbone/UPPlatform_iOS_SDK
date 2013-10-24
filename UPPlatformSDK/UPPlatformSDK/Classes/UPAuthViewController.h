@@ -5,7 +5,7 @@
 //  Created by Andy Roth on 4/6/13.
 //  Copyright (c) 2013 Jawbone. All rights reserved.
 //
-#if !(TARGET_OS_MAC && !TARGET_IPHONE_SIMULATOR)
+#if !(!TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR)
 #import <UIKit/UIKit.h>
 
 #import "UPPlatform.h"

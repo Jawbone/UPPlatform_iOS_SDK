@@ -81,7 +81,7 @@ static NSString *kMoveType = @"moves";
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 		NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:move.graphImageURL]];
 		
-#if TARGET_OS_MAC && !TARGET_IPHONE_SIMULATOR
+#if !TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
 		NSImage *image = [[NSImage alloc] initWithData:imageData];
 #else
 		UIImage *image = [UIImage imageWithData:imageData];

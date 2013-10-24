@@ -47,7 +47,7 @@ typedef void(^UPPlatformRequestCompletion)(UPURLRequest *request, UPURLResponse 
 
 - (void)validateSessionWithCompletion:(UPPlatformSessionCompletion)completion;
 
-#if TARGET_OS_MAC && !TARGET_IPHONE_SIMULATOR
+#if !TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
 - (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret webView:(WebView *)webView completion:(UPPlatformSessionCompletion)completion;
 - (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret webView:(WebView *)webView authScope:(UPPlatformAuthScope)authScope completion:(UPPlatformSessionCompletion)completion;
 #else

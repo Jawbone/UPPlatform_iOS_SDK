@@ -10,6 +10,6 @@
 
 @interface JBResultsViewController : UIViewController
 
-- (void)setResults:(NSString *)results;
+@property (nonatomic, strong) NSString *results;
 
 @end
