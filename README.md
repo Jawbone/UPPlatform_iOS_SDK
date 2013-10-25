@@ -99,3 +99,80 @@ Custom API Requests can also be made using the `UPURLRequest` object, which is w
 ## Additional Resources
 
 You can find additional documentation at <https://jawbone.com/up/platform>.
+
+# TODO (WIP)
+
+## User Information
+
+### Get detailed information about the user
+### Get list of friends (identifiers)
+### Get the user's current mood
+### Get the user's trends
+
+## Moves
+
+### Get the user's move list (paginated by date or by a timestamp)
+### Get the information about a specific move.
+### Get the user's move graphs.
+### Get move intensity.
+
+## Workouts
+
+### Get the user's workout list (paginated by date or by a timestamp).
+### Create a new workout.
+### Get information about a specific workout.
+### Get the user's workout graphs.
+### Get workout intensity.
+
+## Sleeps
+
+### Get the user's sleep list (paginated by date or by a timestamp).
+### Get the information about a specific sleep.
+### Get the user's sleep graphs.
+### Get sleep phases.
+
+## Meals
+
+### Get the user's meal list (paginated by date or by a timestamp).
+### Create a new meal.
+### Get the information about a specific meal.
+
+## Body Composition
+
+### Record body weight, BMI, lean mass, and body fat.
+### Retrieve user records of body weight, BMI, lean mass, and body fat.
+### Get a single body composition record event.
+### Delete body composition record event.
+
+## Cardiac Metrics
+
+### Record heart rate and blood pressure.
+### Retrieve heart rate and blood pressure records.
+### Get a single cardiac metric record event.
+### Delete cardiac metric record event.
+
+## Generic Events
+
+### Create a new event that will show in the user's feed.
+
+## Mood 
+
+### Record the user's mood.
+### Get the user's mood.
+### Get a mood event.
+### Delete mood event.
+
+# Object Types
+
+## User
+## Meal
+## Move
+## Workout
+## Sleep
+## Mood
+## Generic
+## Cardiac
+## Weight
+## User Metrics
+## Trends
+## Timezone
