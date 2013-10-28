@@ -6,6 +6,21 @@
 
 This SDK provides an Objective-C interface for integrating iOS and Mac OS X apps with the [UP Platform](https://jawbone.com/up/platform). It handles authentication using OAuth 2.0 via a UIWebView and provides simple interfaces for making requests to the platform's REST endpoints.
 
+## Getting Started on iOS
+
+### 1. Setup your environment.
+
+The SDK needs OS X Mavericks https://itunes.apple.com/us/app/os-x-mavericks/id675248567?mt=12# and Xcode 5. http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12
+
+### 2. Get the Jawbone iOS SDK.
+
+Clone the repository `git clone git@github.com:Jawbone/UPPlatformSDK.git`.
+Or download the latest release.
+
+### 3. Run the sample app.
+
+MealKeywordsSample
+
 ## Installation
 
 * Drag `UPPlatformSDK.xcodeproj` into your own xcode project or workspace.
