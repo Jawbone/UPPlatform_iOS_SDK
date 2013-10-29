@@ -17,13 +17,61 @@ typedef void(^UPWorkoutAPICompletion)(UPWorkout *workout, UPURLResponse *respons
 
 @interface UPWorkoutAPI : NSObject
 
+/**
+ * Request recent workout events for the currently authenticated user.
+ *
+ * @param limit The maximum number of workout events to be returned.
+ * @param completion Block to be executed upon completion. The block is passed the results.
+ */
 + (void)getWorkoutsWithLimit:(NSUInteger)limit completion:(UPBaseEventAPIArrayCompletion)completion;
+
+/**
+ * Request workout events between two points in time for the currently authenticated user.
+ *
+ * @param startDate Request workout events after this date. The date must be in the past.
+ * @param endDate Request workout events before this date. The date must be in the past.
+ * @param completion Block to be executed upon completion. The block is passed the results.
+ */
 + (void)getWorkoutsFromStartDate:(NSDate *)startDate toEndDate:(NSDate *)endDate completion:(UPBaseEventAPIArrayCompletion)completion;
 
+/**
+ * Post a new workout event to the feed of the currently authenticated user.
+ *
+ * @param workout A new workout event to be added to the feed.
+ * @param completion Block to be executed upon request completion.
+ */
 + (void)postWorkout:(UPWorkout *)workout completion:(UPWorkoutAPICompletion)completion;
+
+/**
+ * Request an existing workout event. The event must be visible to the currently authenticated user.
+ *
+ * @param workout An existing workout event.
+ * @param completion Block to be executed upon completion. The block is passed the result.
+ */
 + (void)refreshWorkout:(UPWorkout *)workout completion:(UPWorkoutAPICompletion)completion;
+
+/**
+ * Delete an existing workout event. The event must belong to the currently authenticated user.
+ *
+ * @param workout The existing workout event to be deleted.
+ * @param completion Block to be executed upon completion.
+ */
 + (void)deleteWorkout:(UPWorkout *)workout completion:(UPBaseEventAPICompletion)completion;
+
+/**
+ * Request the graph image for the workout event.
+ *
+ * @param workout The workout for which to request the graph.
+ * @param completion Block to be executed upon completion. The block is passed the result image.
+ */
 + (void)getWorkoutGraphImage:(UPWorkout *)workout completion:(UPBaseEventAPIImageCompletion)completion;
+
+/**
+ * TODO: What is workout snapshot?
+ *
+ * @param workout The workout for which to request the snapshot.
+ * @param completion Block to be executed upon completion. The block is passed the snapshot.
+ */
 + (void)getWorkoutSnapshot:(UPWorkout *)workout completion:(UPBaseEventAPISnapshotCompletion)completion;
 
 @end
@@ -71,6 +119,16 @@ typedef NS_ENUM(NSUInteger, UPWorkoutIntensity)
 
 @interface UPWorkout : UPMove
 
+/**
+ * Create a new workout event.
+ *
+ * @param type The type of workout that is being created.
+ * @param startTime The time when the workout was started. The time must be in the past.
+ * @param endTime The time the workout had finished. The time must be in the past.
+ * @param intensity The intensity of the workout.
+ * @param caloriesBurned The number of calories burned during the workout.
+ * @return Returns a new workout event.
+ */
 + (UPWorkout *)workoutWithType:(UPWorkoutType)type startTime:(NSDate *)startTime endTime:(NSDate *)endTime intensity:(UPWorkoutIntensity)intensity caloriesBurned:(NSNumber *)caloriesBurned;
 
 @property (nonatomic, assign) UPWorkoutType type;
