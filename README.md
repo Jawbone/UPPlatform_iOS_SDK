@@ -127,7 +127,7 @@ Custom API Requests can also be made using the `UPURLRequest` object, which is w
 
 You can find additional documentation at <https://jawbone.com/up/platform>.
 
-# TODO (WIP)
+# Documentation
 
 ## User Information
 
@@ -160,8 +160,57 @@ You can find additional documentation at <https://jawbone.com/up/platform>.
 
 ## Meals
 
-### Get the user's meal list (paginated by date or by a timestamp).
-### Create a new meal.
+### Get the user's most recent meals.
+
+``` objective-c
+[UPMealAPI getMealsWithLimit:5U completion:^(NSArray *meals, UPURLResponse *response, NSError *error) {
+	[self showResults:meals];
+}];
+```
+
+## Create a new meal
+
+Meal events should be created with one or more meal items. To create a new meal event, we start by specifying nutritional information for a single meal item.
+
+``` objective-c
+UPMealNutritionInfo *info = [[UPMealNutritionInfo alloc] init];
+
+info.calories = @130;
+info.sugar = @30;
+info.carbohydrates = @10;
+info.calcium = @80;
+```
+
+Afterwards, we create a new meal item and set its nutritional information.
+	
+``` objective-c
+UPMealItem *item = [UPMealItem mealItemWithName:@"Granola Bar" 
+                                    description:@"A fancy granola bar."
+                                         amount:@1 
+                               measurementUnits:@"bar"
+                                    servingType:UPMealItemServingTypePlate 
+                                       foodType:UPMealItemFoodTypeBrand 
+                                 nutritionInfo:info];
+```
+
+Then, we create a new meal event that will hold the meal item we had just created.
+
+``` objective-c
+UPMeal *meal = [UPMeal mealWithTitle:@"Delicious Granola Bar"
+                                note:@"It was tasty" 
+                               items:@[item]];
+                               
+meal.photoURL = @"http://studylogic.net/wp-content/uploads/2013/01/burger.jpg";
+```
+
+Finally, let's post a new event on the user's feed with our new meal!
+
+``` objective-c	
+[UPMealAPI postMeal:meal completion:^(UPMeal *meal, UPURLResponse *response, NSError *error) {
+	[self showResults:meal];
+}];
+```
+
 ### Get the information about a specific meal.
 
 ## Body Composition
