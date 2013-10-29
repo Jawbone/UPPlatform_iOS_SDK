@@ -146,21 +146,84 @@ You can find additional documentation at <https://jawbone.com/up/platform>.
 ## Workouts
 
 ### Get the user's workout list (paginated by date or by a timestamp).
+
+``` objective-c
+[UPWorkoutAPI getWorkoutsWithLimit:10U completion:^(NSArray *workouts, UPURLResponse *response, NSError *error) {
+	// Your code here to process an array of UPWorkout objects.
+}];
+```
+
 ### Create a new workout.
-### Get information about a specific workout.
+
+We can start by creating a new workout event.
+
+``` objective-c
+UPWorkout *workout = [UPWorkout workoutWithType:UPWorkoutTypeBike
+                                      startTime:startTime
+                                        endTime:endTime
+                                      intensity:UPWorkoutIntensityEasy
+                                 caloriesBurned:@300];
+                                 
+workout.distance = @7;
+workout.imageURL = @"http://jaredsurnamer.files.wordpress.com/2011/11/116223-magic-marker-icon-sports-hobbies-people-man-runner.png";
+```
+
+We can then post this workout event to the user's feed.
+
+``` objective-c
+[UPWorkoutAPI postWorkout:workout completion:^(UPWorkout *workout, UPURLResponse *response, NSError *error) {
+	// Your completion code here.
+}];
+```
+
 ### Get the user's workout graphs.
+
+``` objective-c
+[UPWorkoutAPI getWorkoutGraphImage:image completion:^(UIImage *image) {
+	// Your code here to use the graph image.
+}];
+```
+
 ### Get workout intensity.
+
+``` objective-c
+TODO: What is the code here?
+```
+
 
 ## Sleeps
 
-### Get the user's sleep list (paginated by date or by a timestamp).
-### Get the information about a specific sleep.
+### Get the user's recent sleep events.
+
+``` objective-c
+[UPSleepAPI getSleepsWithLimit:10U completion:^(NSArray *sleeps, UPURLResponse *response, NSError *error) {
+	// Your code here to process an array of UISleep objects.
+}];
+```
+
+### Get the information about a specific sleep event.
+
+``` objective-c
+// TODO: What is the code here?
+```
+
 ### Get the user's sleep graphs.
+
+``` objective-c
+[UPSleepAPI getSleepGraphImage:sleep completion:^(UIImage *image) {
+	// Your code here to handle the graph image.
+}];
+```
+
 ### Get sleep phases.
+
+``` objective-c
+// TODO: What is the code here?
+```
 
 ## Meals
 
-### Get the user's most recent meals.
+### Get the user's recent meal events.
 
 ``` objective-c
 [UPMealAPI getMealsWithLimit:5U completion:^(NSArray *meals, UPURLResponse *response, NSError *error) {
