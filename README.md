@@ -164,7 +164,7 @@ You can find additional documentation at <https://jawbone.com/up/platform>.
 
 ``` objective-c
 [UPMealAPI getMealsWithLimit:5U completion:^(NSArray *meals, UPURLResponse *response, NSError *error) {
-	[self showResults:meals];
+	// Your code here to process the meals array.
 }];
 ```
 
@@ -207,11 +207,17 @@ Finally, let's post a new event on the user's feed with our new meal!
 
 ``` objective-c	
 [UPMealAPI postMeal:meal completion:^(UPMeal *meal, UPURLResponse *response, NSError *error) {
-	[self showResults:meal];
+	// Your code here to process the meal object.
 }];
 ```
 
 ### Get the information about a specific meal.
+
+``` objective-c
+[UPMealAPI getMealDetails:meal completion:^(UPMeal *meal, UPURLResponse *response, NSError *error) {
+	// Your code here to process the meal object.
+}];
+```
 
 ## Body Composition
 
