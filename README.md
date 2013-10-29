@@ -138,10 +138,33 @@ You can find additional documentation at <https://jawbone.com/up/platform>.
 
 ## Moves
 
-### Get the user's move list (paginated by date or by a timestamp)
+### Get the user's move list (paginated by date or by a timestamp).
+
+``` objective-c
+[UPMoveAPI getMovesWithLimit:10U completion:^(NSArray *moves, UPURLResponse *response, NSError *error) {
+	// Your code here to process an array of UPMove objects.
+}];
+```
+
 ### Get the information about a specific move.
+
+``` objective-c
+// TODO: What is the code here?
+```
+
 ### Get the user's move graphs.
+
+``` objective-c
+[UPMoveAPI getMoveGraphImage:move completion:^(UIImage *image) {
+	// Your code here to process the graph image.
+}];
+```
+
 ### Get move intensity.
+
+``` objective-c
+TODO: How do you do this in code?
+```
 
 ## Workouts
 
@@ -179,7 +202,7 @@ We can then post this workout event to the user's feed.
 ### Get the user's workout graphs.
 
 ``` objective-c
-[UPWorkoutAPI getWorkoutGraphImage:image completion:^(UIImage *image) {
+[UPWorkoutAPI getWorkoutGraphImage:workout completion:^(UIImage *image) {
 	// Your code here to use the graph image.
 }];
 ```
@@ -189,7 +212,6 @@ We can then post this workout event to the user's feed.
 ``` objective-c
 TODO: What is the code here?
 ```
-
 
 ## Sleeps
 
@@ -231,7 +253,7 @@ TODO: What is the code here?
 }];
 ```
 
-## Create a new meal
+### Create a new meal
 
 Meal events should be created with one or more meal items. To create a new meal event, we start by specifying nutritional information for a single meal item.
 
