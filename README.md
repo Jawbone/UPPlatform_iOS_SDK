@@ -373,14 +373,8 @@ Then, we can post the new UPMood object to the user's feed.
 }];
 ```
 
-# Object Types
+# Credits
 
-## User
-## Meal
-## Move
-## Workout
-## Sleep
-## Mood
-## User Metrics
-## Trends
-## Timezone
+### Development
+
+Andy Roth
