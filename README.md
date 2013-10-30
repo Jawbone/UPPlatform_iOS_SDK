@@ -245,6 +245,8 @@ You can request a visualization of the user's workout data as a 560x300 PNG imag
 }];
 ```
 
+NOTE: This data is off Christian's feed. I can take it off if he minds.
+
 ### Get workout intensity.
 
 ``` objective-c
