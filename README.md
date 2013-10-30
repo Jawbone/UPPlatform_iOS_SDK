@@ -14,6 +14,11 @@ This SDK provides an Objective-C interface for integrating iOS and Mac OS X apps
   - [Getting the Jawbone iOS SDK](#getting-the-jawbone-ios-sdk)
   - [Running the Sample App](#running-the-sample-app)
 - [Documentation](#documentation)
+  - [User](#user-information)
+  - [Sleeps](#sleeps)
+  - [Moods](#moods)
+  - [Meals](#meals)
+  - [Workouts](#workouts)
 - [Demo Application](#demo-application)
 - [Credits](#credits)
 - [License](#license)
@@ -131,10 +136,34 @@ You can find additional documentation at <https://jawbone.com/up/platform>.
 
 ## User Information
 
-### Get detailed information about the user
+### Get detailed information about the user.
+
+``` objective-c
+[UPUserAPI getCurrentUserWithCompletion:^(UPUser *user, UPURLResponse *response, NSError *error) {
+	// Your code to process returned UPUser object.
+}];
+
+```
+
 ### Get list of friends (identifiers)
-### Get the user's current mood
+
+``` objective-c
+[UPUserAPI getFriendsWithCompletion:^(NSArray *friends, UPURLResponse *response, NSError *error) {
+	// Your code here to process an array of UPUser objects.
+}];
+```
+
 ### Get the user's trends
+
+``` objective-c
+[UPUserAPI getTrendsWithEndDate:nil
+                      rangeType:UPUserTrendsRangeTypeDays 
+                  rangeDuration:10U
+                     bucketSize:UPUserTrendsBucketSizeDays 
+                     completion:^(NSArray *trends, UPURLResponse *response, NSError *error) {
+	// Your code here to process an array of UPTrend objects.
+}];
+```
 
 ## Moves
 
@@ -163,7 +192,7 @@ You can find additional documentation at <https://jawbone.com/up/platform>.
 ### Get move intensity.
 
 ``` objective-c
-TODO: How do you do this in code?
+// TODO: How do you do this in code?
 ```
 
 ## Workouts
@@ -210,7 +239,7 @@ We can then post this workout event to the user's feed.
 ### Get workout intensity.
 
 ``` objective-c
-TODO: What is the code here?
+// TODO: What is the code here?
 ```
 
 ## Sleeps
@@ -304,7 +333,7 @@ Finally, let's post a new event on the user's feed with our new meal!
 }];
 ```
 
-## Mood 
+## Moods
 
 ### Get the user's mood.
 
