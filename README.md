@@ -1,46 +1,54 @@
+![image](https://d3osil7svxrrgt.cloudfront.net/static/www/logos/jawbone/jawbone-logo-lowres.png)
 # UP Platform iOS/OS X SDK
-
----
 
 ## Overview
 
 This SDK provides an Objective-C interface for integrating iOS and Mac OS X apps with the [UP Platform](https://jawbone.com/up/platform). It handles authentication using OAuth 2.0 via a UIWebView and provides simple interfaces for making requests to the platform's REST endpoints.
 
+## Requirements
+
+The only requirements to start developing with the UP iOS SDK are OS X Mavericks, Xcode 5 and iOS 7. It is recommended that you upgrade to [OS X Mavericks](https://itunes.apple.com/us/app/os-x-mavericks/id675248567?mt=12#), [Xcode 5](http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12) and [iOS 7](https://developer.apple.com/ios7/) if you haven't done so already.
+
+You will need to have access to an existing Jawbone UP user account in order to authenticate with the UP Platform.
+
 ## Table of Contents
 
-- [Requirements](#requirements)
 - [Getting Started](#getting-started)
-  - [Setting up Your Environment](#setting-up-your-environment)
-  - [Getting the Jawbone iOS SDK](#getting-the-jawbone-ios-sdk)
-  - [Running the Sample App](#running-the-sample-app)
+  - [Download the Jawbone UP iOS SDK](#download-the-jawbone-up-ios-sdk)
+  - [Run the Sample App](#running-the-sample-app)
+  - [Add the SDK to Your Project](#add-the-sdk-to-your-project)
 - [Documentation](#documentation)
   - [User](#user-information)
-  - [Sleeps](#sleeps)
-  - [Moods](#moods)
+  - [Sleep](#sleeps)
+  - [Mood](#moods)
   - [Meals](#meals)
   - [Workouts](#workouts)
 - [Demo Application](#demo-application)
+- [Additional Resources](#additional-resources)
 - [Credits](#credits)
 - [License](#license)
 
 ## Getting Started
 
-#### 1. Setting up Your environment
+#### Download the Jawbone UP iOS SDK.
 
-The SDK needs OS X Mavericks https://itunes.apple.com/us/app/os-x-mavericks/id675248567?mt=12# and Xcode 5. http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12
+You can download the latest iOS SDK release via the link below or clone it directly from this GitHub repository.
 
-#### 2. Getting the Jawbone iOS SDK.
+**Option 1:** Download UP iOS SDK v1.0.0 (November 2013)  
+http://github.com/jawbone/jawbone-up-ios-sdk/releases/1.0.0
 
-Clone the repository `git clone git@github.com:Jawbone/UPPlatformSDK.git`.
-Or download the latest release.
+**Option 2:** Clone this repository from GitHub  
+`git clone git@github.com:Jawbone/jawbone-up-ios-sdk.git`
 
-#### 3. Running the Sample App.
+#### Run the Sample App
 
-MealKeywordsSample
+The Jawbone UP iOS SDK comes with a sample iOS app that you can use to authenticate with the UP Platform and start interacting with a Jawbone UP account.
 
-## Installation
+You can find and open the PlatformTest project in `UPPlatformSDK/PlatformTest/PlatformTest.xcodeproj`.
 
-* Drag `UPPlatformSDK.xcodeproj` into your own xcode project or workspace.
+#### Add the SDK to Your Project
+
+* Drag `UPPlatformSDK.xcodeproj` into your own Xcode project or workspace.
 
 ![image](Documentation/install_1.png)
 
@@ -60,7 +68,7 @@ MealKeywordsSample
 
 ![image](Documentation/install_5.png)
 
-## Authentication
+#### Authentication
 
 Authentication is handled using the shared `UPPlatform` object.
 
@@ -76,11 +84,11 @@ To start a new session, using the `startSessionWithClientID:clientSecret:authSco
 	
 See `UPPlatform.h` for all available authScopes.
 
-## API Requests
+#### API Requests
 
 Once a valid session has been established, there are a few ways to create API requests. You can use either the provided objects that encapsulate most of the available endpoints, or you can create custom requests.
 
-### API Objects
+#### API Objects
 
 The API Objects are the simplest way to create requests to the REST platform. They take creating the network requests and parsing the resulting JSON into `NSObject`s. Here are a few examples:
 
@@ -128,10 +136,6 @@ Custom API Requests can also be made using the `UPURLRequest` object, which is w
 		// The resulting response.data is an NSDictionary describing the created mood
 	}];
 	
-## Additional Resources
-
-You can find additional documentation at <https://jawbone.com/up/platform>.
-
 # Documentation
 
 ## User Information
@@ -181,7 +185,7 @@ You can find additional documentation at <https://jawbone.com/up/platform>.
 // TODO: What is the code here?
 ```
 
-### Get the user's move graphs.
+### Get the user's move graph.
 ![image](Documentation/moves.png)
 
 You can request a visualization of the user's moves data as a 560x300 PNG image with a transparent background.
@@ -229,7 +233,11 @@ We can then post this workout event to the user's feed.
 }];
 ```
 
-### Get the user's workout graphs.
+### Get the user's workout graph.
+
+![image](Documentation/workouts.png)
+
+You can request a visualization of the user's workout data as a 560x300 PNG image with a transparent background.
 
 ``` objective-c
 [UPWorkoutAPI getWorkoutGraphImage:workout completion:^(UIImage *image) {
@@ -259,7 +267,7 @@ We can then post this workout event to the user's feed.
 // TODO: What is the code here?
 ```
 
-### Get the user's sleep graphs.
+### Get the user's sleep graph.
 ![image](Documentation/sleep.png)
 
 You can request a visualization of the user's sleep data as a 560x300 PNG image with a transparent background.
@@ -374,8 +382,14 @@ Then, we can post the new UPMood object to the user's feed.
 }];
 ```
 
+# Additional Resources
+
+You can find additional Jawbone UP Platform documentation at <https://jawbone.com/up/platform>.
+
 # Credits
 
 ### Development
 
-Andy Roth
+**Andy Roth**  
+Senior Software Engineer at Jawbone  
+Jawbone  
