@@ -304,30 +304,45 @@ Finally, let's post a new event on the user's feed with our new meal!
 }];
 ```
 
-## Body Composition
-
-### Record body weight, BMI, lean mass, and body fat.
-### Retrieve user records of body weight, BMI, lean mass, and body fat.
-### Get a single body composition record event.
-### Delete body composition record event.
-
-## Cardiac Metrics
-
-### Record heart rate and blood pressure.
-### Retrieve heart rate and blood pressure records.
-### Get a single cardiac metric record event.
-### Delete cardiac metric record event.
-
-## Generic Events
-
-### Create a new event that will show in the user's feed.
-
 ## Mood 
 
-### Record the user's mood.
 ### Get the user's mood.
+
+``` objective-c
+[UPMoodAPI getCurrentMoodWithCompletion:^(UPMood *mood, UPURLResponse *response, NSError *error) {
+	[self showResults:mood];
+}];
+```
+
+### Record the user's mood.
+
+To set the user's mood we first need to create a new UPMood object.
+
+``` objective-c
+UPMood *newMood = [UPMood moodWithType:UPMoodTypePumpedUp title:@"I'm pumped!"];
+```
+
+Then, we can post the new UPMood object to the user's feed.
+
+``` objective-c
+[UPMoodAPI postMood:newMood completion:^(UPMood *mood, UPURLResponse *response, NSError *error) {
+	// Your code goes here.
+}];
+```
+
 ### Get a mood event.
-### Delete mood event.
+
+``` objective-c
+// TODO: What is the code here?
+```
+
+### Delete a mood event.
+
+``` objective-c
+[UPMoodAPI deleteMood:mood completion:^(id result, UPURLResponse *response, NSError *error) {
+	// Your code goes here.
+}];
+```
 
 # Object Types
 
@@ -337,9 +352,6 @@ Finally, let's post a new event on the user's feed with our new meal!
 ## Workout
 ## Sleep
 ## Mood
-## Generic
-## Cardiac
-## Weight
 ## User Metrics
 ## Trends
 ## Timezone
