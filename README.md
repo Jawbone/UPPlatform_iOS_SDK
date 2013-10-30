@@ -182,15 +182,16 @@ You can find additional documentation at <https://jawbone.com/up/platform>.
 ```
 
 ### Get the user's move graphs.
+![image](Documentation/moves.png)
 
+You can request a visualization of the user's moves data as a 560x300 PNG image with a transparent background.
 ``` objective-c
 [UPMoveAPI getMoveGraphImage:move completion:^(UIImage *image) {
 	// Your code here to process the graph image.
 }];
 ```
-
+*NOTE: This data is off Andrew's feed. I can take it off if he minds.*
 ### Get move intensity.
-
 ``` objective-c
 // TODO: How do you do this in code?
 ```
@@ -259,19 +260,19 @@ We can then post this workout event to the user's feed.
 ```
 
 ### Get the user's sleep graphs.
+![image](Documentation/sleep.png)
 
+You can request a visualization of the user's sleep data as a 560x300 PNG image with a transparent background.
 ``` objective-c
 [UPSleepAPI getSleepGraphImage:sleep completion:^(UIImage *image) {
 	// Your code here to handle the graph image.
 }];
 ```
-
+*NOTE: This data is off Christian's feed. I can take it off if he minds.*
 ### Get sleep phases.
-
 ``` objective-c
 // TODO: What is the code here?
 ```
-
 ## Meals
 
 ### Get the user's recent meal events.
