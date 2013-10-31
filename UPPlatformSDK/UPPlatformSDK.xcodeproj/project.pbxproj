@@ -26,6 +26,28 @@
 		48FA5FD61768CB4B00025723 /* UPAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C16171736AE009CCA56 /* UPAuthViewController.m */; };
 		48FA5FD81768CB4B00025723 /* NSDate+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C13171736AE009CCA56 /* NSDate+UPPlatform.m */; };
 		48FA5FDA1768CB4B00025723 /* NSDictionary+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7111757C12C00118114 /* NSDictionary+UPPlatform.m */; };
+		BF30417A1821FC5400903744 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FA5F9B1768CA7900025723 /* XCTest.framework */; };
+		BF30417B1821FC5400903744 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E46C0317173670009CCA56 /* Foundation.framework */; };
+		BF30417D1821FC5400903744 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF30417C1821FC5400903744 /* UIKit.framework */; };
+		BF3041831821FC5400903744 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF3041811821FC5400903744 /* InfoPlist.strings */; };
+		BF3041851821FC5400903744 /* UPPlatformSDK_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3041841821FC5400903744 /* UPPlatformSDK_Tests.m */; };
+		BF30418C1821FD5D00903744 /* UPMealAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE43D175939EB001074DE /* UPMealAPI.m */; };
+		BF30418D1821FECC00903744 /* UPBaseEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7171757D0FD00118114 /* UPBaseEventAPI.m */; };
+		BF30418E1821FECE00903744 /* UPUserAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C26171736AE009CCA56 /* UPUserAPI.m */; };
+		BF30418F1821FED000903744 /* UPMoodAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C1C171736AE009CCA56 /* UPMoodAPI.m */; };
+		BF3041901821FED200903744 /* UPGenericEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C1A171736AE009CCA56 /* UPGenericEventAPI.m */; };
+		BF3041911821FED400903744 /* UPBodyEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7241757EBDA00118114 /* UPBodyEventAPI.m */; };
+		BF3041921821FED600903744 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AB3E13175801A70066C3D7 /* UPCardiacEventAPI.m */; };
+		BF3041931821FED800903744 /* UPMoveAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AB3E19175806E00066C3D7 /* UPMoveAPI.m */; };
+		BF3041941821FEDA00903744 /* UPWorkoutAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE42D175916D8001074DE /* UPWorkoutAPI.m */; };
+		BF3041951821FEDC00903744 /* UPSleepAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE437175927C0001074DE /* UPSleepAPI.m */; };
+		BF3041961821FEF000903744 /* UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C1E171736AE009CCA56 /* UPPlatform.m */; };
+		BF3041971821FEF300903744 /* UPURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C22171736AE009CCA56 /* UPURLRequest.m */; };
+		BF3041981821FF0600903744 /* UPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C24171736AE009CCA56 /* UPURLResponse.m */; };
+		BF3041991821FF0900903744 /* UPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C20171736AE009CCA56 /* UPSession.m */; };
+		BF30419A1821FF0E00903744 /* UPAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C16171736AE009CCA56 /* UPAuthViewController.m */; };
+		BF30419B1821FF1100903744 /* NSDate+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C13171736AE009CCA56 /* NSDate+UPPlatform.m */; };
+		BF30419C1821FF1300903744 /* NSDictionary+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7111757C12C00118114 /* NSDictionary+UPPlatform.m */; };
 		E30CE42E175916D8001074DE /* UPWorkoutAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE42D175916D8001074DE /* UPWorkoutAPI.m */; };
 		E30CE438175927C0001074DE /* UPSleepAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE437175927C0001074DE /* UPSleepAPI.m */; };
 		E30CE43E175939EB001074DE /* UPMealAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE43D175939EB001074DE /* UPMealAPI.m */; };
@@ -45,6 +67,16 @@
 		E3E46C30171736AE009CCA56 /* UPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C24171736AE009CCA56 /* UPURLResponse.m */; };
 		E3E46C31171736AE009CCA56 /* UPUserAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C26171736AE009CCA56 /* UPUserAPI.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF3041871821FC5400903744 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3E46BF817173670009CCA56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3E46BFF17173670009CCA56;
+			remoteInfo = UPPlatformSDK;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E3E46BFE17173670009CCA56 /* CopyFiles */ = {
@@ -66,6 +98,12 @@
 		48FA5F8E1768CA7900025723 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		48FA5F8F1768CA7900025723 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		48FA5F9B1768CA7900025723 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BF3041791821FC5400903744 /* UPPlatformSDK Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UPPlatformSDK Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF30417C1821FC5400903744 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BF3041801821FC5400903744 /* UPPlatformSDK Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UPPlatformSDK Tests-Info.plist"; sourceTree = "<group>"; };
+		BF3041821821FC5400903744 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BF3041841821FC5400903744 /* UPPlatformSDK_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UPPlatformSDK_Tests.m; sourceTree = "<group>"; };
+		BF3041861821FC5400903744 /* UPPlatformSDK Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UPPlatformSDK Tests-Prefix.pch"; sourceTree = "<group>"; };
 		E30CE42C175916D8001074DE /* UPWorkoutAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPWorkoutAPI.h; sourceTree = "<group>"; };
 		E30CE42D175916D8001074DE /* UPWorkoutAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPWorkoutAPI.m; sourceTree = "<group>"; };
 		E30CE436175927BF001074DE /* UPSleepAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPSleepAPI.h; sourceTree = "<group>"; };
@@ -116,6 +154,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BF3041761821FC5400903744 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF30417A1821FC5400903744 /* XCTest.framework in Frameworks */,
+				BF30417D1821FC5400903744 /* UIKit.framework in Frameworks */,
+				BF30417B1821FC5400903744 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E3E46BFD17173670009CCA56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,6 +183,25 @@
 				48FA5F8F1768CA7900025723 /* AppKit.framework */,
 			);
 			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BF30417E1821FC5400903744 /* UPPlatformSDK Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BF3041841821FC5400903744 /* UPPlatformSDK_Tests.m */,
+				BF30417F1821FC5400903744 /* Supporting Files */,
+			);
+			path = "UPPlatformSDK Tests";
+			sourceTree = "<group>";
+		};
+		BF30417F1821FC5400903744 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF3041801821FC5400903744 /* UPPlatformSDK Tests-Info.plist */,
+				BF3041811821FC5400903744 /* InfoPlist.strings */,
+				BF3041861821FC5400903744 /* UPPlatformSDK Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		E32E1BB9171768510007D731 /* Core */ = {
@@ -203,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				E3E46C0517173670009CCA56 /* UPPlatformSDK */,
+				BF30417E1821FC5400903744 /* UPPlatformSDK Tests */,
 				E3E46C0217173670009CCA56 /* Frameworks */,
 				E3E46C0117173670009CCA56 /* Products */,
 			);
@@ -213,6 +281,7 @@
 			children = (
 				E3E46C0017173670009CCA56 /* libUPPlatformSDK.a */,
 				48FA5F891768CA7900025723 /* libUPPlatformSDK-OSX.a */,
+				BF3041791821FC5400903744 /* UPPlatformSDK Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,6 +292,7 @@
 				E3E46C0317173670009CCA56 /* Foundation.framework */,
 				48FA5F8A1768CA7900025723 /* Cocoa.framework */,
 				48FA5F9B1768CA7900025723 /* XCTest.framework */,
+				BF30417C1821FC5400903744 /* UIKit.framework */,
 				48FA5F8C1768CA7900025723 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -290,6 +360,24 @@
 			productReference = 48FA5F891768CA7900025723 /* libUPPlatformSDK-OSX.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		BF3041781821FC5400903744 /* UPPlatformSDK Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF30418B1821FC5400903744 /* Build configuration list for PBXNativeTarget "UPPlatformSDK Tests" */;
+			buildPhases = (
+				BF3041751821FC5400903744 /* Sources */,
+				BF3041761821FC5400903744 /* Frameworks */,
+				BF3041771821FC5400903744 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF3041881821FC5400903744 /* PBXTargetDependency */,
+			);
+			name = "UPPlatformSDK Tests";
+			productName = "UPPlatformSDK Tests";
+			productReference = BF3041791821FC5400903744 /* UPPlatformSDK Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E3E46BFF17173670009CCA56 /* UPPlatformSDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3E46C0E17173670009CCA56 /* Build configuration list for PBXNativeTarget "UPPlatformSDK" */;
@@ -315,6 +403,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Jawbone;
+				TargetAttributes = {
+					BF3041781821FC5400903744 = {
+						TestTargetID = E3E46BFF17173670009CCA56;
+					};
+				};
 			};
 			buildConfigurationList = E3E46BFB17173670009CCA56 /* Build configuration list for PBXProject "UPPlatformSDK" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -330,9 +423,21 @@
 			targets = (
 				E3E46BFF17173670009CCA56 /* UPPlatformSDK */,
 				48FA5F881768CA7900025723 /* UPPlatformSDK-OSX */,
+				BF3041781821FC5400903744 /* UPPlatformSDK Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF3041771821FC5400903744 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF3041831821FC5400903744 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		48FA5F851768CA7900025723 /* Sources */ = {
@@ -356,6 +461,31 @@
 				48FA5FD61768CB4B00025723 /* UPAuthViewController.m in Sources */,
 				48FA5FD81768CB4B00025723 /* NSDate+UPPlatform.m in Sources */,
 				48FA5FDA1768CB4B00025723 /* NSDictionary+UPPlatform.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF3041751821FC5400903744 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF3041911821FED400903744 /* UPBodyEventAPI.m in Sources */,
+				BF30418F1821FED000903744 /* UPMoodAPI.m in Sources */,
+				BF30418E1821FECE00903744 /* UPUserAPI.m in Sources */,
+				BF3041981821FF0600903744 /* UPURLResponse.m in Sources */,
+				BF3041901821FED200903744 /* UPGenericEventAPI.m in Sources */,
+				BF30418C1821FD5D00903744 /* UPMealAPI.m in Sources */,
+				BF3041951821FEDC00903744 /* UPSleepAPI.m in Sources */,
+				BF30419A1821FF0E00903744 /* UPAuthViewController.m in Sources */,
+				BF3041851821FC5400903744 /* UPPlatformSDK_Tests.m in Sources */,
+				BF3041971821FEF300903744 /* UPURLRequest.m in Sources */,
+				BF30419C1821FF1300903744 /* NSDictionary+UPPlatform.m in Sources */,
+				BF3041931821FED800903744 /* UPMoveAPI.m in Sources */,
+				BF30419B1821FF1100903744 /* NSDate+UPPlatform.m in Sources */,
+				BF3041921821FED600903744 /* UPCardiacEventAPI.m in Sources */,
+				BF3041961821FEF000903744 /* UPPlatform.m in Sources */,
+				BF3041991821FF0900903744 /* UPSession.m in Sources */,
+				BF30418D1821FECC00903744 /* UPBaseEventAPI.m in Sources */,
+				BF3041941821FEDA00903744 /* UPWorkoutAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +514,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF3041881821FC5400903744 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3E46BFF17173670009CCA56 /* UPPlatformSDK */;
+			targetProxy = BF3041871821FC5400903744 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF3041811821FC5400903744 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF3041821821FC5400903744 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		48FA5FA91768CA7900025723 /* Debug */ = {
@@ -439,6 +588,63 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BF3041891821FC5400903744 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UPPlatformSDK Tests/UPPlatformSDK Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "UPPlatformSDK Tests/UPPlatformSDK Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BF30418A1821FC5400903744 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UPPlatformSDK Tests/UPPlatformSDK Tests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "UPPlatformSDK Tests/UPPlatformSDK Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -527,6 +733,15 @@
 			buildConfigurations = (
 				48FA5FA91768CA7900025723 /* Debug */,
 				48FA5FAA1768CA7900025723 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF30418B1821FC5400903744 /* Build configuration list for PBXNativeTarget "UPPlatformSDK Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF3041891821FC5400903744 /* Debug */,
+				BF30418A1821FC5400903744 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
