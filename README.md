@@ -24,6 +24,7 @@ You will need to have access to an existing Jawbone UP user account in order to 
   - [Meals](#meals)
   - [Workouts](#workouts)
 - [Demo Application](#demo-application)
+- [Unit Tests](#unit-tests)
 - [Additional Resources](#additional-resources)
 - [Credits](#credits)
 - [License](#license)
@@ -383,6 +384,10 @@ Then, we can post the new UPMood object to the user's feed.
 	// Your code goes here.
 }];
 ```
+
+# Unit Tests
+
+The SDK ships with a suite of XCTest unit tests that cover the API functionality. You can run the tests by opening the UP iOSK SDK project in Xcode 5 and pressing <kbd>&#x2318;</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd>.
 
 # Additional Resources
 
