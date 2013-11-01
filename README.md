@@ -9,14 +9,15 @@ This SDK provides an Objective-C interface for integrating iOS and Mac OS X apps
 
 The only requirements to start developing with the UP iOS SDK are OS X Mavericks, Xcode 5 and iOS 7. It is recommended that you upgrade to [OS X Mavericks](https://itunes.apple.com/us/app/os-x-mavericks/id675248567?mt=12#), [Xcode 5](http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12) and [iOS 7](https://developer.apple.com/ios7/) if you haven't done so already.
 
-You will need to have access to an existing Jawbone UP user account in order to authenticate with the UP Platform.
+You will need to have access to an existing Jawbone UP user account in order to authenticate with the UP Platform. New accounts can be created at [jawbone.com/start/signup](http://jawbone.com/start/signup).
 
 ## Table of Contents
 
 - [Getting Started](#getting-started)
+  - [Obtain your OAuth Credentials](#generate-your-oauth-credentials)
   - [Download the Jawbone UP iOS SDK](#download-the-jawbone-up-ios-sdk)
   - [Run the Sample App](#running-the-sample-app)
-  - [Add the SDK to Your Project](#add-the-sdk-to-your-project)
+  - [Add the iOS SDK to Your Project](#add-the-sdk-to-your-project)
 - [Documentation](#documentation)
   - [User](#user-information)
   - [Sleep](#sleeps)
@@ -30,6 +31,14 @@ You will need to have access to an existing Jawbone UP user account in order to 
 - [License](#license)
 
 ## Getting Started
+
+#### Obtain Your OAuth Credentials
+
+Go to [developers.jawbone.com](http://developers.jawbone.com) and sign in with your Jawbone UP account. If you don't already have a Jawbone UP account you can create one at [jawbone.com/start/signup](https://jawbone.com/start/signup).
+
+After you sign in press "Manage Account" and create a new organization, if necessary.  
+
+Finally, fill out the form to create a new app and get your **OAuth client ID** and **app secret** keys that you can now use to authenticate your iOS app with the UP Platform.
 
 #### Download the Jawbone UP iOS SDK.
 
@@ -47,7 +56,7 @@ The Jawbone UP iOS SDK comes with a sample iOS app that you can use to authentic
 
 You can find and open the PlatformTest project in `UPPlatformSDK/PlatformTest/PlatformTest.xcodeproj`.
 
-#### Add the SDK to Your Project
+#### Add the iOS SDK to Your Project
 
 * Drag `UPPlatformSDK.xcodeproj` into your own Xcode project or workspace.
 
