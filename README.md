@@ -359,21 +359,33 @@ Custom API Requests can also be made using the `UPURLRequest` object, which is w
 
 ### Get the current user's information.
 
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me" params:nil];
-	
-    [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
-        // The resulting response.data is an NSDictionary with the JSON results
-    }];
+``` objective-c
+UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me"
+                                                      params:nil];
+
+[[UPPlatform sharedPlatform] sendRequest:request
+                              completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
+    // The resulting response.data is an NSDictionary with the JSON results.
+}];
+```
     
 ### Post a new mood to UP.
 
-	NSDictionary *params = @{ @"title" : @"I feel great!", @"sub_type" : @(1), @"tz" : [NSTimeZone localTimeZone].name };
-	
-	UPURLRequest *request = [UPURLRequest postRequestWithEndpoint:@"nudge/api/users/@me/mood" params:params];
-	
-	[[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
-		// The resulting response.data is an NSDictionary describing the created mood
-	}];
+``` objective-c
+NSDictionary *params = @{
+                         @"title": @"I feel great!",
+                         @"sub_type": @1,
+                         @"tz": [NSTimeZone localTimeZone].name
+                         };
+
+UPURLRequest *request = [UPURLRequest postRequestWithEndpoint:@"nudge/api/users/@me/mood"
+                                                       params:params];
+
+[[UPPlatform sharedPlatform] sendRequest:request
+                              completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
+    // The resulting response.data is an NSDictionary describing the created mood.
+}];
+```
 
 # Unit Tests
 
