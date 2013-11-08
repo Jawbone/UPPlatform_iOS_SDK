@@ -400,8 +400,8 @@ You can find additional Jawbone UP Platform documentation at <https://jawbone.co
 ### Development
 
 **Andy Roth**  
-Senior Software Engineer at Jawbone  
-Jawbone  
+Senior Software Engineer  
+Jawbone
 
 # License
 
