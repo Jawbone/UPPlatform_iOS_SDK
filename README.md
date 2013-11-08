@@ -9,22 +9,22 @@ This SDK provides an Objective-C interface for integrating iOS and Mac OS X apps
 
 The only requirements to start developing with the UP iOS SDK are OS X Mavericks, Xcode 5 and iOS 7. It is recommended that you upgrade to [OS X Mavericks](https://itunes.apple.com/us/app/os-x-mavericks/id675248567?mt=12#), [Xcode 5](http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12) and [iOS 7](https://developer.apple.com/ios7/) if you haven't done so already.
 
-You will need to have access to an existing Jawbone UP user account in order to authenticate with the UP Platform. New accounts can be created at [jawbone.com/start/signup](http://jawbone.com/start/signup).
+You will need to have access to an existing Jawbone UP user account in order to authenticate with the UP Platform. New accounts can be created by going to [jawbone.com/start/signup](http://jawbone.com/start/signup).
 
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-  - [Obtain your OAuth Credentials](#generate-your-oauth-credentials)
+  - [Obtain Your OAuth Credentials](#obtain-your-oauth-credentials)
   - [Download the Jawbone UP iOS SDK](#download-the-jawbone-up-ios-sdk)
-  - [Run the Sample App](#running-the-sample-app)
-  - [Add the iOS SDK to Your Project](#add-the-sdk-to-your-project)
+  - [Run the Sample App](#run-the-sample-app)
+  - [Add the SDK to Your Project](#add-the-sdk-to-your-project)
 - [Documentation](#documentation)
+  - [Authentication](#authentication)
   - [User](#user-information)
   - [Sleep](#sleeps)
   - [Mood](#moods)
   - [Meals](#meals)
   - [Workouts](#workouts)
-- [Demo Application](#demo-application)
 - [Unit Tests](#unit-tests)
 - [Additional Resources](#additional-resources)
 - [Credits](#credits)
@@ -58,7 +58,7 @@ The Jawbone UP iOS SDK comes with a sample iOS app that you can use to authentic
 
 You can find and open the PlatformTest project in `UPPlatformSDK/PlatformTest/PlatformTest.xcodeproj`.
 
-#### Add the iOS SDK to Your Project
+#### Add the SDK to Your Project
 
 * Drag `UPPlatformSDK.xcodeproj` into your own Xcode project or workspace.
 
@@ -80,77 +80,34 @@ You can find and open the PlatformTest project in `UPPlatformSDK/PlatformTest/Pl
 
 ![image](Documentation/install_5.png)
 
-#### Authentication
+# Documentation
 
-Authentication is handled using the shared `UPPlatform` object.
+## Authentication
 
-First, to validate that an existing session is still valid, call `validateSessionWithCompletion:`. If the `session` object passed to the completion block is not `nil`, the session is valid and API requests can be made.
+Authentication is handled using the shared `UPPlatform` object. To start a new session, use the `startSessionWithClientID:clientSecret:authScope:completion:` method.
+
+``` objective-c
+[[UPPlatform sharedPlatform] startSessionWithClientID:@"MY_CLIENT_ID"
+                                         clientSecret:@"MY_CLIENT_SECRET"
+                                            authScope:(UPPlatformAuthScopeExtendedRead | UPPlatformAuthScopeMoveRead)
+                                           completion:^(UPSession *session, NSError *error) {
+                                               if (session != nil) {
+                                                   // Your code to start making API requests goes here.
+                                               }
+}];
+```
+    
+*NOTE: Possible UPPlatformAuthScope values can be found in `UPPlatform.h`.*
+
+Once a valid session has been established, there are a few ways to create API requests. You can use either the provided objects that encapsulate most of the available endpoints, or you can create custom requests. The API Objects are the simplest way to create requests to the REST platform. They take creating the network requests and parsing the resulting JSON into `NSObject`s.
+
+To validate that an existing session is still valid, call `validateSessionWithCompletion:`. If the `session` object passed to the completion block is not `nil`, the session is valid and API requests can be made.
 
 *NOTE: I only added this because when requesting tokens from multiple clients (i.e. Simulator and iPhone), the previously requested tokens become invalid. We should fix this.*
 
-To start a new session, using the `startSessionWithClientID:clientSecret:authScope:completion:` method.
-
-	[[UPPlatform sharedPlatform] startSessionWithClientID:@"MY_CLIENT_ID" clientSecret:@"MY_CLIENT_SECRET" authScope:(UPPlatformAuthScopeExtendedRead | UPPlatformAuthScopeMoveRead) completion:^(UPSession *session, NSError *error) {
-		// If session != nil we can begin making API requests.
-	}];
-	
-See `UPPlatform.h` for all available authScopes.
-
-#### API Requests
-
-Once a valid session has been established, there are a few ways to create API requests. You can use either the provided objects that encapsulate most of the available endpoints, or you can create custom requests.
-
-#### API Objects
-
-The API Objects are the simplest way to create requests to the REST platform. They take creating the network requests and parsing the resulting JSON into `NSObject`s. Here are a few examples:
-
-##### Get the current user's information
-
-	[UPUserAPI getCurrentUserWithCompletion:^(UPUser *user, UPURLResponse *response, NSError *error) {
-		// Do something with the user
-	}];
-	
-##### Get the user's past 14 moves
-
-	[UPMoveAPI getMovesWithLimit:14 completion:^(NSArray *results, UPURLResponse *response, NSError *error) {
-		// Do something with the array of UPMove objects
-	}];
-	
-##### Post a new body event to UP
-
-	UPBodyEvent *bodyEvent = [UPBodyEvent eventWithTitle:@"160 lbs." weight:@(72.5748) bodyFat:@(20) leanMass:@(20) bmi:@(22) note:@"Weigh-in created by My App." image:nil];
-	
-	[UPBodyEventAPI bodyEvent completion:^(UPBodyEvent *event, UPURLResponse *response, NSError *error) {
-		// Event was created and updated with an xid
-	}];
-	
-*Note: All units (weight, distance) are in metric.*
-
-### Custom Requests
-
-Custom API Requests can also be made using the `UPURLRequest` object, which is what the API Objects also use. This allows you to make a request to any endpoint, giving any parameters, and receiving a resulting JSON object. Here are a few examples:
-
-##### Get the current user's information
-
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me" params:nil];
-	
-    [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
-        // The resulting response.data is an NSDictionary with the JSON results
-    }];
-    
-##### Post a new mood to UP
-
-	NSDictionary *params = @{ @"title" : @"I feel great!", @"sub_type" : @(1), @"tz" : [NSTimeZone localTimeZone].name };
-	
-	UPURLRequest *request = [UPURLRequest postRequestWithEndpoint:@"nudge/api/users/@me/mood" params:params];
-	
-	[[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
-		// The resulting response.data is an NSDictionary describing the created mood
-	}];
-	
-# Documentation
-
 ## User Information
+
+*NOTE: All units (weight, distance) are in metric.*
 
 ### Get detailed information about the user.
 
@@ -396,6 +353,28 @@ Then, we can post the new UPMood object to the user's feed.
 }];
 ```
 
+## Custom Requests
+
+Custom API Requests can also be made using the `UPURLRequest` object, which is what the API Objects also use. This allows you to make a request to any endpoint, giving any parameters, and receiving a resulting JSON object. Here are a few examples:
+
+### Get the current user's information.
+
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me" params:nil];
+	
+    [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
+        // The resulting response.data is an NSDictionary with the JSON results
+    }];
+    
+### Post a new mood to UP.
+
+	NSDictionary *params = @{ @"title" : @"I feel great!", @"sub_type" : @(1), @"tz" : [NSTimeZone localTimeZone].name };
+	
+	UPURLRequest *request = [UPURLRequest postRequestWithEndpoint:@"nudge/api/users/@me/mood" params:params];
+	
+	[[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
+		// The resulting response.data is an NSDictionary describing the created mood
+	}];
+
 # Unit Tests
 
 The SDK ships with a suite of XCTest unit tests that cover the API functionality. You can run the tests by opening the UP iOSK SDK project in Xcode 5 and pressing <kbd>&#x2318;</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd>.
@@ -411,3 +390,7 @@ You can find additional Jawbone UP Platform documentation at <https://jawbone.co
 **Andy Roth**  
 Senior Software Engineer at Jawbone  
 Jawbone  
+
+# License
+
+[Sosumi](http://en.wikipedia.org/wiki/Sosumi)
