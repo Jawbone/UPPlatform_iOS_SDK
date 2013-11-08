@@ -34,11 +34,13 @@ You will need to have access to an existing Jawbone UP user account in order to 
 
 #### Obtain Your OAuth Credentials
 
-Go to [developers.jawbone.com](http://developers.jawbone.com) and sign in with your Jawbone UP account. If you don't already have a Jawbone UP account you can create one at [jawbone.com/start/signup](https://jawbone.com/start/signup).
+Sign into the [Jawbone UP Developer Portal](http://developers.jawbone.com) using your Jawbone UP account. If you do not have an account you can create one by going to [jawbone.com/start/signup](https://jawbone.com/start/signup).
 
-After you sign in press "Manage Account" and create a new organization, if necessary.  
+Register your organization by pressing "Manage Account".
 
-Finally, fill out the form to create a new app and get your **OAuth client ID** and **app secret** keys that you can now use to authenticate your iOS app with the UP Platform.
+Follow the instructions to create a new app and get your OAuth **Client ID** and **App Secret** keys that you will use to authenticate with the UP Platform.
+
+![image](Documentation/developer_snapshot.png)
 
 #### Download the Jawbone UP iOS SDK.
 
