@@ -44,10 +44,7 @@
     
     NSAssert(self.rootViewController != nil, @"Application must have a root view controller.");
     
-    NSString *imagePath = [[UPPlatform platformBundle] pathForResource:@"WebViewBackground" ofType:@"png"];
-    UIImage *backgroundImage = [UIImage imageWithContentsOfFile:imagePath];
-    
-    self.view.backgroundColor = [UIColor colorWithPatternImage:backgroundImage];
+    self.view.backgroundColor = [UIColor blackColor];
     self.view.frame = [UIScreen mainScreen].applicationFrame;
     
     UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
@@ -59,7 +56,7 @@
     
     self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height - 44)];
     self.webView.delegate = self;
-    self.webView.backgroundColor = [UIColor colorWithPatternImage:backgroundImage];
+    self.webView.backgroundColor = [UIColor blackColor];
 }
 
 - (void)show

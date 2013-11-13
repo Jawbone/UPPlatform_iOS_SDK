@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F84B5E71834167400F42E83 /* libUPPlatformSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F84B5E01834166800F42E83 /* libUPPlatformSDK.a */; };
 		E30CE43117591DF2001074DE /* JBWorkoutTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE43017591DF2001074DE /* JBWorkoutTestViewController.m */; };
 		E30CE435175926ED001074DE /* JBSleepTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE434175926EC001074DE /* JBSleepTestViewController.m */; };
 		E30CE43B17593961001074DE /* JBMealTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE43A17593961001074DE /* JBMealTestViewController.m */; };
@@ -23,8 +24,6 @@
 		E3B24E1B1756BA05008FCE06 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E3B24E1A1756BA05008FCE06 /* Default-568h@2x.png */; };
 		E3B24E1E1756BA05008FCE06 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B24E1C1756BA05008FCE06 /* MainStoryboard.storyboard */; };
 		E3B24E211756BA05008FCE06 /* JBLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24E201756BA05008FCE06 /* JBLandingViewController.m */; };
-		E3B24E311756BA5D008FCE06 /* libUPPlatformSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B24E301756BA50008FCE06 /* libUPPlatformSDK.a */; };
-		E3B24E331756BA7B008FCE06 /* UPPlatformSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E3B24E321756BA7B008FCE06 /* UPPlatformSDK.bundle */; };
 		E3B24E381756BD18008FCE06 /* JBUserTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24E371756BD18008FCE06 /* JBUserTestViewController.m */; };
 		E3B24E3B1756C399008FCE06 /* JBBaseTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24E3A1756C399008FCE06 /* JBBaseTestViewController.m */; };
 		E3B24E3E1756C410008FCE06 /* JBResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24E3D1756C410008FCE06 /* JBResultsViewController.m */; };
@@ -34,16 +33,38 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E3B24E2F1756BA50008FCE06 /* PBXContainerItemProxy */ = {
+		1F84B5DF1834166800F42E83 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E3B24E2B1756BA50008FCE06 /* UPPlatformSDK.xcodeproj */;
+			containerPortal = 1F84B5D91834166800F42E83 /* UPPlatformSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = E3E46C0017173670009CCA56;
+			remoteInfo = UPPlatformSDK;
+		};
+		1F84B5E11834166800F42E83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F84B5D91834166800F42E83 /* UPPlatformSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 48FA5F891768CA7900025723;
+			remoteInfo = "UPPlatformSDK-OSX";
+		};
+		1F84B5E31834166800F42E83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F84B5D91834166800F42E83 /* UPPlatformSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF3041791821FC5400903744;
+			remoteInfo = "UPPlatformSDK Tests";
+		};
+		1F84B5E51834167000F42E83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F84B5D91834166800F42E83 /* UPPlatformSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E3E46BFF17173670009CCA56;
 			remoteInfo = UPPlatformSDK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F84B5D91834166800F42E83 /* UPPlatformSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UPPlatformSDK.xcodeproj; path = ../../UPPlatformSDK/UPPlatformSDK.xcodeproj; sourceTree = "<group>"; };
 		E30CE42F17591DF2001074DE /* JBWorkoutTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBWorkoutTestViewController.h; sourceTree = "<group>"; };
 		E30CE43017591DF2001074DE /* JBWorkoutTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBWorkoutTestViewController.m; sourceTree = "<group>"; };
 		E30CE433175926EC001074DE /* JBSleepTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSleepTestViewController.h; sourceTree = "<group>"; };
@@ -70,8 +91,6 @@
 		E3B24E1D1756BA05008FCE06 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		E3B24E1F1756BA05008FCE06 /* JBLandingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JBLandingViewController.h; path = ../JBLandingViewController.h; sourceTree = "<group>"; };
 		E3B24E201756BA05008FCE06 /* JBLandingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JBLandingViewController.m; path = ../JBLandingViewController.m; sourceTree = "<group>"; };
-		E3B24E2B1756BA50008FCE06 /* UPPlatformSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UPPlatformSDK.xcodeproj; path = ../../UPPlatformSDK/UPPlatformSDK.xcodeproj; sourceTree = "<group>"; };
-		E3B24E321756BA7B008FCE06 /* UPPlatformSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = UPPlatformSDK.bundle; path = ../../UPPlatformSDK/UPPlatformSDK/UPPlatformSDK.bundle; sourceTree = "<group>"; };
 		E3B24E361756BD18008FCE06 /* JBUserTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBUserTestViewController.h; sourceTree = "<group>"; };
 		E3B24E371756BD18008FCE06 /* JBUserTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBUserTestViewController.m; sourceTree = "<group>"; };
 		E3B24E391756C399008FCE06 /* JBBaseTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBaseTestViewController.h; sourceTree = "<group>"; };
@@ -91,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3B24E311756BA5D008FCE06 /* libUPPlatformSDK.a in Frameworks */,
+				1F84B5E71834167400F42E83 /* libUPPlatformSDK.a in Frameworks */,
 				E3B24E051756BA05008FCE06 /* UIKit.framework in Frameworks */,
 				E3B24E071756BA05008FCE06 /* Foundation.framework in Frameworks */,
 				E3B24E091756BA05008FCE06 /* CoreGraphics.framework in Frameworks */,
@@ -101,6 +120,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F84B5DA1834166800F42E83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F84B5E01834166800F42E83 /* libUPPlatformSDK.a */,
+				1F84B5E21834166800F42E83 /* libUPPlatformSDK-OSX.a */,
+				1F84B5E41834166800F42E83 /* UPPlatformSDK Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E3B24DF81756BA05008FCE06 = {
 			isa = PBXGroup;
 			children = (
@@ -158,19 +187,10 @@
 		E3B24E2A1756BA48008FCE06 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
-				E3B24E321756BA7B008FCE06 /* UPPlatformSDK.bundle */,
-				E3B24E2B1756BA50008FCE06 /* UPPlatformSDK.xcodeproj */,
+				1F84B5D91834166800F42E83 /* UPPlatformSDK.xcodeproj */,
 			);
 			name = Platform;
 			path = PlatformTest;
-			sourceTree = "<group>";
-		};
-		E3B24E2C1756BA50008FCE06 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E3B24E301756BA50008FCE06 /* libUPPlatformSDK.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		E3B24E351756BD18008FCE06 /* Classes */ = {
@@ -218,6 +238,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1F84B5E61834167000F42E83 /* PBXTargetDependency */,
 			);
 			name = PlatformTest;
 			productName = PlatformTest;
@@ -246,8 +267,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = E3B24E2C1756BA50008FCE06 /* Products */;
-					ProjectRef = E3B24E2B1756BA50008FCE06 /* UPPlatformSDK.xcodeproj */;
+					ProductGroup = 1F84B5DA1834166800F42E83 /* Products */;
+					ProjectRef = 1F84B5D91834166800F42E83 /* UPPlatformSDK.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -258,11 +279,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E3B24E301756BA50008FCE06 /* libUPPlatformSDK.a */ = {
+		1F84B5E01834166800F42E83 /* libUPPlatformSDK.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libUPPlatformSDK.a;
-			remoteRef = E3B24E2F1756BA50008FCE06 /* PBXContainerItemProxy */;
+			remoteRef = 1F84B5DF1834166800F42E83 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1F84B5E21834166800F42E83 /* libUPPlatformSDK-OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libUPPlatformSDK-OSX.a";
+			remoteRef = 1F84B5E11834166800F42E83 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1F84B5E41834166800F42E83 /* UPPlatformSDK Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UPPlatformSDK Tests.xctest";
+			remoteRef = 1F84B5E31834166800F42E83 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -277,7 +312,6 @@
 				E3B24E191756BA05008FCE06 /* Default@2x.png in Resources */,
 				E3B24E1B1756BA05008FCE06 /* Default-568h@2x.png in Resources */,
 				E3B24E1E1756BA05008FCE06 /* MainStoryboard.storyboard in Resources */,
-				E3B24E331756BA7B008FCE06 /* UPPlatformSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +340,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F84B5E61834167000F42E83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UPPlatformSDK;
+			targetProxy = 1F84B5E51834167000F42E83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E3B24E0D1756BA05008FCE06 /* InfoPlist.strings */ = {

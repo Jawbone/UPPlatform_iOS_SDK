@@ -161,7 +161,6 @@
 		E3E46C24171736AE009CCA56 /* UPURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPURLResponse.m; sourceTree = "<group>"; };
 		E3E46C25171736AE009CCA56 /* UPUserAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPUserAPI.h; sourceTree = "<group>"; };
 		E3E46C26171736AE009CCA56 /* UPUserAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPUserAPI.m; sourceTree = "<group>"; };
-		E3E46C27171736AE009CCA56 /* UPPlatformSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UPPlatformSDK.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,7 +320,6 @@
 			isa = PBXGroup;
 			children = (
 				E3E46C11171736AE009CCA56 /* Classes */,
-				E3E46C27171736AE009CCA56 /* UPPlatformSDK.bundle */,
 				E3E46C0617173670009CCA56 /* Supporting Files */,
 			);
 			path = UPPlatformSDK;

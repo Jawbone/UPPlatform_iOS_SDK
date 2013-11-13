@@ -71,11 +71,6 @@ static UPPlatform *_instance = nil;
     return @"https://jawbone.com";
 }
 
-+ (NSBundle *)platformBundle
-{
-    return [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"UPPlatformSDK" withExtension:@"bundle"]];
-}
-
 #pragma mark - Auth Flow
 
 - (NSString *)existingAuthToken
