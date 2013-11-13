@@ -26,6 +26,25 @@
 		48FA5FD61768CB4B00025723 /* UPAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C16171736AE009CCA56 /* UPAuthViewController.m */; };
 		48FA5FD81768CB4B00025723 /* NSDate+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C13171736AE009CCA56 /* NSDate+UPPlatform.m */; };
 		48FA5FDA1768CB4B00025723 /* NSDictionary+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7111757C12C00118114 /* NSDictionary+UPPlatform.m */; };
+		BF0E75ED1833024B0088A315 /* UP.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C14171736AE009CCA56 /* UP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E75FD183303050088A315 /* UPPlatformSDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C0717173670009CCA56 /* UPPlatformSDK-Prefix.pch */; };
+		BF0E75FE1833031E0088A315 /* UPBaseEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C8A7161757D0FD00118114 /* UPBaseEventAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E76001833031E0088A315 /* UPUserAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C25171736AE009CCA56 /* UPUserAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E76021833031E0088A315 /* UPMoodAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C1B171736AE009CCA56 /* UPMoodAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E76041833031E0088A315 /* UPGenericEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C19171736AE009CCA56 /* UPGenericEventAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E76061833031E0088A315 /* UPBodyEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C8A7231757EBD900118114 /* UPBodyEventAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E76081833031E0088A315 /* UPCardiacEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3AB3E12175801A70066C3D7 /* UPCardiacEventAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E760A1833031E0088A315 /* UPMoveAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3AB3E18175806E00066C3D7 /* UPMoveAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E760C1833031E0088A315 /* UPWorkoutAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E30CE42C175916D8001074DE /* UPWorkoutAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E760E1833031E0088A315 /* UPSleepAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E30CE436175927BF001074DE /* UPSleepAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E76101833031E0088A315 /* UPMealAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E30CE43C175939EA001074DE /* UPMealAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E7612183303340088A315 /* UPPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C1D171736AE009CCA56 /* UPPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E7613183303340088A315 /* UPSession.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C1F171736AE009CCA56 /* UPSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E7614183303340088A315 /* UPURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C21171736AE009CCA56 /* UPURLRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E7615183303340088A315 /* UPURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C23171736AE009CCA56 /* UPURLResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E7616183303370088A315 /* UPAuthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C15171736AE009CCA56 /* UPAuthViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0E7617183303410088A315 /* NSDate+UPPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C12171736AE009CCA56 /* NSDate+UPPlatform.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		BF0E7618183303420088A315 /* NSDictionary+UPPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C8A7101757C12C00118114 /* NSDictionary+UPPlatform.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		BF30417A1821FC5400903744 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FA5F9B1768CA7900025723 /* XCTest.framework */; };
 		BF30417B1821FC5400903744 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E46C0317173670009CCA56 /* Foundation.framework */; };
 		BF30417D1821FC5400903744 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF30417C1821FC5400903744 /* UIKit.framework */; };
@@ -340,6 +359,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BF67966F1833022700E17BE4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0E75ED1833024B0088A315 /* UP.h in Headers */,
+				BF0E75FE1833031E0088A315 /* UPBaseEventAPI.h in Headers */,
+				BF0E76001833031E0088A315 /* UPUserAPI.h in Headers */,
+				BF0E76021833031E0088A315 /* UPMoodAPI.h in Headers */,
+				BF0E7612183303340088A315 /* UPPlatform.h in Headers */,
+				BF0E7613183303340088A315 /* UPSession.h in Headers */,
+				BF0E7614183303340088A315 /* UPURLRequest.h in Headers */,
+				BF0E7616183303370088A315 /* UPAuthViewController.h in Headers */,
+				BF0E7615183303340088A315 /* UPURLResponse.h in Headers */,
+				BF0E76041833031E0088A315 /* UPGenericEventAPI.h in Headers */,
+				BF0E76061833031E0088A315 /* UPBodyEventAPI.h in Headers */,
+				BF0E76081833031E0088A315 /* UPCardiacEventAPI.h in Headers */,
+				BF0E760A1833031E0088A315 /* UPMoveAPI.h in Headers */,
+				BF0E760C1833031E0088A315 /* UPWorkoutAPI.h in Headers */,
+				BF0E760E1833031E0088A315 /* UPSleepAPI.h in Headers */,
+				BF0E76101833031E0088A315 /* UPMealAPI.h in Headers */,
+				BF0E7617183303410088A315 /* NSDate+UPPlatform.h in Headers */,
+				BF0E7618183303420088A315 /* NSDictionary+UPPlatform.h in Headers */,
+				BF0E75FD183303050088A315 /* UPPlatformSDK-Prefix.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -385,6 +430,7 @@
 				E3E46BFC17173670009CCA56 /* Sources */,
 				E3E46BFD17173670009CCA56 /* Frameworks */,
 				E3E46BFE17173670009CCA56 /* CopyFiles */,
+				BF67966F1833022700E17BE4 /* Headers */,
 			);
 			buildRules = (
 			);
