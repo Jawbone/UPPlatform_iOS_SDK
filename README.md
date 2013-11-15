@@ -154,7 +154,7 @@ You can request a visualization of the user's moves data as a 560x300 PNG image 
 	// Your code here to process the graph image.
 }];
 ```
-*NOTE: This data is off Andrew's feed. I can take it off if he minds.*
+
 ### Get move intensity.
 ``` objective-c
 // TODO: How do you do this in code?
@@ -205,8 +205,6 @@ You can request a visualization of the user's workout data as a 560x300 PNG imag
 }];
 ```
 
-NOTE: This data is off Christian's feed. I can take it off if he minds.
-
 ### Get workout intensity.
 
 ``` objective-c
@@ -238,7 +236,7 @@ You can request a visualization of the user's sleep data as a 560x300 PNG image 
 	// Your code here to handle the graph image.
 }];
 ```
-*NOTE: This data is off Christian's feed. I can take it off if he minds.*
+
 ### Get sleep phases.
 ``` objective-c
 // TODO: What is the code here?
