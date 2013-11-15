@@ -10,8 +10,8 @@
 #import <UPPlatformSDK/UPPlatformSDK.h>
 
 // OAuth keys.
-NSString *const kAPIExplorerID = @"Z1ghuhmIQvA";
-NSString *const kAPIExplorerSecret = @"20105f7734c3daefa9d14321cc0c1eaaa2db9206";
+NSString *const kAPIExplorerID = @"3ZYR1YjGd3Q";
+NSString *const kAPIExplorerSecret = @"4dd5b10b3a3a16dbf3082c86d5faff09e11a682b";
 
 @interface HUViewController ()
 
