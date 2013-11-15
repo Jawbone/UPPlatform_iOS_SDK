@@ -43,7 +43,6 @@ typedef void(^UPPlatformRequestCompletion)(UPURLRequest *request, UPURLResponse 
 
 + (UPPlatform *)sharedPlatform;
 + (NSString *)basePlatformURL;
-+ (NSBundle *)platformBundle;
 
 - (void)validateSessionWithCompletion:(UPPlatformSessionCompletion)completion;
 
