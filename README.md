@@ -1,5 +1,5 @@
 ![image](https://d3osil7svxrrgt.cloudfront.net/static/www/logos/jawbone/jawbone-logo-lowres.png)
-# UP Platform iOS/OS X SDK
+# UP Platform iOS SDK
 
 ## Overview
 
