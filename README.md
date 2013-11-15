@@ -396,4 +396,4 @@ Jawbone
 
 # License
 
-[Sosumi](http://en.wikipedia.org/wiki/Sosumi)
+Usage is provided under the Apache License (v2.0). See LICENSE for full details.
