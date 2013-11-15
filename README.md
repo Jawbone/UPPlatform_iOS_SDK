@@ -3,7 +3,7 @@
 
 ## Overview
 
-This SDK provides an Objective-C interface for integrating iOS and Mac OS X apps with the [UP Platform](https://jawbone.com/up/platform). It handles authentication using OAuth 2.0 via a UIWebView and provides simple interfaces for making requests to the platform's REST endpoints.
+This SDK provides an Objective-C interface for integrating iOS apps with the [UP Platform](https://jawbone.com/up/platform). It handles authentication using OAuth 2.0 via a UIWebView and provides simple interfaces for making requests to the platform's REST endpoints.
 
 ## Requirements
 
@@ -56,29 +56,20 @@ http://github.com/jawbone/jawbone-up-ios-sdk/releases/1.0.0
 
 The Jawbone UP iOS SDK comes with a sample iOS app that you can use to authenticate with the UP Platform and start interacting with a Jawbone UP account.
 
-You can find and open the PlatformTest project in `UPPlatformSDK/PlatformTest/PlatformTest.xcodeproj`.
+You can find and open the PlatformTest project in `UPPlatformSDK/HelloUP/HelloUP.xcodeproj`.
 
 #### Add the SDK to Your Project
 
-* Drag `UPPlatformSDK.xcodeproj` into your own Xcode project or workspace.
+* Drag `UPPlatformSDK.framework` into Frameworks group inside your Xcode project or workspace.
 
-![image](Documentation/install_1.png)
+![image](Documentation/Framework.png)
 
-* Under Build Phases, add either `libUPPlatformSDK.a` or `libUPPlatformSDK-OSX.a` to the linked libraries, depending on your platform.
+* Under Build Settings, add `-ObjC` to Other Linker Flags.
 
-![image](Documentation/install_2.png)
+![image](Documentation/ObjC.png)
 
-* Under Build Settings, add the UPPlatformSDK (i.e. `../UPPlatformSDK/UPPlatformSDK`) directory to the Header Search Paths recursively.
-
-![image](Documentation/install_3.png)
-
-* Under Build Settings, add `-all_load` to Other Linker Flags.
-
-![image](Documentation/install_4.png)
-
-* Drag `UPPlatformSDK.bundle` into your project's resources.
-
-![image](Documentation/install_5.png)
+That's it!  
+Now just add `#import <UPPlatformSDK/UPPlatformSDK.h>` wherever you want to use the SDK in your project.
 
 # Documentation
 
