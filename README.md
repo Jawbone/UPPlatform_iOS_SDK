@@ -47,10 +47,10 @@ Follow the instructions to create a new app and get your OAuth **Client ID** and
 You can download the latest iOS SDK release via the link below or clone it directly from this GitHub repository.
 
 **Option 1:** Download UP iOS SDK v1.0.0 (November 2013)  
-http://github.com/jawbone/jawbone-up-ios-sdk/releases/1.0.0
+https://github.com/Jawbone/UPPlatformSDK/releases/tag/v0.1-alpha
 
 **Option 2:** Clone this repository from GitHub  
-`git clone git@github.com:Jawbone/jawbone-up-ios-sdk.git`
+`git clone git@github.com:Jawbone/UPPlatformSDK.git`
 
 #### Run the Sample App
 
