@@ -9,82 +9,103 @@
 /* Begin PBXBuildFile section */
 		1F971807177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 1F971806177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch */; };
 		48FA5F8B1768CA7900025723 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FA5F8A1768CA7900025723 /* Cocoa.framework */; };
-		48FA5FBA1768CB4B00025723 /* UPBaseEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7171757D0FD00118114 /* UPBaseEventAPI.m */; };
-		48FA5FBC1768CB4B00025723 /* UPUserAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C26171736AE009CCA56 /* UPUserAPI.m */; };
-		48FA5FBE1768CB4B00025723 /* UPMoodAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C1C171736AE009CCA56 /* UPMoodAPI.m */; };
-		48FA5FC01768CB4B00025723 /* UPGenericEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C1A171736AE009CCA56 /* UPGenericEventAPI.m */; };
-		48FA5FC21768CB4B00025723 /* UPBodyEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7241757EBDA00118114 /* UPBodyEventAPI.m */; };
-		48FA5FC41768CB4B00025723 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AB3E13175801A70066C3D7 /* UPCardiacEventAPI.m */; };
-		48FA5FC61768CB4B00025723 /* UPMoveAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AB3E19175806E00066C3D7 /* UPMoveAPI.m */; };
-		48FA5FC81768CB4B00025723 /* UPWorkoutAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE42D175916D8001074DE /* UPWorkoutAPI.m */; };
-		48FA5FCA1768CB4B00025723 /* UPSleepAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE437175927C0001074DE /* UPSleepAPI.m */; };
-		48FA5FCC1768CB4B00025723 /* UPMealAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE43D175939EB001074DE /* UPMealAPI.m */; };
-		48FA5FCE1768CB4B00025723 /* UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C1E171736AE009CCA56 /* UPPlatform.m */; };
-		48FA5FD01768CB4B00025723 /* UPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C20171736AE009CCA56 /* UPSession.m */; };
-		48FA5FD21768CB4B00025723 /* UPURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C22171736AE009CCA56 /* UPURLRequest.m */; };
-		48FA5FD41768CB4B00025723 /* UPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C24171736AE009CCA56 /* UPURLResponse.m */; };
-		48FA5FD61768CB4B00025723 /* UPAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C16171736AE009CCA56 /* UPAuthViewController.m */; };
-		48FA5FD81768CB4B00025723 /* NSDate+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C13171736AE009CCA56 /* NSDate+UPPlatform.m */; };
-		48FA5FDA1768CB4B00025723 /* NSDictionary+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7111757C12C00118114 /* NSDictionary+UPPlatform.m */; };
 		BF0E75ED1833024B0088A315 /* UP.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C14171736AE009CCA56 /* UP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF0E75FD183303050088A315 /* UPPlatformSDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C0717173670009CCA56 /* UPPlatformSDK-Prefix.pch */; };
 		BF0E75FE1833031E0088A315 /* UPBaseEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C8A7161757D0FD00118114 /* UPBaseEventAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E76001833031E0088A315 /* UPUserAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C25171736AE009CCA56 /* UPUserAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E76021833031E0088A315 /* UPMoodAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C1B171736AE009CCA56 /* UPMoodAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E76041833031E0088A315 /* UPGenericEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C19171736AE009CCA56 /* UPGenericEventAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E76061833031E0088A315 /* UPBodyEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C8A7231757EBD900118114 /* UPBodyEventAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E76081833031E0088A315 /* UPCardiacEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3AB3E12175801A70066C3D7 /* UPCardiacEventAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E760A1833031E0088A315 /* UPMoveAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E3AB3E18175806E00066C3D7 /* UPMoveAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E760C1833031E0088A315 /* UPWorkoutAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E30CE42C175916D8001074DE /* UPWorkoutAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E760E1833031E0088A315 /* UPSleepAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E30CE436175927BF001074DE /* UPSleepAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E76101833031E0088A315 /* UPMealAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E30CE43C175939EA001074DE /* UPMealAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E7612183303340088A315 /* UPPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C1D171736AE009CCA56 /* UPPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E7613183303340088A315 /* UPSession.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C1F171736AE009CCA56 /* UPSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E7614183303340088A315 /* UPURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C21171736AE009CCA56 /* UPURLRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E7615183303340088A315 /* UPURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C23171736AE009CCA56 /* UPURLResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E7616183303370088A315 /* UPAuthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C15171736AE009CCA56 /* UPAuthViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0E7617183303410088A315 /* NSDate+UPPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C12171736AE009CCA56 /* NSDate+UPPlatform.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		BF0E7618183303420088A315 /* NSDictionary+UPPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C8A7101757C12C00118114 /* NSDictionary+UPPlatform.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		BF30417A1821FC5400903744 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FA5F9B1768CA7900025723 /* XCTest.framework */; };
 		BF30417B1821FC5400903744 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E46C0317173670009CCA56 /* Foundation.framework */; };
 		BF30417D1821FC5400903744 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF30417C1821FC5400903744 /* UIKit.framework */; };
 		BF3041831821FC5400903744 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF3041811821FC5400903744 /* InfoPlist.strings */; };
 		BF3041851821FC5400903744 /* UPPlatformSDK_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3041841821FC5400903744 /* UPPlatformSDK_Tests.m */; };
-		BF30418C1821FD5D00903744 /* UPMealAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE43D175939EB001074DE /* UPMealAPI.m */; };
-		BF30418D1821FECC00903744 /* UPBaseEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7171757D0FD00118114 /* UPBaseEventAPI.m */; };
-		BF30418E1821FECE00903744 /* UPUserAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C26171736AE009CCA56 /* UPUserAPI.m */; };
-		BF30418F1821FED000903744 /* UPMoodAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C1C171736AE009CCA56 /* UPMoodAPI.m */; };
-		BF3041901821FED200903744 /* UPGenericEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C1A171736AE009CCA56 /* UPGenericEventAPI.m */; };
-		BF3041911821FED400903744 /* UPBodyEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7241757EBDA00118114 /* UPBodyEventAPI.m */; };
-		BF3041921821FED600903744 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AB3E13175801A70066C3D7 /* UPCardiacEventAPI.m */; };
-		BF3041931821FED800903744 /* UPMoveAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AB3E19175806E00066C3D7 /* UPMoveAPI.m */; };
-		BF3041941821FEDA00903744 /* UPWorkoutAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE42D175916D8001074DE /* UPWorkoutAPI.m */; };
-		BF3041951821FEDC00903744 /* UPSleepAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE437175927C0001074DE /* UPSleepAPI.m */; };
-		BF3041961821FEF000903744 /* UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C1E171736AE009CCA56 /* UPPlatform.m */; };
-		BF3041971821FEF300903744 /* UPURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C22171736AE009CCA56 /* UPURLRequest.m */; };
-		BF3041981821FF0600903744 /* UPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C24171736AE009CCA56 /* UPURLResponse.m */; };
-		BF3041991821FF0900903744 /* UPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C20171736AE009CCA56 /* UPSession.m */; };
-		BF30419A1821FF0E00903744 /* UPAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C16171736AE009CCA56 /* UPAuthViewController.m */; };
-		BF30419B1821FF1100903744 /* NSDate+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C13171736AE009CCA56 /* NSDate+UPPlatform.m */; };
-		BF30419C1821FF1300903744 /* NSDictionary+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7111757C12C00118114 /* NSDictionary+UPPlatform.m */; };
-		E30CE42E175916D8001074DE /* UPWorkoutAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE42D175916D8001074DE /* UPWorkoutAPI.m */; };
-		E30CE438175927C0001074DE /* UPSleepAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE437175927C0001074DE /* UPSleepAPI.m */; };
-		E30CE43E175939EB001074DE /* UPMealAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E30CE43D175939EB001074DE /* UPMealAPI.m */; };
-		E3AB3E14175801A70066C3D7 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AB3E13175801A70066C3D7 /* UPCardiacEventAPI.m */; };
-		E3AB3E1A175806E00066C3D7 /* UPMoveAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AB3E19175806E00066C3D7 /* UPMoveAPI.m */; };
-		E3C8A7121757C12C00118114 /* NSDictionary+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7111757C12C00118114 /* NSDictionary+UPPlatform.m */; };
-		E3C8A7181757D0FD00118114 /* UPBaseEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7171757D0FD00118114 /* UPBaseEventAPI.m */; };
-		E3C8A7251757EBDA00118114 /* UPBodyEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C8A7241757EBDA00118114 /* UPBodyEventAPI.m */; };
+		BF7FB2481837EA3F00F6A596 /* NSDate+UPPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2441837EA3F00F6A596 /* NSDate+UPPlatform.h */; };
+		BF7FB2491837EA3F00F6A596 /* NSDate+UPPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2441837EA3F00F6A596 /* NSDate+UPPlatform.h */; };
+		BF7FB24A1837EA3F00F6A596 /* NSDate+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2451837EA3F00F6A596 /* NSDate+UPPlatform.m */; };
+		BF7FB24B1837EA3F00F6A596 /* NSDate+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2451837EA3F00F6A596 /* NSDate+UPPlatform.m */; };
+		BF7FB24C1837EA3F00F6A596 /* NSDate+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2451837EA3F00F6A596 /* NSDate+UPPlatform.m */; };
+		BF7FB24D1837EA3F00F6A596 /* NSDictionary+UPPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2461837EA3F00F6A596 /* NSDictionary+UPPlatform.h */; };
+		BF7FB24E1837EA3F00F6A596 /* NSDictionary+UPPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2461837EA3F00F6A596 /* NSDictionary+UPPlatform.h */; };
+		BF7FB24F1837EA3F00F6A596 /* NSDictionary+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2471837EA3F00F6A596 /* NSDictionary+UPPlatform.m */; };
+		BF7FB2501837EA3F00F6A596 /* NSDictionary+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2471837EA3F00F6A596 /* NSDictionary+UPPlatform.m */; };
+		BF7FB2511837EA3F00F6A596 /* NSDictionary+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2471837EA3F00F6A596 /* NSDictionary+UPPlatform.m */; };
+		BF7FB2541837EA4E00F6A596 /* UPAuthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2521837EA4E00F6A596 /* UPAuthViewController.h */; };
+		BF7FB2551837EA4E00F6A596 /* UPAuthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2521837EA4E00F6A596 /* UPAuthViewController.h */; };
+		BF7FB2561837EA4E00F6A596 /* UPAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2531837EA4E00F6A596 /* UPAuthViewController.m */; };
+		BF7FB2571837EA4E00F6A596 /* UPAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2531837EA4E00F6A596 /* UPAuthViewController.m */; };
+		BF7FB2581837EA4E00F6A596 /* UPAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2531837EA4E00F6A596 /* UPAuthViewController.m */; };
+		BF7FB25B1837EA5700F6A596 /* UPPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2591837EA5700F6A596 /* UPPlatform.h */; };
+		BF7FB25C1837EA5700F6A596 /* UPPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2591837EA5700F6A596 /* UPPlatform.h */; };
+		BF7FB25D1837EA5700F6A596 /* UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB25A1837EA5700F6A596 /* UPPlatform.m */; };
+		BF7FB25E1837EA5700F6A596 /* UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB25A1837EA5700F6A596 /* UPPlatform.m */; };
+		BF7FB25F1837EA5700F6A596 /* UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB25A1837EA5700F6A596 /* UPPlatform.m */; };
+		BF7FB2621837EA6300F6A596 /* UPSession.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2601837EA6300F6A596 /* UPSession.h */; };
+		BF7FB2631837EA6300F6A596 /* UPSession.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2601837EA6300F6A596 /* UPSession.h */; };
+		BF7FB2641837EA6300F6A596 /* UPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2611837EA6300F6A596 /* UPSession.m */; };
+		BF7FB2651837EA6300F6A596 /* UPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2611837EA6300F6A596 /* UPSession.m */; };
+		BF7FB2661837EA6300F6A596 /* UPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2611837EA6300F6A596 /* UPSession.m */; };
+		BF7FB2691837EA6C00F6A596 /* UPURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2671837EA6C00F6A596 /* UPURLRequest.h */; };
+		BF7FB26A1837EA6C00F6A596 /* UPURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2671837EA6C00F6A596 /* UPURLRequest.h */; };
+		BF7FB26B1837EA6C00F6A596 /* UPURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2681837EA6C00F6A596 /* UPURLRequest.m */; };
+		BF7FB26C1837EA6C00F6A596 /* UPURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2681837EA6C00F6A596 /* UPURLRequest.m */; };
+		BF7FB26D1837EA6C00F6A596 /* UPURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2681837EA6C00F6A596 /* UPURLRequest.m */; };
+		BF7FB2701837EA7200F6A596 /* UPURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB26E1837EA7200F6A596 /* UPURLResponse.h */; };
+		BF7FB2711837EA7200F6A596 /* UPURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB26E1837EA7200F6A596 /* UPURLResponse.h */; };
+		BF7FB2721837EA7200F6A596 /* UPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB26F1837EA7200F6A596 /* UPURLResponse.m */; };
+		BF7FB2731837EA7200F6A596 /* UPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB26F1837EA7200F6A596 /* UPURLResponse.m */; };
+		BF7FB2741837EA7200F6A596 /* UPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB26F1837EA7200F6A596 /* UPURLResponse.m */; };
+		BF7FB2771837EA8800F6A596 /* UPMealAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2751837EA8800F6A596 /* UPMealAPI.h */; };
+		BF7FB2781837EA8800F6A596 /* UPMealAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2751837EA8800F6A596 /* UPMealAPI.h */; };
+		BF7FB2791837EA8800F6A596 /* UPMealAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2761837EA8800F6A596 /* UPMealAPI.m */; };
+		BF7FB27A1837EA8800F6A596 /* UPMealAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2761837EA8800F6A596 /* UPMealAPI.m */; };
+		BF7FB27B1837EA8800F6A596 /* UPMealAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2761837EA8800F6A596 /* UPMealAPI.m */; };
+		BF7FB27E1837EA8F00F6A596 /* UPSleepAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB27C1837EA8F00F6A596 /* UPSleepAPI.h */; };
+		BF7FB27F1837EA8F00F6A596 /* UPSleepAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB27C1837EA8F00F6A596 /* UPSleepAPI.h */; };
+		BF7FB2801837EA8F00F6A596 /* UPSleepAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB27D1837EA8F00F6A596 /* UPSleepAPI.m */; };
+		BF7FB2811837EA8F00F6A596 /* UPSleepAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB27D1837EA8F00F6A596 /* UPSleepAPI.m */; };
+		BF7FB2821837EA8F00F6A596 /* UPSleepAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB27D1837EA8F00F6A596 /* UPSleepAPI.m */; };
+		BF7FB2851837EA9900F6A596 /* UPWorkoutAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2831837EA9900F6A596 /* UPWorkoutAPI.h */; };
+		BF7FB2861837EA9900F6A596 /* UPWorkoutAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2831837EA9900F6A596 /* UPWorkoutAPI.h */; };
+		BF7FB2871837EA9900F6A596 /* UPWorkoutAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2841837EA9900F6A596 /* UPWorkoutAPI.m */; };
+		BF7FB2881837EA9900F6A596 /* UPWorkoutAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2841837EA9900F6A596 /* UPWorkoutAPI.m */; };
+		BF7FB2891837EA9900F6A596 /* UPWorkoutAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2841837EA9900F6A596 /* UPWorkoutAPI.m */; };
+		BF7FB28C1837EAA600F6A596 /* UPMoveAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB28A1837EAA600F6A596 /* UPMoveAPI.h */; };
+		BF7FB28D1837EAA600F6A596 /* UPMoveAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB28A1837EAA600F6A596 /* UPMoveAPI.h */; };
+		BF7FB28E1837EAA600F6A596 /* UPMoveAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB28B1837EAA600F6A596 /* UPMoveAPI.m */; };
+		BF7FB28F1837EAA600F6A596 /* UPMoveAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB28B1837EAA600F6A596 /* UPMoveAPI.m */; };
+		BF7FB2901837EAA600F6A596 /* UPMoveAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB28B1837EAA600F6A596 /* UPMoveAPI.m */; };
+		BF7FB2931837EAAE00F6A596 /* UPCardiacEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2911837EAAE00F6A596 /* UPCardiacEventAPI.h */; };
+		BF7FB2941837EAAE00F6A596 /* UPCardiacEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2911837EAAE00F6A596 /* UPCardiacEventAPI.h */; };
+		BF7FB2951837EAAE00F6A596 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2921837EAAE00F6A596 /* UPCardiacEventAPI.m */; };
+		BF7FB2961837EAAE00F6A596 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2921837EAAE00F6A596 /* UPCardiacEventAPI.m */; };
+		BF7FB2971837EAAE00F6A596 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2921837EAAE00F6A596 /* UPCardiacEventAPI.m */; };
+		BF7FB29A1837EABA00F6A596 /* UPBodyEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2981837EABA00F6A596 /* UPBodyEventAPI.h */; };
+		BF7FB29B1837EABA00F6A596 /* UPBodyEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2981837EABA00F6A596 /* UPBodyEventAPI.h */; };
+		BF7FB29C1837EABA00F6A596 /* UPBodyEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2991837EABA00F6A596 /* UPBodyEventAPI.m */; };
+		BF7FB29D1837EABA00F6A596 /* UPBodyEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2991837EABA00F6A596 /* UPBodyEventAPI.m */; };
+		BF7FB29E1837EABA00F6A596 /* UPBodyEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2991837EABA00F6A596 /* UPBodyEventAPI.m */; };
+		BF7FB2A11837EADD00F6A596 /* UPCardiacEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB29F1837EADD00F6A596 /* UPCardiacEventAPI.h */; };
+		BF7FB2A21837EADD00F6A596 /* UPCardiacEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB29F1837EADD00F6A596 /* UPCardiacEventAPI.h */; };
+		BF7FB2A31837EADD00F6A596 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2A01837EADD00F6A596 /* UPCardiacEventAPI.m */; };
+		BF7FB2A41837EADD00F6A596 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2A01837EADD00F6A596 /* UPCardiacEventAPI.m */; };
+		BF7FB2A51837EADD00F6A596 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2A01837EADD00F6A596 /* UPCardiacEventAPI.m */; };
+		BF7FB2A81837EAE400F6A596 /* UPGenericEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2A61837EAE400F6A596 /* UPGenericEventAPI.h */; };
+		BF7FB2A91837EAE400F6A596 /* UPGenericEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2A61837EAE400F6A596 /* UPGenericEventAPI.h */; };
+		BF7FB2AA1837EAE400F6A596 /* UPGenericEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2A71837EAE400F6A596 /* UPGenericEventAPI.m */; };
+		BF7FB2AB1837EAE400F6A596 /* UPGenericEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2A71837EAE400F6A596 /* UPGenericEventAPI.m */; };
+		BF7FB2AC1837EAE400F6A596 /* UPGenericEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2A71837EAE400F6A596 /* UPGenericEventAPI.m */; };
+		BF7FB2AF1837EAEC00F6A596 /* UPMoodAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2AD1837EAEC00F6A596 /* UPMoodAPI.h */; };
+		BF7FB2B01837EAEC00F6A596 /* UPMoodAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2AD1837EAEC00F6A596 /* UPMoodAPI.h */; };
+		BF7FB2B11837EAEC00F6A596 /* UPMoodAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2AE1837EAEC00F6A596 /* UPMoodAPI.m */; };
+		BF7FB2B21837EAEC00F6A596 /* UPMoodAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2AE1837EAEC00F6A596 /* UPMoodAPI.m */; };
+		BF7FB2B31837EAEC00F6A596 /* UPMoodAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2AE1837EAEC00F6A596 /* UPMoodAPI.m */; };
+		BF7FB2B61837EAF400F6A596 /* UPUserAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2B41837EAF400F6A596 /* UPUserAPI.h */; };
+		BF7FB2B71837EAF400F6A596 /* UPUserAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2B41837EAF400F6A596 /* UPUserAPI.h */; };
+		BF7FB2B81837EAF400F6A596 /* UPUserAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2B51837EAF400F6A596 /* UPUserAPI.m */; };
+		BF7FB2B91837EAF400F6A596 /* UPUserAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2B51837EAF400F6A596 /* UPUserAPI.m */; };
+		BF7FB2BA1837EAF400F6A596 /* UPUserAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2B51837EAF400F6A596 /* UPUserAPI.m */; };
+		BF7FB2BC1837EAFE00F6A596 /* UPBaseEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2BB1837EAFE00F6A596 /* UPBaseEventAPI.m */; };
+		BF7FB2BD1837EAFE00F6A596 /* UPBaseEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2BB1837EAFE00F6A596 /* UPBaseEventAPI.m */; };
+		BF7FB2BE1837EAFE00F6A596 /* UPBaseEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2BB1837EAFE00F6A596 /* UPBaseEventAPI.m */; };
 		E3E46C0417173670009CCA56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E46C0317173670009CCA56 /* Foundation.framework */; };
-		E3E46C28171736AE009CCA56 /* NSDate+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C13171736AE009CCA56 /* NSDate+UPPlatform.m */; };
-		E3E46C29171736AE009CCA56 /* UPAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C16171736AE009CCA56 /* UPAuthViewController.m */; };
-		E3E46C2B171736AE009CCA56 /* UPGenericEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C1A171736AE009CCA56 /* UPGenericEventAPI.m */; };
-		E3E46C2C171736AE009CCA56 /* UPMoodAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C1C171736AE009CCA56 /* UPMoodAPI.m */; };
-		E3E46C2D171736AE009CCA56 /* UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C1E171736AE009CCA56 /* UPPlatform.m */; };
-		E3E46C2E171736AE009CCA56 /* UPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C20171736AE009CCA56 /* UPSession.m */; };
-		E3E46C2F171736AE009CCA56 /* UPURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C22171736AE009CCA56 /* UPURLRequest.m */; };
-		E3E46C30171736AE009CCA56 /* UPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C24171736AE009CCA56 /* UPURLResponse.m */; };
-		E3E46C31171736AE009CCA56 /* UPUserAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E46C26171736AE009CCA56 /* UPUserAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,44 +144,46 @@
 		BF3041821821FC5400903744 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BF3041841821FC5400903744 /* UPPlatformSDK_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UPPlatformSDK_Tests.m; sourceTree = "<group>"; };
 		BF3041861821FC5400903744 /* UPPlatformSDK Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UPPlatformSDK Tests-Prefix.pch"; sourceTree = "<group>"; };
-		E30CE42C175916D8001074DE /* UPWorkoutAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPWorkoutAPI.h; sourceTree = "<group>"; };
-		E30CE42D175916D8001074DE /* UPWorkoutAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPWorkoutAPI.m; sourceTree = "<group>"; };
-		E30CE436175927BF001074DE /* UPSleepAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPSleepAPI.h; sourceTree = "<group>"; };
-		E30CE437175927C0001074DE /* UPSleepAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPSleepAPI.m; sourceTree = "<group>"; };
-		E30CE43C175939EA001074DE /* UPMealAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPMealAPI.h; sourceTree = "<group>"; };
-		E30CE43D175939EB001074DE /* UPMealAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPMealAPI.m; sourceTree = "<group>"; };
-		E3AB3E12175801A70066C3D7 /* UPCardiacEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPCardiacEventAPI.h; sourceTree = "<group>"; };
-		E3AB3E13175801A70066C3D7 /* UPCardiacEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPCardiacEventAPI.m; sourceTree = "<group>"; };
-		E3AB3E18175806E00066C3D7 /* UPMoveAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPMoveAPI.h; sourceTree = "<group>"; };
-		E3AB3E19175806E00066C3D7 /* UPMoveAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPMoveAPI.m; sourceTree = "<group>"; };
-		E3C8A7101757C12C00118114 /* NSDictionary+UPPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+UPPlatform.h"; sourceTree = "<group>"; };
-		E3C8A7111757C12C00118114 /* NSDictionary+UPPlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+UPPlatform.m"; sourceTree = "<group>"; };
-		E3C8A7161757D0FD00118114 /* UPBaseEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPBaseEventAPI.h; sourceTree = "<group>"; };
-		E3C8A7171757D0FD00118114 /* UPBaseEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPBaseEventAPI.m; sourceTree = "<group>"; };
-		E3C8A7231757EBD900118114 /* UPBodyEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPBodyEventAPI.h; sourceTree = "<group>"; };
-		E3C8A7241757EBDA00118114 /* UPBodyEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPBodyEventAPI.m; sourceTree = "<group>"; };
+		BF7FB2441837EA3F00F6A596 /* NSDate+UPPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+UPPlatform.h"; path = "UPPlatformSDK/NSDate+UPPlatform.h"; sourceTree = SOURCE_ROOT; };
+		BF7FB2451837EA3F00F6A596 /* NSDate+UPPlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+UPPlatform.m"; path = "UPPlatformSDK/NSDate+UPPlatform.m"; sourceTree = SOURCE_ROOT; };
+		BF7FB2461837EA3F00F6A596 /* NSDictionary+UPPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+UPPlatform.h"; path = "UPPlatformSDK/NSDictionary+UPPlatform.h"; sourceTree = SOURCE_ROOT; };
+		BF7FB2471837EA3F00F6A596 /* NSDictionary+UPPlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+UPPlatform.m"; path = "UPPlatformSDK/NSDictionary+UPPlatform.m"; sourceTree = SOURCE_ROOT; };
+		BF7FB2521837EA4E00F6A596 /* UPAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPAuthViewController.h; path = UPPlatformSDK/UPAuthViewController.h; sourceTree = SOURCE_ROOT; };
+		BF7FB2531837EA4E00F6A596 /* UPAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPAuthViewController.m; path = UPPlatformSDK/UPAuthViewController.m; sourceTree = SOURCE_ROOT; };
+		BF7FB2591837EA5700F6A596 /* UPPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPPlatform.h; path = UPPlatformSDK/UPPlatform.h; sourceTree = SOURCE_ROOT; };
+		BF7FB25A1837EA5700F6A596 /* UPPlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPPlatform.m; path = UPPlatformSDK/UPPlatform.m; sourceTree = SOURCE_ROOT; };
+		BF7FB2601837EA6300F6A596 /* UPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPSession.h; path = UPPlatformSDK/UPSession.h; sourceTree = SOURCE_ROOT; };
+		BF7FB2611837EA6300F6A596 /* UPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPSession.m; path = UPPlatformSDK/UPSession.m; sourceTree = SOURCE_ROOT; };
+		BF7FB2671837EA6C00F6A596 /* UPURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPURLRequest.h; path = UPPlatformSDK/UPURLRequest.h; sourceTree = SOURCE_ROOT; };
+		BF7FB2681837EA6C00F6A596 /* UPURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPURLRequest.m; path = UPPlatformSDK/UPURLRequest.m; sourceTree = SOURCE_ROOT; };
+		BF7FB26E1837EA7200F6A596 /* UPURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPURLResponse.h; path = UPPlatformSDK/UPURLResponse.h; sourceTree = SOURCE_ROOT; };
+		BF7FB26F1837EA7200F6A596 /* UPURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPURLResponse.m; path = UPPlatformSDK/UPURLResponse.m; sourceTree = SOURCE_ROOT; };
+		BF7FB2751837EA8800F6A596 /* UPMealAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPMealAPI.h; path = UPPlatformSDK/UPMealAPI.h; sourceTree = SOURCE_ROOT; };
+		BF7FB2761837EA8800F6A596 /* UPMealAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPMealAPI.m; path = UPPlatformSDK/UPMealAPI.m; sourceTree = SOURCE_ROOT; };
+		BF7FB27C1837EA8F00F6A596 /* UPSleepAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPSleepAPI.h; path = UPPlatformSDK/UPSleepAPI.h; sourceTree = SOURCE_ROOT; };
+		BF7FB27D1837EA8F00F6A596 /* UPSleepAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPSleepAPI.m; path = UPPlatformSDK/UPSleepAPI.m; sourceTree = SOURCE_ROOT; };
+		BF7FB2831837EA9900F6A596 /* UPWorkoutAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPWorkoutAPI.h; path = UPPlatformSDK/UPWorkoutAPI.h; sourceTree = SOURCE_ROOT; };
+		BF7FB2841837EA9900F6A596 /* UPWorkoutAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPWorkoutAPI.m; path = UPPlatformSDK/UPWorkoutAPI.m; sourceTree = SOURCE_ROOT; };
+		BF7FB28A1837EAA600F6A596 /* UPMoveAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPMoveAPI.h; path = UPPlatformSDK/UPMoveAPI.h; sourceTree = SOURCE_ROOT; };
+		BF7FB28B1837EAA600F6A596 /* UPMoveAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPMoveAPI.m; path = UPPlatformSDK/UPMoveAPI.m; sourceTree = SOURCE_ROOT; };
+		BF7FB2911837EAAE00F6A596 /* UPCardiacEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPCardiacEventAPI.h; path = UPPlatformSDK/UPCardiacEventAPI.h; sourceTree = SOURCE_ROOT; };
+		BF7FB2921837EAAE00F6A596 /* UPCardiacEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPCardiacEventAPI.m; path = UPPlatformSDK/UPCardiacEventAPI.m; sourceTree = SOURCE_ROOT; };
+		BF7FB2981837EABA00F6A596 /* UPBodyEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPBodyEventAPI.h; path = UPPlatformSDK/UPBodyEventAPI.h; sourceTree = SOURCE_ROOT; };
+		BF7FB2991837EABA00F6A596 /* UPBodyEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPBodyEventAPI.m; path = UPPlatformSDK/UPBodyEventAPI.m; sourceTree = SOURCE_ROOT; };
+		BF7FB29F1837EADD00F6A596 /* UPCardiacEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPCardiacEventAPI.h; path = UPPlatformSDK/UPCardiacEventAPI.h; sourceTree = SOURCE_ROOT; };
+		BF7FB2A01837EADD00F6A596 /* UPCardiacEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPCardiacEventAPI.m; path = UPPlatformSDK/UPCardiacEventAPI.m; sourceTree = SOURCE_ROOT; };
+		BF7FB2A61837EAE400F6A596 /* UPGenericEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPGenericEventAPI.h; path = UPPlatformSDK/UPGenericEventAPI.h; sourceTree = SOURCE_ROOT; };
+		BF7FB2A71837EAE400F6A596 /* UPGenericEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPGenericEventAPI.m; path = UPPlatformSDK/UPGenericEventAPI.m; sourceTree = SOURCE_ROOT; };
+		BF7FB2AD1837EAEC00F6A596 /* UPMoodAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPMoodAPI.h; path = UPPlatformSDK/UPMoodAPI.h; sourceTree = SOURCE_ROOT; };
+		BF7FB2AE1837EAEC00F6A596 /* UPMoodAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPMoodAPI.m; path = UPPlatformSDK/UPMoodAPI.m; sourceTree = SOURCE_ROOT; };
+		BF7FB2B41837EAF400F6A596 /* UPUserAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPUserAPI.h; path = UPPlatformSDK/UPUserAPI.h; sourceTree = SOURCE_ROOT; };
+		BF7FB2B51837EAF400F6A596 /* UPUserAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPUserAPI.m; path = UPPlatformSDK/UPUserAPI.m; sourceTree = SOURCE_ROOT; };
+		BF7FB2BB1837EAFE00F6A596 /* UPBaseEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPBaseEventAPI.m; path = UPPlatformSDK/UPBaseEventAPI.m; sourceTree = SOURCE_ROOT; };
+		E3C8A7161757D0FD00118114 /* UPBaseEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPBaseEventAPI.h; path = UPPlatformSDK/UPBaseEventAPI.h; sourceTree = "<group>"; };
 		E3E46C0017173670009CCA56 /* libUPPlatformSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUPPlatformSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E46C0317173670009CCA56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E3E46C0717173670009CCA56 /* UPPlatformSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UPPlatformSDK-Prefix.pch"; sourceTree = "<group>"; };
-		E3E46C12171736AE009CCA56 /* NSDate+UPPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+UPPlatform.h"; sourceTree = "<group>"; };
-		E3E46C13171736AE009CCA56 /* NSDate+UPPlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+UPPlatform.m"; sourceTree = "<group>"; };
-		E3E46C14171736AE009CCA56 /* UP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UP.h; sourceTree = "<group>"; };
-		E3E46C15171736AE009CCA56 /* UPAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPAuthViewController.h; sourceTree = "<group>"; };
-		E3E46C16171736AE009CCA56 /* UPAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPAuthViewController.m; sourceTree = "<group>"; };
-		E3E46C19171736AE009CCA56 /* UPGenericEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPGenericEventAPI.h; sourceTree = "<group>"; };
-		E3E46C1A171736AE009CCA56 /* UPGenericEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPGenericEventAPI.m; sourceTree = "<group>"; };
-		E3E46C1B171736AE009CCA56 /* UPMoodAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPMoodAPI.h; sourceTree = "<group>"; };
-		E3E46C1C171736AE009CCA56 /* UPMoodAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPMoodAPI.m; sourceTree = "<group>"; };
-		E3E46C1D171736AE009CCA56 /* UPPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPlatform.h; sourceTree = "<group>"; };
-		E3E46C1E171736AE009CCA56 /* UPPlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPPlatform.m; sourceTree = "<group>"; };
-		E3E46C1F171736AE009CCA56 /* UPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPSession.h; sourceTree = "<group>"; };
-		E3E46C20171736AE009CCA56 /* UPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPSession.m; sourceTree = "<group>"; };
-		E3E46C21171736AE009CCA56 /* UPURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPURLRequest.h; sourceTree = "<group>"; };
-		E3E46C22171736AE009CCA56 /* UPURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPURLRequest.m; sourceTree = "<group>"; };
-		E3E46C23171736AE009CCA56 /* UPURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPURLResponse.h; sourceTree = "<group>"; };
-		E3E46C24171736AE009CCA56 /* UPURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPURLResponse.m; sourceTree = "<group>"; };
-		E3E46C25171736AE009CCA56 /* UPUserAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPUserAPI.h; sourceTree = "<group>"; };
-		E3E46C26171736AE009CCA56 /* UPUserAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPUserAPI.m; sourceTree = "<group>"; };
+		E3E46C14171736AE009CCA56 /* UP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UP.h; path = UPPlatformSDK/UP.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,14 +248,14 @@
 		E32E1BB9171768510007D731 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E3E46C1D171736AE009CCA56 /* UPPlatform.h */,
-				E3E46C1E171736AE009CCA56 /* UPPlatform.m */,
-				E3E46C1F171736AE009CCA56 /* UPSession.h */,
-				E3E46C20171736AE009CCA56 /* UPSession.m */,
-				E3E46C21171736AE009CCA56 /* UPURLRequest.h */,
-				E3E46C22171736AE009CCA56 /* UPURLRequest.m */,
-				E3E46C23171736AE009CCA56 /* UPURLResponse.h */,
-				E3E46C24171736AE009CCA56 /* UPURLResponse.m */,
+				BF7FB2591837EA5700F6A596 /* UPPlatform.h */,
+				BF7FB25A1837EA5700F6A596 /* UPPlatform.m */,
+				BF7FB2601837EA6300F6A596 /* UPSession.h */,
+				BF7FB2611837EA6300F6A596 /* UPSession.m */,
+				BF7FB2671837EA6C00F6A596 /* UPURLRequest.h */,
+				BF7FB2681837EA6C00F6A596 /* UPURLRequest.m */,
+				BF7FB26E1837EA7200F6A596 /* UPURLResponse.h */,
+				BF7FB26F1837EA7200F6A596 /* UPURLResponse.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -240,10 +263,10 @@
 		E32E1BBA171768640007D731 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				E3E46C12171736AE009CCA56 /* NSDate+UPPlatform.h */,
-				E3E46C13171736AE009CCA56 /* NSDate+UPPlatform.m */,
-				E3C8A7101757C12C00118114 /* NSDictionary+UPPlatform.h */,
-				E3C8A7111757C12C00118114 /* NSDictionary+UPPlatform.m */,
+				BF7FB2441837EA3F00F6A596 /* NSDate+UPPlatform.h */,
+				BF7FB2451837EA3F00F6A596 /* NSDate+UPPlatform.m */,
+				BF7FB2461837EA3F00F6A596 /* NSDictionary+UPPlatform.h */,
+				BF7FB2471837EA3F00F6A596 /* NSDictionary+UPPlatform.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -251,8 +274,8 @@
 		E32E1BBB171768710007D731 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E3E46C15171736AE009CCA56 /* UPAuthViewController.h */,
-				E3E46C16171736AE009CCA56 /* UPAuthViewController.m */,
+				BF7FB2521837EA4E00F6A596 /* UPAuthViewController.h */,
+				BF7FB2531837EA4E00F6A596 /* UPAuthViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -261,25 +284,27 @@
 			isa = PBXGroup;
 			children = (
 				E3C8A7161757D0FD00118114 /* UPBaseEventAPI.h */,
-				E3C8A7171757D0FD00118114 /* UPBaseEventAPI.m */,
-				E3E46C25171736AE009CCA56 /* UPUserAPI.h */,
-				E3E46C26171736AE009CCA56 /* UPUserAPI.m */,
-				E3E46C1B171736AE009CCA56 /* UPMoodAPI.h */,
-				E3E46C1C171736AE009CCA56 /* UPMoodAPI.m */,
-				E3E46C19171736AE009CCA56 /* UPGenericEventAPI.h */,
-				E3E46C1A171736AE009CCA56 /* UPGenericEventAPI.m */,
-				E3C8A7231757EBD900118114 /* UPBodyEventAPI.h */,
-				E3C8A7241757EBDA00118114 /* UPBodyEventAPI.m */,
-				E3AB3E12175801A70066C3D7 /* UPCardiacEventAPI.h */,
-				E3AB3E13175801A70066C3D7 /* UPCardiacEventAPI.m */,
-				E3AB3E18175806E00066C3D7 /* UPMoveAPI.h */,
-				E3AB3E19175806E00066C3D7 /* UPMoveAPI.m */,
-				E30CE42C175916D8001074DE /* UPWorkoutAPI.h */,
-				E30CE42D175916D8001074DE /* UPWorkoutAPI.m */,
-				E30CE436175927BF001074DE /* UPSleepAPI.h */,
-				E30CE437175927C0001074DE /* UPSleepAPI.m */,
-				E30CE43C175939EA001074DE /* UPMealAPI.h */,
-				E30CE43D175939EB001074DE /* UPMealAPI.m */,
+				BF7FB2BB1837EAFE00F6A596 /* UPBaseEventAPI.m */,
+				BF7FB2B41837EAF400F6A596 /* UPUserAPI.h */,
+				BF7FB2B51837EAF400F6A596 /* UPUserAPI.m */,
+				BF7FB2AD1837EAEC00F6A596 /* UPMoodAPI.h */,
+				BF7FB2AE1837EAEC00F6A596 /* UPMoodAPI.m */,
+				BF7FB2A61837EAE400F6A596 /* UPGenericEventAPI.h */,
+				BF7FB2A71837EAE400F6A596 /* UPGenericEventAPI.m */,
+				BF7FB29F1837EADD00F6A596 /* UPCardiacEventAPI.h */,
+				BF7FB2A01837EADD00F6A596 /* UPCardiacEventAPI.m */,
+				BF7FB2981837EABA00F6A596 /* UPBodyEventAPI.h */,
+				BF7FB2991837EABA00F6A596 /* UPBodyEventAPI.m */,
+				BF7FB2911837EAAE00F6A596 /* UPCardiacEventAPI.h */,
+				BF7FB2921837EAAE00F6A596 /* UPCardiacEventAPI.m */,
+				BF7FB28A1837EAA600F6A596 /* UPMoveAPI.h */,
+				BF7FB28B1837EAA600F6A596 /* UPMoveAPI.m */,
+				BF7FB2831837EA9900F6A596 /* UPWorkoutAPI.h */,
+				BF7FB2841837EA9900F6A596 /* UPWorkoutAPI.m */,
+				BF7FB27C1837EA8F00F6A596 /* UPSleepAPI.h */,
+				BF7FB27D1837EA8F00F6A596 /* UPSleepAPI.m */,
+				BF7FB2751837EA8800F6A596 /* UPMealAPI.h */,
+				BF7FB2761837EA8800F6A596 /* UPMealAPI.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -353,7 +378,24 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7FB2631837EA6300F6A596 /* UPSession.h in Headers */,
+				BF7FB2A21837EADD00F6A596 /* UPCardiacEventAPI.h in Headers */,
 				1F971807177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch in Headers */,
+				BF7FB2B71837EAF400F6A596 /* UPUserAPI.h in Headers */,
+				BF7FB2B01837EAEC00F6A596 /* UPMoodAPI.h in Headers */,
+				BF7FB2781837EA8800F6A596 /* UPMealAPI.h in Headers */,
+				BF7FB2941837EAAE00F6A596 /* UPCardiacEventAPI.h in Headers */,
+				BF7FB28D1837EAA600F6A596 /* UPMoveAPI.h in Headers */,
+				BF7FB26A1837EA6C00F6A596 /* UPURLRequest.h in Headers */,
+				BF7FB2A91837EAE400F6A596 /* UPGenericEventAPI.h in Headers */,
+				BF7FB27F1837EA8F00F6A596 /* UPSleepAPI.h in Headers */,
+				BF7FB24E1837EA3F00F6A596 /* NSDictionary+UPPlatform.h in Headers */,
+				BF7FB2711837EA7200F6A596 /* UPURLResponse.h in Headers */,
+				BF7FB25C1837EA5700F6A596 /* UPPlatform.h in Headers */,
+				BF7FB2551837EA4E00F6A596 /* UPAuthViewController.h in Headers */,
+				BF7FB2861837EA9900F6A596 /* UPWorkoutAPI.h in Headers */,
+				BF7FB2491837EA3F00F6A596 /* NSDate+UPPlatform.h in Headers */,
+				BF7FB29B1837EABA00F6A596 /* UPBodyEventAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,23 +404,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF0E75ED1833024B0088A315 /* UP.h in Headers */,
+				BF7FB2A11837EADD00F6A596 /* UPCardiacEventAPI.h in Headers */,
+				BF7FB29A1837EABA00F6A596 /* UPBodyEventAPI.h in Headers */,
+				BF7FB2931837EAAE00F6A596 /* UPCardiacEventAPI.h in Headers */,
+				BF7FB2691837EA6C00F6A596 /* UPURLRequest.h in Headers */,
 				BF0E75FE1833031E0088A315 /* UPBaseEventAPI.h in Headers */,
-				BF0E76001833031E0088A315 /* UPUserAPI.h in Headers */,
-				BF0E76021833031E0088A315 /* UPMoodAPI.h in Headers */,
-				BF0E7612183303340088A315 /* UPPlatform.h in Headers */,
-				BF0E7613183303340088A315 /* UPSession.h in Headers */,
-				BF0E7614183303340088A315 /* UPURLRequest.h in Headers */,
-				BF0E7616183303370088A315 /* UPAuthViewController.h in Headers */,
-				BF0E7615183303340088A315 /* UPURLResponse.h in Headers */,
-				BF0E76041833031E0088A315 /* UPGenericEventAPI.h in Headers */,
-				BF0E76061833031E0088A315 /* UPBodyEventAPI.h in Headers */,
-				BF0E76081833031E0088A315 /* UPCardiacEventAPI.h in Headers */,
-				BF0E760A1833031E0088A315 /* UPMoveAPI.h in Headers */,
-				BF0E760C1833031E0088A315 /* UPWorkoutAPI.h in Headers */,
-				BF0E760E1833031E0088A315 /* UPSleepAPI.h in Headers */,
-				BF0E76101833031E0088A315 /* UPMealAPI.h in Headers */,
-				BF0E7617183303410088A315 /* NSDate+UPPlatform.h in Headers */,
-				BF0E7618183303420088A315 /* NSDictionary+UPPlatform.h in Headers */,
+				BF7FB28C1837EAA600F6A596 /* UPMoveAPI.h in Headers */,
+				BF7FB2621837EA6300F6A596 /* UPSession.h in Headers */,
+				BF7FB2541837EA4E00F6A596 /* UPAuthViewController.h in Headers */,
+				BF7FB24D1837EA3F00F6A596 /* NSDictionary+UPPlatform.h in Headers */,
+				BF7FB25B1837EA5700F6A596 /* UPPlatform.h in Headers */,
+				BF7FB2771837EA8800F6A596 /* UPMealAPI.h in Headers */,
+				BF7FB2701837EA7200F6A596 /* UPURLResponse.h in Headers */,
+				BF7FB2A81837EAE400F6A596 /* UPGenericEventAPI.h in Headers */,
+				BF7FB2B61837EAF400F6A596 /* UPUserAPI.h in Headers */,
+				BF7FB2AF1837EAEC00F6A596 /* UPMoodAPI.h in Headers */,
+				BF7FB2851837EA9900F6A596 /* UPWorkoutAPI.h in Headers */,
+				BF7FB27E1837EA8F00F6A596 /* UPSleepAPI.h in Headers */,
+				BF7FB2481837EA3F00F6A596 /* NSDate+UPPlatform.h in Headers */,
 				BF0E75FD183303050088A315 /* UPPlatformSDK-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,23 +531,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48FA5FBA1768CB4B00025723 /* UPBaseEventAPI.m in Sources */,
-				48FA5FBC1768CB4B00025723 /* UPUserAPI.m in Sources */,
-				48FA5FBE1768CB4B00025723 /* UPMoodAPI.m in Sources */,
-				48FA5FC01768CB4B00025723 /* UPGenericEventAPI.m in Sources */,
-				48FA5FC21768CB4B00025723 /* UPBodyEventAPI.m in Sources */,
-				48FA5FC41768CB4B00025723 /* UPCardiacEventAPI.m in Sources */,
-				48FA5FC61768CB4B00025723 /* UPMoveAPI.m in Sources */,
-				48FA5FC81768CB4B00025723 /* UPWorkoutAPI.m in Sources */,
-				48FA5FCA1768CB4B00025723 /* UPSleepAPI.m in Sources */,
-				48FA5FCC1768CB4B00025723 /* UPMealAPI.m in Sources */,
-				48FA5FCE1768CB4B00025723 /* UPPlatform.m in Sources */,
-				48FA5FD01768CB4B00025723 /* UPSession.m in Sources */,
-				48FA5FD21768CB4B00025723 /* UPURLRequest.m in Sources */,
-				48FA5FD41768CB4B00025723 /* UPURLResponse.m in Sources */,
-				48FA5FD61768CB4B00025723 /* UPAuthViewController.m in Sources */,
-				48FA5FD81768CB4B00025723 /* NSDate+UPPlatform.m in Sources */,
-				48FA5FDA1768CB4B00025723 /* NSDictionary+UPPlatform.m in Sources */,
+				BF7FB24B1837EA3F00F6A596 /* NSDate+UPPlatform.m in Sources */,
+				BF7FB2811837EA8F00F6A596 /* UPSleepAPI.m in Sources */,
+				BF7FB2AB1837EAE400F6A596 /* UPGenericEventAPI.m in Sources */,
+				BF7FB2B91837EAF400F6A596 /* UPUserAPI.m in Sources */,
+				BF7FB2651837EA6300F6A596 /* UPSession.m in Sources */,
+				BF7FB2501837EA3F00F6A596 /* NSDictionary+UPPlatform.m in Sources */,
+				BF7FB2BD1837EAFE00F6A596 /* UPBaseEventAPI.m in Sources */,
+				BF7FB2881837EA9900F6A596 /* UPWorkoutAPI.m in Sources */,
+				BF7FB2961837EAAE00F6A596 /* UPCardiacEventAPI.m in Sources */,
+				BF7FB2A41837EADD00F6A596 /* UPCardiacEventAPI.m in Sources */,
+				BF7FB29D1837EABA00F6A596 /* UPBodyEventAPI.m in Sources */,
+				BF7FB2571837EA4E00F6A596 /* UPAuthViewController.m in Sources */,
+				BF7FB25E1837EA5700F6A596 /* UPPlatform.m in Sources */,
+				BF7FB27A1837EA8800F6A596 /* UPMealAPI.m in Sources */,
+				BF7FB2731837EA7200F6A596 /* UPURLResponse.m in Sources */,
+				BF7FB28F1837EAA600F6A596 /* UPMoveAPI.m in Sources */,
+				BF7FB2B21837EAEC00F6A596 /* UPMoodAPI.m in Sources */,
+				BF7FB26C1837EA6C00F6A596 /* UPURLRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,24 +556,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF3041911821FED400903744 /* UPBodyEventAPI.m in Sources */,
-				BF30418F1821FED000903744 /* UPMoodAPI.m in Sources */,
-				BF30418E1821FECE00903744 /* UPUserAPI.m in Sources */,
-				BF3041981821FF0600903744 /* UPURLResponse.m in Sources */,
-				BF3041901821FED200903744 /* UPGenericEventAPI.m in Sources */,
-				BF30418C1821FD5D00903744 /* UPMealAPI.m in Sources */,
-				BF3041951821FEDC00903744 /* UPSleepAPI.m in Sources */,
-				BF30419A1821FF0E00903744 /* UPAuthViewController.m in Sources */,
+				BF7FB2BA1837EAF400F6A596 /* UPUserAPI.m in Sources */,
+				BF7FB2B31837EAEC00F6A596 /* UPMoodAPI.m in Sources */,
+				BF7FB2741837EA7200F6A596 /* UPURLResponse.m in Sources */,
+				BF7FB27B1837EA8800F6A596 /* UPMealAPI.m in Sources */,
+				BF7FB2901837EAA600F6A596 /* UPMoveAPI.m in Sources */,
+				BF7FB2821837EA8F00F6A596 /* UPSleepAPI.m in Sources */,
+				BF7FB26D1837EA6C00F6A596 /* UPURLRequest.m in Sources */,
+				BF7FB2BE1837EAFE00F6A596 /* UPBaseEventAPI.m in Sources */,
 				BF3041851821FC5400903744 /* UPPlatformSDK_Tests.m in Sources */,
-				BF3041971821FEF300903744 /* UPURLRequest.m in Sources */,
-				BF30419C1821FF1300903744 /* NSDictionary+UPPlatform.m in Sources */,
-				BF3041931821FED800903744 /* UPMoveAPI.m in Sources */,
-				BF30419B1821FF1100903744 /* NSDate+UPPlatform.m in Sources */,
-				BF3041921821FED600903744 /* UPCardiacEventAPI.m in Sources */,
-				BF3041961821FEF000903744 /* UPPlatform.m in Sources */,
-				BF3041991821FF0900903744 /* UPSession.m in Sources */,
-				BF30418D1821FECC00903744 /* UPBaseEventAPI.m in Sources */,
-				BF3041941821FEDA00903744 /* UPWorkoutAPI.m in Sources */,
+				BF7FB25F1837EA5700F6A596 /* UPPlatform.m in Sources */,
+				BF7FB2511837EA3F00F6A596 /* NSDictionary+UPPlatform.m in Sources */,
+				BF7FB2661837EA6300F6A596 /* UPSession.m in Sources */,
+				BF7FB2891837EA9900F6A596 /* UPWorkoutAPI.m in Sources */,
+				BF7FB2971837EAAE00F6A596 /* UPCardiacEventAPI.m in Sources */,
+				BF7FB29E1837EABA00F6A596 /* UPBodyEventAPI.m in Sources */,
+				BF7FB2AC1837EAE400F6A596 /* UPGenericEventAPI.m in Sources */,
+				BF7FB2A51837EADD00F6A596 /* UPCardiacEventAPI.m in Sources */,
+				BF7FB2581837EA4E00F6A596 /* UPAuthViewController.m in Sources */,
+				BF7FB24C1837EA3F00F6A596 /* NSDate+UPPlatform.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,23 +582,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3E46C28171736AE009CCA56 /* NSDate+UPPlatform.m in Sources */,
-				E3E46C29171736AE009CCA56 /* UPAuthViewController.m in Sources */,
-				E3E46C2B171736AE009CCA56 /* UPGenericEventAPI.m in Sources */,
-				E3E46C2C171736AE009CCA56 /* UPMoodAPI.m in Sources */,
-				E3E46C2D171736AE009CCA56 /* UPPlatform.m in Sources */,
-				E3E46C2E171736AE009CCA56 /* UPSession.m in Sources */,
-				E3E46C2F171736AE009CCA56 /* UPURLRequest.m in Sources */,
-				E3E46C30171736AE009CCA56 /* UPURLResponse.m in Sources */,
-				E3E46C31171736AE009CCA56 /* UPUserAPI.m in Sources */,
-				E3C8A7121757C12C00118114 /* NSDictionary+UPPlatform.m in Sources */,
-				E3C8A7181757D0FD00118114 /* UPBaseEventAPI.m in Sources */,
-				E3C8A7251757EBDA00118114 /* UPBodyEventAPI.m in Sources */,
-				E3AB3E14175801A70066C3D7 /* UPCardiacEventAPI.m in Sources */,
-				E3AB3E1A175806E00066C3D7 /* UPMoveAPI.m in Sources */,
-				E30CE42E175916D8001074DE /* UPWorkoutAPI.m in Sources */,
-				E30CE438175927C0001074DE /* UPSleepAPI.m in Sources */,
-				E30CE43E175939EB001074DE /* UPMealAPI.m in Sources */,
+				BF7FB24A1837EA3F00F6A596 /* NSDate+UPPlatform.m in Sources */,
+				BF7FB2801837EA8F00F6A596 /* UPSleepAPI.m in Sources */,
+				BF7FB2AA1837EAE400F6A596 /* UPGenericEventAPI.m in Sources */,
+				BF7FB2641837EA6300F6A596 /* UPSession.m in Sources */,
+				BF7FB2B81837EAF400F6A596 /* UPUserAPI.m in Sources */,
+				BF7FB24F1837EA3F00F6A596 /* NSDictionary+UPPlatform.m in Sources */,
+				BF7FB2561837EA4E00F6A596 /* UPAuthViewController.m in Sources */,
+				BF7FB2BC1837EAFE00F6A596 /* UPBaseEventAPI.m in Sources */,
+				BF7FB25D1837EA5700F6A596 /* UPPlatform.m in Sources */,
+				BF7FB2871837EA9900F6A596 /* UPWorkoutAPI.m in Sources */,
+				BF7FB2A31837EADD00F6A596 /* UPCardiacEventAPI.m in Sources */,
+				BF7FB29C1837EABA00F6A596 /* UPBodyEventAPI.m in Sources */,
+				BF7FB2951837EAAE00F6A596 /* UPCardiacEventAPI.m in Sources */,
+				BF7FB2791837EA8800F6A596 /* UPMealAPI.m in Sources */,
+				BF7FB2721837EA7200F6A596 /* UPURLResponse.m in Sources */,
+				BF7FB28E1837EAA600F6A596 /* UPMoveAPI.m in Sources */,
+				BF7FB2B11837EAEC00F6A596 /* UPMoodAPI.m in Sources */,
+				BF7FB26B1837EA6C00F6A596 /* UPURLRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
