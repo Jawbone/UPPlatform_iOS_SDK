@@ -80,8 +80,6 @@
         self.view.transform = CGAffineTransformMakeScale(0.1, 0.1);
     } completion:^(BOOL finished) {
         [self.view removeFromSuperview];
-        [self.webView loadRequest:nil];
-        
         if (completion) completion();
     }];
 }
