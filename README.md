@@ -27,6 +27,9 @@ You will need to have access to an existing Jawbone UP user account in order to 
   - [Workouts](#workouts)
 - [Unit Tests](#unit-tests)
 - [Additional Resources](#additional-resources)
+- [Terms of Service](#terms-of-service)
+- [API Status](#api-status)
+- [Support](#support)
 - [Credits](#credits)
 - [License](#license)
 
@@ -354,6 +357,27 @@ The SDK ships with a suite of XCTest unit tests that cover the API functionality
 # Additional Resources
 
 You can find additional Jawbone UP Platform documentation at <https://jawbone.com/up/platform>.
+
+# Terms of Service
+
+Key principles governing the use of the UP API:
+
+* The data belongs to the user. We are stewards of the data and have an obligation to protect it and use it responsibly.
+* Data can only be collected with explicit user permission. Only collect what you need and only use it as you say you will.
+* User must have a mechanism to disable access and to request that any collected data be deleted.
+* Use of the UP API is governed by the [UP API Terms Of Service](https://jawbone.com/up/developer/terms). 
+
+By using the API, you agree to the TOS, available for your review.
+
+# API Status
+
+Please visit UP Platform's [status page](http://status.jawbone.com/) to see the platform status updated in real-time.
+
+# Support
+
+Follow us on Twitter [@JawboneDev](https://twitter.com/jawbonedev) to get the latest news and updates regarding the API.
+
+Contact the developer support team by sending an email to apisupport@jawbone.com.
 
 # Credits
 
