@@ -94,8 +94,6 @@ Once a valid session has been established, there are a few ways to create API re
 
 To validate that an existing session is still valid, call `validateSessionWithCompletion:`. If the `session` object passed to the completion block is not `nil`, the session is valid and API requests can be made.
 
-*NOTE: I only added this because when requesting tokens from multiple clients (i.e. Simulator and iPhone), the previously requested tokens become invalid. We should fix this.*
-
 ## User Information
 
 *NOTE: All units (weight, distance) are in metric.*
@@ -139,12 +137,6 @@ To validate that an existing session is still valid, call `validateSessionWithCo
 }];
 ```
 
-### Get the information about a specific move.
-
-``` objective-c
-// TODO: What is the code here?
-```
-
 ### Get the user's move graph.
 ![image](Documentation/moves.png)
 
@@ -153,11 +145,6 @@ You can request a visualization of the user's moves data as a 560x300 PNG image 
 [UPMoveAPI getMoveGraphImage:move completion:^(UIImage *image) {
 	// Your code here to process the graph image.
 }];
-```
-
-### Get move intensity.
-``` objective-c
-// TODO: How do you do this in code?
 ```
 
 ## Workouts
@@ -205,12 +192,6 @@ You can request a visualization of the user's workout data as a 560x300 PNG imag
 }];
 ```
 
-### Get workout intensity.
-
-``` objective-c
-// TODO: What is the code here?
-```
-
 ## Sleeps
 
 ### Get the user's recent sleep events.
@@ -219,12 +200,6 @@ You can request a visualization of the user's workout data as a 560x300 PNG imag
 [UPSleepAPI getSleepsWithLimit:10U completion:^(NSArray *sleeps, UPURLResponse *response, NSError *error) {
 	// Your code here to process an array of UISleep objects.
 }];
-```
-
-### Get the information about a specific sleep event.
-
-``` objective-c
-// TODO: What is the code here?
 ```
 
 ### Get the user's sleep graph.
@@ -237,10 +212,6 @@ You can request a visualization of the user's sleep data as a 560x300 PNG image 
 }];
 ```
 
-### Get sleep phases.
-``` objective-c
-// TODO: What is the code here?
-```
 ## Meals
 
 ### Get the user's recent meal events.
