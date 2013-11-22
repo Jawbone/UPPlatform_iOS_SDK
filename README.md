@@ -257,7 +257,7 @@ UPMeal *meal = [UPMeal mealWithTitle:@"Delicious Granola Bar"
                                 note:@"It was tasty" 
                                items:@[item]];
                                
-meal.photoURL = @"@"YOUR_PHOTO_URL.png";
+meal.photoURL = @"YOUR_PHOTO_URL.png";
 ```
 
 Finally, let's post a new event on the user's feed with our new meal!
