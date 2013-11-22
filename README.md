@@ -172,7 +172,7 @@ UPWorkout *workout = [UPWorkout workoutWithType:UPWorkoutTypeBike
                                  caloriesBurned:@300];
                                  
 workout.distance = @7;
-workout.imageURL = @"http://jaredsurnamer.files.wordpress.com/2011/11/116223-magic-marker-icon-sports-hobbies-people-man-runner.png";
+workout.imageURL = @"YOUR_IMAGE_URL.png";
 ```
 
 We can then post this workout event to the user's feed.
@@ -257,7 +257,7 @@ UPMeal *meal = [UPMeal mealWithTitle:@"Delicious Granola Bar"
                                 note:@"It was tasty" 
                                items:@[item]];
                                
-meal.photoURL = @"http://studylogic.net/wp-content/uploads/2013/01/burger.jpg";
+meal.photoURL = @"@"YOUR_PHOTO_URL.png";
 ```
 
 Finally, let's post a new event on the user's feed with our new meal!
