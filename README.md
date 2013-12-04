@@ -3,7 +3,7 @@
 
 ## Overview
 
-This SDK provides an Objective-C interface for integrating iOS apps with the [UP Platform](https://jawbone.com/up/platform). It handles authentication using OAuth 2.0 via a UIWebView and provides simple interfaces for making requests to the platform's REST endpoints.
+This SDK provides an Objective-C interface for integrating iOS apps with the [UP Platform](https://jawbone.com/up/developer). It handles authentication using OAuth 2.0 via a UIWebView and provides simple interfaces for making requests to the platform's REST endpoints.
 
 ## Requirements
 
@@ -356,7 +356,7 @@ The SDK ships with a suite of XCTest unit tests that cover the API functionality
 
 # Additional Resources
 
-You can find additional Jawbone UP Platform documentation at <https://jawbone.com/up/platform>.
+You can find additional Jawbone UP Platform documentation at <https://jawbone.com/up/developer>.
 
 # Terms of Service
 
