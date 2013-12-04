@@ -17,6 +17,8 @@
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) NSURL *authURL;
 
+@property (nonatomic, strong) NSString *redirectURIScheme;
+
 @end
 
 @implementation UPAuthViewController
@@ -57,6 +59,9 @@
     self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height - 44)];
     self.webView.delegate = self;
     self.webView.backgroundColor = [UIColor blackColor];
+    
+    NSURL *url = [NSURL URLWithString:[UPPlatform sharedPlatform].redirectURI];
+    self.redirectURIScheme = url.scheme;
 }
 
 - (void)show
@@ -113,7 +118,7 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    if ([request.URL.scheme isEqualToString:@"up-platform"])
+    if ([request.URL.scheme isEqualToString:self.redirectURIScheme])
     {
         NSString *query = request.URL.query;
         NSString *code = [query stringByReplacingOccurrencesOfString:@"code=" withString:@""];

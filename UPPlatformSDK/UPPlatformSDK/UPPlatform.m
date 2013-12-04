@@ -14,6 +14,8 @@
 #import "UPURLResponse.h"
 #import "UPUserAPI.h"
 
+NSString * const kUPPlatformDefaultRedirectURI = @"up-platform://redirect";
+
 #if !(!TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR)
 @interface UPPlatform () <UPAuthViewControllerDelegate>
 #else
@@ -24,6 +26,7 @@
 
 @property (nonatomic, strong) NSString *clientID;
 @property (nonatomic, strong) NSString *clientSecret;
+@property (nonatomic, strong) NSString *redirectURI;
 
 @property (nonatomic, copy) UPPlatformSessionCompletion sessionCompletion;
 
@@ -141,7 +144,7 @@ static UPPlatform *_instance = nil;
         [self.authWindow makeKeyAndOrderFront:nil];
     }
     
-    NSMutableString *authURLString = [NSMutableString stringWithFormat:@"%@/auth/oauth2/auth?response_type=code&client_id=%@&scope=%@&redirect_uri=%@", [UPPlatform basePlatformURL], self.clientID, [self stringFromAuthScope:authScope], @"up-platform://redirect"];
+    NSMutableString *authURLString = [NSMutableString stringWithFormat:@"%@/auth/oauth2/auth?response_type=code&client_id=%@&scope=%@&redirect_uri=%@", [UPPlatform basePlatformURL], self.clientID, [self stringFromAuthScope:authScope], kUPPlatformDefaultRedirectURI];
 	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:authURLString]];
 	request.HTTPShouldHandleCookies = NO;
 	[webView setFrameLoadDelegate:self];
@@ -199,6 +202,11 @@ static UPPlatform *_instance = nil;
 
 - (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret authScope:(UPPlatformAuthScope)authScope completion:(UPPlatformSessionCompletion)completion
 {
+    [self startSessionWithClientID:clientID clientSecret:clientSecret authScope:authScope redirectURI:kUPPlatformDefaultRedirectURI completion:completion];
+}
+
+- (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret authScope:(UPPlatformAuthScope)authScope redirectURI:(NSString *)redirectURI completion:(UPPlatformSessionCompletion)completion
+{
     self.sessionCompletion = completion;
     self.clientID = clientID;
     self.clientSecret = clientSecret;
@@ -211,7 +219,8 @@ static UPPlatform *_instance = nil;
         return;
     }
     
-    NSMutableString *authURLString = [NSMutableString stringWithFormat:@"%@/auth/oauth2/auth?response_type=code&client_id=%@&scope=%@&redirect_uri=%@", [UPPlatform basePlatformURL], self.clientID, [self stringFromAuthScope:authScope], @"up-platform://redirect"];
+    self.redirectURI = redirectURI;
+    NSMutableString *authURLString = [NSMutableString stringWithFormat:@"%@/auth/oauth2/auth?response_type=code&client_id=%@&scope=%@&redirect_uri=%@", [UPPlatform basePlatformURL], self.clientID, [self stringFromAuthScope:authScope], redirectURI];
     
     self.authViewController = [[UPAuthViewController alloc] initWithURL:[NSURL URLWithString:authURLString] delegate:self];
     [self.authViewController show];
