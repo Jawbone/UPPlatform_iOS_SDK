@@ -21,10 +21,14 @@ You will need to have access to an existing Jawbone UP user account in order to 
 - [Documentation](#documentation)
   - [Authentication](#authentication)
   - [User](#user-information)
-  - [Sleep](#sleeps)
-  - [Mood](#moods)
-  - [Meals](#meals)
   - [Workouts](#workouts)
+  - [Sleep](#sleeps)
+  - [Meals](#meals)
+  - [Moods](#moods)
+  - [Cardiac](#cardiac)
+  - [Body](#body)
+  - [Generic](#generic)
+  - [Custom Requests](#custom-requests)
 - [Unit Tests](#unit-tests)
 - [Additional Resources](#additional-resources)
 - [Terms of Service](#terms-of-service)
@@ -307,10 +311,12 @@ Then, we can post the new UPMood object to the user's feed.
 }];
 ```
 
-### Get a mood event.
+### Get the user's current mood.
 
 ``` objective-c
-// TODO: What is the code here?
+[UPMoodAPI getCurrentMoodWithCompletion:^(UPMood *mood, UPURLResponse *response, NSError *error) {
+        // Your code goes here.
+}];
 ```
 
 ### Delete a mood event.
@@ -319,6 +325,126 @@ Then, we can post the new UPMood object to the user's feed.
 [UPMoodAPI deleteMood:mood completion:^(id result, UPURLResponse *response, NSError *error) {
 	// Your code goes here.
 }];
+
+
+```
+## Cardiac
+
+To create a new cardiac event we first need to create a new UPCardiacEvent object.
+
+``` objective-c
+UPCardiacEvent *cardiacEvent = [UPCardiacEvent eventWithTitle:@"Run"
+                                                    heartRate:@120
+                                             systolicPressure:@120
+                                            diastolicPressure:@80
+                                                         note:@"Good weather."
+                                                        image:nil];
+```
+
+Then, we can post the new UPCardiacEvent object to the user's feed.
+
+``` objective-c
+[UPCardiacEventAPI postCardiacEvent:cardiacEvent
+                         completion:^(UPCardiacEvent *event, UPURLResponse *response, NSError *error) {
+                                     
+                         }];
+```
+
+### Request recent cardiac events.
+
+``` objective-c
+[UPCardiacEventAPI getCardiacEventsWithCompletion:^(NSArray *results, UPURLResponse *response, NSError *error) {
+        // Your code goes here.
+}];
+```
+
+
+### Delete a cardiac event.
+
+``` objective-c
+[UPCardiacEventAPI deleteCardiacEvent:event
+                           completion:^(id result, UPURLResponse *response, NSError *error) {
+                           	// Your code goes here.
+                           }};
+```
+
+## Body
+
+To create a new body event we first need to create a new UPBodyEvent object.
+
+``` objective-c
+UPBodyEvent *bodyEvent = [UPBodyEvent eventWithTitle:@"Morning start."
+                                              weight:@70
+                                             bodyFat:@0.14f
+                                            leanMass:@29.5f
+                                                 bmi:@18.5f
+                                                note:@"Good progress."
+                                               image:nil];
+```
+
+Then, we can post the new UPBodyEvent object to the user's feed.
+
+``` objective-c
+[UPBodyEventAPI postBodyEvent:bodyEvent
+                   completion:^(UPBodyEvent *event, UPURLResponse *response, NSError *error) {
+                   // Your code goes here.
+}];
+```
+
+### Request recent body events.
+
+``` objective-c
+[UPBodyEventAPI getBodyEventsWithCompletion:^(NSArray *results, UPURLResponse *response, NSError *error) 
+      // Your code goes here.
+}];
+```
+
+
+### Delete a body event.
+
+``` objective-c
+[UPBodyEventAPI deleteBodyEvent:bodyEvent
+                     completion:^(id result, UPURLResponse *response, NSError *error) {
+                             // Your code goes here.
+                     }];
+```
+
+## Generic
+
+To create a new generic event we first need to create a new UPGenericEvent object.
+
+``` objective-c
+UPGenericEvent *genericEvent = [UPGenericEvent eventWithTitle:@"Good deed."
+                                                         verb:@"Done well."
+                                                   attributes:@{}
+                                                         note:@"Indeed."
+                                                        image:nil];
+```
+
+Then, we can post the new UPGenericEvent object to the user's feed.
+
+``` objective-c
+[UPGenericEventAPI postGenericEvent:genericEvent
+                             completion:^(UPGenericEvent *event, UPURLResponse *response, NSError *error) {
+                                   // Your code goes here.
+}];
+```
+
+### Request recent generic events.
+
+``` objective-c
+[UPGenericEventAPI getGenericEventsWithCompletion:^(NSArray *results, UPURLResponse *response, NSError *error) {
+     // Your code goes here.
+}];
+```
+
+### Delete a generic event.
+
+``` objective-c
+[UPGenericEventAPI deleteGenericEvent:genericEvent
+                           completion:^(id result, UPURLResponse *response, NSError *error) {
+                               // Your code goes here.
+                           }];
 ```
 
 ## Custom Requests
