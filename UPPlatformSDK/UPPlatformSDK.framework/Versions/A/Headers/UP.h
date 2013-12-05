@@ -1,12 +1,11 @@
 //
-//  UPPlatformSDK.h
-//  UPPlatformSDK
+//  UP.h
+//  PlatformSDK
 //
-//  Created by Shadow on 11/13/13.
+//  Created by Andy Roth on 4/7/13.
 //  Copyright (c) 2013 Jawbone. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "UPPlatform.h"
 #import "UPSession.h"
 #import "UPURLRequest.h"
@@ -20,7 +19,3 @@
 #import "UPWorkoutAPI.h"
 #import "UPSleepAPI.h"
 #import "UPMealAPI.h"
-
-@interface UPPlatformSDK : NSObject
-
-@end
