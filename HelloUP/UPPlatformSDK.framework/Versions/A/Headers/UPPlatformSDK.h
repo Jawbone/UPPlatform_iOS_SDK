@@ -2,7 +2,7 @@
 //  UPPlatformSDK.h
 //  UPPlatformSDK
 //
-//  Created by Kyrylo Zdornyy on 12/4/13.
+//  Created by Shadow on 11/13/13.
 //  Copyright (c) 2013 Jawbone. All rights reserved.
 //
 
