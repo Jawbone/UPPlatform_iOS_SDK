@@ -43,6 +43,8 @@ Register your organization by pressing "Manage Account".
 
 Follow the instructions to create a new app and get your OAuth **Client ID** and **App Secret** keys that you will use to authenticate with the UP Platform.
 
+Specify your custom redirect URI in the "OAuth Redirect URI" field or use the default value `up-platform://redirect`.  
+
 ![image](Documentation/developer_snapshot.png)
 
 #### Download the Jawbone UP iOS SDK.
@@ -78,7 +80,10 @@ Now just add `#import <UPPlatformSDK/UPPlatformSDK.h>` wherever you want to use 
 
 ## Authentication
 
-Authentication is handled using the shared `UPPlatform` object. To start a new session, use the `startSessionWithClientID:clientSecret:authScope:completion:` method.
+Authentication is handled using the shared `UPPlatform` object. To start a new session, use the `startSessionWithClientID:clientSecret:authScope:completion:` method.  
+
+*NOTE: If you specified a custom redirect URI for your app in the [Jawbone UP Developer Portal](http://developers.jawbone.com) you can specify it using the `startSessionWithClientID:clientSecret:authScope:redirectURI:completion:` method instead.*  
+
 
 ``` objective-c
 [[UPPlatform sharedPlatform] startSessionWithClientID:@"MY_CLIENT_ID"
