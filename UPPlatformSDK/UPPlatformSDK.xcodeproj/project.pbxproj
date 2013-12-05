@@ -78,9 +78,6 @@
 		BF7FB29C1837EABA00F6A596 /* UPBodyEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2991837EABA00F6A596 /* UPBodyEventAPI.m */; };
 		BF7FB29D1837EABA00F6A596 /* UPBodyEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2991837EABA00F6A596 /* UPBodyEventAPI.m */; };
 		BF7FB29E1837EABA00F6A596 /* UPBodyEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2991837EABA00F6A596 /* UPBodyEventAPI.m */; };
-		BF7FB2A11837EADD00F6A596 /* UPCardiacEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB29F1837EADD00F6A596 /* UPCardiacEventAPI.h */; };
-		BF7FB2A21837EADD00F6A596 /* UPCardiacEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB29F1837EADD00F6A596 /* UPCardiacEventAPI.h */; };
-		BF7FB2A31837EADD00F6A596 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2A01837EADD00F6A596 /* UPCardiacEventAPI.m */; };
 		BF7FB2A81837EAE400F6A596 /* UPGenericEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2A61837EAE400F6A596 /* UPGenericEventAPI.h */; };
 		BF7FB2A91837EAE400F6A596 /* UPGenericEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2A61837EAE400F6A596 /* UPGenericEventAPI.h */; };
 		BF7FB2AA1837EAE400F6A596 /* UPGenericEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2A71837EAE400F6A596 /* UPGenericEventAPI.m */; };
@@ -166,8 +163,6 @@
 		BF7FB2921837EAAE00F6A596 /* UPCardiacEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPCardiacEventAPI.m; path = UPPlatformSDK/UPCardiacEventAPI.m; sourceTree = SOURCE_ROOT; };
 		BF7FB2981837EABA00F6A596 /* UPBodyEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPBodyEventAPI.h; path = UPPlatformSDK/UPBodyEventAPI.h; sourceTree = SOURCE_ROOT; };
 		BF7FB2991837EABA00F6A596 /* UPBodyEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPBodyEventAPI.m; path = UPPlatformSDK/UPBodyEventAPI.m; sourceTree = SOURCE_ROOT; };
-		BF7FB29F1837EADD00F6A596 /* UPCardiacEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPCardiacEventAPI.h; path = UPPlatformSDK/UPCardiacEventAPI.h; sourceTree = SOURCE_ROOT; };
-		BF7FB2A01837EADD00F6A596 /* UPCardiacEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPCardiacEventAPI.m; path = UPPlatformSDK/UPCardiacEventAPI.m; sourceTree = SOURCE_ROOT; };
 		BF7FB2A61837EAE400F6A596 /* UPGenericEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPGenericEventAPI.h; path = UPPlatformSDK/UPGenericEventAPI.h; sourceTree = SOURCE_ROOT; };
 		BF7FB2A71837EAE400F6A596 /* UPGenericEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPGenericEventAPI.m; path = UPPlatformSDK/UPGenericEventAPI.m; sourceTree = SOURCE_ROOT; };
 		BF7FB2AD1837EAEC00F6A596 /* UPMoodAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPMoodAPI.h; path = UPPlatformSDK/UPMoodAPI.h; sourceTree = SOURCE_ROOT; };
@@ -286,8 +281,6 @@
 				BF7FB2AE1837EAEC00F6A596 /* UPMoodAPI.m */,
 				BF7FB2A61837EAE400F6A596 /* UPGenericEventAPI.h */,
 				BF7FB2A71837EAE400F6A596 /* UPGenericEventAPI.m */,
-				BF7FB29F1837EADD00F6A596 /* UPCardiacEventAPI.h */,
-				BF7FB2A01837EADD00F6A596 /* UPCardiacEventAPI.m */,
 				BF7FB2981837EABA00F6A596 /* UPBodyEventAPI.h */,
 				BF7FB2991837EABA00F6A596 /* UPBodyEventAPI.m */,
 				BF7FB2911837EAAE00F6A596 /* UPCardiacEventAPI.h */,
@@ -374,7 +367,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7FB2631837EA6300F6A596 /* UPSession.h in Headers */,
-				BF7FB2A21837EADD00F6A596 /* UPCardiacEventAPI.h in Headers */,
 				1F971807177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch in Headers */,
 				BF7FB2B71837EAF400F6A596 /* UPUserAPI.h in Headers */,
 				BF7FB2B01837EAEC00F6A596 /* UPMoodAPI.h in Headers */,
@@ -397,7 +389,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF7FB2A11837EADD00F6A596 /* UPCardiacEventAPI.h in Headers */,
 				BF7FB29A1837EABA00F6A596 /* UPBodyEventAPI.h in Headers */,
 				BF7FB2691837EA6C00F6A596 /* UPURLRequest.h in Headers */,
 				BF7FB28C1837EAA600F6A596 /* UPMoveAPI.h in Headers */,
@@ -583,7 +574,6 @@
 				BF7FB2BC1837EAFE00F6A596 /* UPBaseEventAPI.m in Sources */,
 				BF7FB25D1837EA5700F6A596 /* UPPlatform.m in Sources */,
 				BF7FB2871837EA9900F6A596 /* UPWorkoutAPI.m in Sources */,
-				BF7FB2A31837EADD00F6A596 /* UPCardiacEventAPI.m in Sources */,
 				BF7FB29C1837EABA00F6A596 /* UPBodyEventAPI.m in Sources */,
 				BF7FB2791837EA8800F6A596 /* UPMealAPI.m in Sources */,
 				BF7FB2721837EA7200F6A596 /* UPURLResponse.m in Sources */,
