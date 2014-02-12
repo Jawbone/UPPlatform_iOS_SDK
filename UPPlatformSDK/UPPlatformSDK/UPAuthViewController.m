@@ -39,6 +39,8 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+
     // Setup the auth view
     UIWindow *keyWindow = [UIApplication sharedApplication].delegate.window;
     if (!keyWindow) keyWindow = [UIApplication sharedApplication].keyWindow;
