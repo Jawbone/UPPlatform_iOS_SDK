@@ -62,6 +62,11 @@
     self.webView.delegate = self;
     self.webView.backgroundColor = [UIColor blackColor];
     
+    for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies])
+    {
+        [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
+    }
+    
     NSURL *url = [NSURL URLWithString:[UPPlatform sharedPlatform].redirectURI];
     self.redirectURIScheme = url.scheme;
 }
