@@ -13,6 +13,7 @@
 
 @property (nonatomic, weak) id<UPAuthViewControllerDelegate> delegate;
 
+@property (nonatomic, strong) UIViewController *contentViewController;
 @property (nonatomic, strong) UIViewController *rootViewController;
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) NSURL *authURL;
@@ -32,6 +33,13 @@
     {
         self.authURL = url;
         self.delegate = delegate;
+        
+        // Setup the auth view
+        UIWindow *keyWindow = [UIApplication sharedApplication].delegate.window;
+        if (!keyWindow) keyWindow = [UIApplication sharedApplication].keyWindow;
+        self.rootViewController = keyWindow.rootViewController;
+        
+        NSAssert(self.rootViewController != nil, @"Application must have a root view controller.");
     }
     
     return self;
@@ -40,27 +48,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Setup the auth view
-    UIWindow *keyWindow = [UIApplication sharedApplication].delegate.window;
-    if (!keyWindow) keyWindow = [UIApplication sharedApplication].keyWindow;
-    self.rootViewController = keyWindow.rootViewController;
     
-    NSAssert(self.rootViewController != nil, @"Application must have a root view controller.");
+    self.navigationBar.tintColor = [UIColor darkGrayColor];
+    self.navigationBar.translucent = NO;
+    [self pushViewController:[[UIViewController alloc] init] animated:NO];
     
-    self.view.backgroundColor = [UIColor blackColor];
-    self.view.frame = [UIScreen mainScreen].applicationFrame;
-    
-    UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
-    navigationBar.items = @[ self.navigationItem ];
-    [self.view addSubview:navigationBar];
+    self.topViewController.view.backgroundColor = [UIColor whiteColor];
+    self.topViewController.view.frame = [UIScreen mainScreen].applicationFrame;
     
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(cancel)];
-    self.navigationItem.leftBarButtonItem = cancelButton;
-    
-    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height - 44)];
-    self.webView.delegate = self;
-    self.webView.backgroundColor = [UIColor blackColor];
+    self.topViewController.navigationItem.leftBarButtonItem = cancelButton;
     
     for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:[UPPlatform basePlatformURL]]])
     {
@@ -71,27 +68,25 @@
     self.redirectURIScheme = url.scheme;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.topViewController.view.bounds.size.width, self.topViewController.view.bounds.size.height)];
+    self.webView.delegate = self;
+    self.webView.backgroundColor = [UIColor whiteColor];
+}
+
 - (void)show
 {
-    self.view.alpha = 0.0;
-    self.view.transform = CGAffineTransformMakeScale(0.1, 0.1);
-    [self.rootViewController.view addSubview:self.view];
-    
-    [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        self.view.alpha = 1.0;
-        self.view.transform = CGAffineTransformIdentity;
-    } completion:^(BOOL finished) {
+    [self.rootViewController presentViewController:self animated:YES completion:^{
         [self.webView loadRequest:[NSURLRequest requestWithURL:self.authURL]];
     }];
 }
 
 - (void)hideWithCompletion:(void(^)())completion
 {
-    [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        self.view.alpha = 0.0;
-        self.view.transform = CGAffineTransformMakeScale(0.1, 0.1);
-    } completion:^(BOOL finished) {
-        [self.view removeFromSuperview];
+    [self.rootViewController dismissViewControllerAnimated:YES completion:^{
         if (completion) completion();
     }];
 }
@@ -109,7 +104,7 @@
 {
     if (!self.webView.superview)
     {
-        self.navigationItem.title = @"Loading";
+        self.topViewController.navigationItem.title = @"Loading";
     }
 }
 
@@ -118,8 +113,8 @@
     // Add the web view once it loads
     if (!self.webView.superview)
     {
-        self.navigationItem.title = @"";
-        [self.view addSubview:self.webView];
+        self.topViewController.navigationItem.title = @"";
+        [self.topViewController.view addSubview:self.webView];
     }
 }
 

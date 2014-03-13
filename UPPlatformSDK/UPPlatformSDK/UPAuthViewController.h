@@ -20,7 +20,7 @@
 
 @end
 
-@interface UPAuthViewController : UIViewController
+@interface UPAuthViewController : UINavigationController
 
 - (id)initWithURL:(NSURL *)url delegate:(id<UPAuthViewControllerDelegate>)delegate;
 - (void)show;
