@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F971807177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 1F971806177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch */; };
+		1FF19D0F18D242FB00B5FAB2 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2921837EAAE00F6A596 /* UPCardiacEventAPI.m */; };
 		48FA5F8B1768CA7900025723 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FA5F8A1768CA7900025723 /* Cocoa.framework */; };
 		BF0E75FD183303050088A315 /* UPPlatformSDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E3E46C0717173670009CCA56 /* UPPlatformSDK-Prefix.pch */; };
 		BF17C7B318391B6D0081A22C /* UPBaseEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BF17C7B218391B6D0081A22C /* UPBaseEventAPI.h */; };
@@ -564,6 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF19D0F18D242FB00B5FAB2 /* UPCardiacEventAPI.m in Sources */,
 				BF7FB24A1837EA3F00F6A596 /* NSDate+UPPlatform.m in Sources */,
 				BF7FB2801837EA8F00F6A596 /* UPSleepAPI.m in Sources */,
 				BF7FB2AA1837EAE400F6A596 /* UPGenericEventAPI.m in Sources */,
