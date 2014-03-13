@@ -14,13 +14,25 @@
 		1FF19C6218D231A500B5FAB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C6118D231A500B5FAB2 /* main.m */; };
 		1FF19C6618D231A500B5FAB2 /* JBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C6518D231A500B5FAB2 /* JBAppDelegate.m */; };
 		1FF19C6918D231A500B5FAB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF19C6718D231A500B5FAB2 /* Main.storyboard */; };
-		1FF19C6C18D231A500B5FAB2 /* JBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C6B18D231A500B5FAB2 /* JBViewController.m */; };
 		1FF19C6E18D231A500B5FAB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF19C6D18D231A500B5FAB2 /* Images.xcassets */; };
 		1FF19C7518D231A500B5FAB2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF19C7418D231A500B5FAB2 /* XCTest.framework */; };
 		1FF19C7618D231A500B5FAB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF19C5518D231A400B5FAB2 /* Foundation.framework */; };
 		1FF19C7718D231A500B5FAB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF19C5918D231A500B5FAB2 /* UIKit.framework */; };
 		1FF19C7F18D231A500B5FAB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FF19C7D18D231A500B5FAB2 /* InfoPlist.strings */; };
 		1FF19C8118D231A500B5FAB2 /* APIExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C8018D231A500B5FAB2 /* APIExplorerTests.m */; };
+		1FF19CA318D2320500B5FAB2 /* JBBaseTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C8C18D2320500B5FAB2 /* JBBaseTestViewController.m */; };
+		1FF19CA418D2320500B5FAB2 /* JBBodyEventTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C8E18D2320500B5FAB2 /* JBBodyEventTestViewController.m */; };
+		1FF19CA518D2320500B5FAB2 /* JBCardiacEventTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C9018D2320500B5FAB2 /* JBCardiacEventTestViewController.m */; };
+		1FF19CA618D2320500B5FAB2 /* JBGenericEventTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C9218D2320500B5FAB2 /* JBGenericEventTestViewController.m */; };
+		1FF19CA718D2320500B5FAB2 /* JBMealTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C9418D2320500B5FAB2 /* JBMealTestViewController.m */; };
+		1FF19CA818D2320500B5FAB2 /* JBMoodTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C9618D2320500B5FAB2 /* JBMoodTestViewController.m */; };
+		1FF19CA918D2320500B5FAB2 /* JBMoveTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C9818D2320500B5FAB2 /* JBMoveTestViewController.m */; };
+		1FF19CAA18D2320500B5FAB2 /* JBResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C9A18D2320500B5FAB2 /* JBResultsViewController.m */; };
+		1FF19CAB18D2320500B5FAB2 /* JBSleepTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C9C18D2320500B5FAB2 /* JBSleepTestViewController.m */; };
+		1FF19CAC18D2320500B5FAB2 /* JBUserTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19C9E18D2320500B5FAB2 /* JBUserTestViewController.m */; };
+		1FF19CAD18D2320500B5FAB2 /* JBWorkoutTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19CA018D2320500B5FAB2 /* JBWorkoutTestViewController.m */; };
+		1FF19CAE18D2320500B5FAB2 /* JBLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF19CA218D2320500B5FAB2 /* JBLandingViewController.m */; };
+		1FF19CBB18D2325100B5FAB2 /* libUPPlatformSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF19CB618D2324500B5FAB2 /* libUPPlatformSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +42,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1FF19C5118D231A400B5FAB2;
 			remoteInfo = APIExplorer;
+		};
+		1FF19CB518D2324500B5FAB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FF19CB018D2324500B5FAB2 /* UPPlatformSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E3E46C0017173670009CCA56;
+			remoteInfo = UPPlatformSDK;
+		};
+		1FF19CB718D2324500B5FAB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FF19CB018D2324500B5FAB2 /* UPPlatformSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 48FA5F891768CA7900025723;
+			remoteInfo = "UPPlatformSDK-OSX";
+		};
+		1FF19CB918D2324C00B5FAB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FF19CB018D2324500B5FAB2 /* UPPlatformSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E3E46BFF17173670009CCA56;
+			remoteInfo = UPPlatformSDK;
+		};
+		1FF19CBF18D2338000B5FAB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FF19CB018D2324500B5FAB2 /* UPPlatformSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF3041791821FC5400903744;
+			remoteInfo = "UPPlatformSDK Tests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -45,14 +85,37 @@
 		1FF19C6418D231A500B5FAB2 /* JBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBAppDelegate.h; sourceTree = "<group>"; };
 		1FF19C6518D231A500B5FAB2 /* JBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBAppDelegate.m; sourceTree = "<group>"; };
 		1FF19C6818D231A500B5FAB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1FF19C6A18D231A500B5FAB2 /* JBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBViewController.h; sourceTree = "<group>"; };
-		1FF19C6B18D231A500B5FAB2 /* JBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBViewController.m; sourceTree = "<group>"; };
 		1FF19C6D18D231A500B5FAB2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1FF19C7318D231A500B5FAB2 /* APIExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF19C7418D231A500B5FAB2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1FF19C7C18D231A500B5FAB2 /* APIExplorerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "APIExplorerTests-Info.plist"; sourceTree = "<group>"; };
 		1FF19C7E18D231A500B5FAB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1FF19C8018D231A500B5FAB2 /* APIExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIExplorerTests.m; sourceTree = "<group>"; };
+		1FF19C8B18D2320500B5FAB2 /* JBBaseTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBaseTestViewController.h; sourceTree = "<group>"; };
+		1FF19C8C18D2320500B5FAB2 /* JBBaseTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBaseTestViewController.m; sourceTree = "<group>"; };
+		1FF19C8D18D2320500B5FAB2 /* JBBodyEventTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBodyEventTestViewController.h; sourceTree = "<group>"; };
+		1FF19C8E18D2320500B5FAB2 /* JBBodyEventTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBodyEventTestViewController.m; sourceTree = "<group>"; };
+		1FF19C8F18D2320500B5FAB2 /* JBCardiacEventTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBCardiacEventTestViewController.h; sourceTree = "<group>"; };
+		1FF19C9018D2320500B5FAB2 /* JBCardiacEventTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBCardiacEventTestViewController.m; sourceTree = "<group>"; };
+		1FF19C9118D2320500B5FAB2 /* JBGenericEventTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBGenericEventTestViewController.h; sourceTree = "<group>"; };
+		1FF19C9218D2320500B5FAB2 /* JBGenericEventTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBGenericEventTestViewController.m; sourceTree = "<group>"; };
+		1FF19C9318D2320500B5FAB2 /* JBMealTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBMealTestViewController.h; sourceTree = "<group>"; };
+		1FF19C9418D2320500B5FAB2 /* JBMealTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMealTestViewController.m; sourceTree = "<group>"; };
+		1FF19C9518D2320500B5FAB2 /* JBMoodTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBMoodTestViewController.h; sourceTree = "<group>"; };
+		1FF19C9618D2320500B5FAB2 /* JBMoodTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMoodTestViewController.m; sourceTree = "<group>"; };
+		1FF19C9718D2320500B5FAB2 /* JBMoveTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBMoveTestViewController.h; sourceTree = "<group>"; };
+		1FF19C9818D2320500B5FAB2 /* JBMoveTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMoveTestViewController.m; sourceTree = "<group>"; };
+		1FF19C9918D2320500B5FAB2 /* JBResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBResultsViewController.h; sourceTree = "<group>"; };
+		1FF19C9A18D2320500B5FAB2 /* JBResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBResultsViewController.m; sourceTree = "<group>"; };
+		1FF19C9B18D2320500B5FAB2 /* JBSleepTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSleepTestViewController.h; sourceTree = "<group>"; };
+		1FF19C9C18D2320500B5FAB2 /* JBSleepTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSleepTestViewController.m; sourceTree = "<group>"; };
+		1FF19C9D18D2320500B5FAB2 /* JBUserTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBUserTestViewController.h; sourceTree = "<group>"; };
+		1FF19C9E18D2320500B5FAB2 /* JBUserTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBUserTestViewController.m; sourceTree = "<group>"; };
+		1FF19C9F18D2320500B5FAB2 /* JBWorkoutTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBWorkoutTestViewController.h; sourceTree = "<group>"; };
+		1FF19CA018D2320500B5FAB2 /* JBWorkoutTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBWorkoutTestViewController.m; sourceTree = "<group>"; };
+		1FF19CA118D2320500B5FAB2 /* JBLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLandingViewController.h; sourceTree = "<group>"; };
+		1FF19CA218D2320500B5FAB2 /* JBLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLandingViewController.m; sourceTree = "<group>"; };
+		1FF19CB018D2324500B5FAB2 /* UPPlatformSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UPPlatformSDK.xcodeproj; path = ../../../UPPlatformSDK/UPPlatformSDK.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF19CBB18D2325100B5FAB2 /* libUPPlatformSDK.a in Frameworks */,
 				1FF19C5818D231A500B5FAB2 /* CoreGraphics.framework in Frameworks */,
 				1FF19C5A18D231A500B5FAB2 /* UIKit.framework in Frameworks */,
 				1FF19C5618D231A400B5FAB2 /* Foundation.framework in Frameworks */,
@@ -112,11 +176,13 @@
 		1FF19C5B18D231A500B5FAB2 /* APIExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				1FF19CAF18D2324000B5FAB2 /* SDK */,
+				1FF19C8A18D2320500B5FAB2 /* Classes */,
+				1FF19CA118D2320500B5FAB2 /* JBLandingViewController.h */,
+				1FF19CA218D2320500B5FAB2 /* JBLandingViewController.m */,
 				1FF19C6418D231A500B5FAB2 /* JBAppDelegate.h */,
 				1FF19C6518D231A500B5FAB2 /* JBAppDelegate.m */,
 				1FF19C6718D231A500B5FAB2 /* Main.storyboard */,
-				1FF19C6A18D231A500B5FAB2 /* JBViewController.h */,
-				1FF19C6B18D231A500B5FAB2 /* JBViewController.m */,
 				1FF19C6D18D231A500B5FAB2 /* Images.xcassets */,
 				1FF19C5C18D231A500B5FAB2 /* Supporting Files */,
 			);
@@ -152,6 +218,53 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1FF19C8A18D2320500B5FAB2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1FF19C8B18D2320500B5FAB2 /* JBBaseTestViewController.h */,
+				1FF19C8C18D2320500B5FAB2 /* JBBaseTestViewController.m */,
+				1FF19C8D18D2320500B5FAB2 /* JBBodyEventTestViewController.h */,
+				1FF19C8E18D2320500B5FAB2 /* JBBodyEventTestViewController.m */,
+				1FF19C8F18D2320500B5FAB2 /* JBCardiacEventTestViewController.h */,
+				1FF19C9018D2320500B5FAB2 /* JBCardiacEventTestViewController.m */,
+				1FF19C9118D2320500B5FAB2 /* JBGenericEventTestViewController.h */,
+				1FF19C9218D2320500B5FAB2 /* JBGenericEventTestViewController.m */,
+				1FF19C9318D2320500B5FAB2 /* JBMealTestViewController.h */,
+				1FF19C9418D2320500B5FAB2 /* JBMealTestViewController.m */,
+				1FF19C9518D2320500B5FAB2 /* JBMoodTestViewController.h */,
+				1FF19C9618D2320500B5FAB2 /* JBMoodTestViewController.m */,
+				1FF19C9718D2320500B5FAB2 /* JBMoveTestViewController.h */,
+				1FF19C9818D2320500B5FAB2 /* JBMoveTestViewController.m */,
+				1FF19C9918D2320500B5FAB2 /* JBResultsViewController.h */,
+				1FF19C9A18D2320500B5FAB2 /* JBResultsViewController.m */,
+				1FF19C9B18D2320500B5FAB2 /* JBSleepTestViewController.h */,
+				1FF19C9C18D2320500B5FAB2 /* JBSleepTestViewController.m */,
+				1FF19C9D18D2320500B5FAB2 /* JBUserTestViewController.h */,
+				1FF19C9E18D2320500B5FAB2 /* JBUserTestViewController.m */,
+				1FF19C9F18D2320500B5FAB2 /* JBWorkoutTestViewController.h */,
+				1FF19CA018D2320500B5FAB2 /* JBWorkoutTestViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1FF19CAF18D2324000B5FAB2 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				1FF19CB018D2324500B5FAB2 /* UPPlatformSDK.xcodeproj */,
+			);
+			name = SDK;
+			sourceTree = "<group>";
+		};
+		1FF19CB118D2324500B5FAB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FF19CB618D2324500B5FAB2 /* libUPPlatformSDK.a */,
+				1FF19CB818D2324500B5FAB2 /* libUPPlatformSDK-OSX.a */,
+				1FF19CC018D2338000B5FAB2 /* UPPlatformSDK Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +279,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1FF19CBA18D2324C00B5FAB2 /* PBXTargetDependency */,
 			);
 			name = APIExplorer;
 			productName = APIExplorer;
@@ -216,6 +330,12 @@
 			mainGroup = 1FF19C4918D231A400B5FAB2;
 			productRefGroup = 1FF19C5318D231A400B5FAB2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1FF19CB118D2324500B5FAB2 /* Products */;
+					ProjectRef = 1FF19CB018D2324500B5FAB2 /* UPPlatformSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1FF19C5118D231A400B5FAB2 /* APIExplorer */,
@@ -223,6 +343,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1FF19CB618D2324500B5FAB2 /* libUPPlatformSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUPPlatformSDK.a;
+			remoteRef = 1FF19CB518D2324500B5FAB2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FF19CB818D2324500B5FAB2 /* libUPPlatformSDK-OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libUPPlatformSDK-OSX.a";
+			remoteRef = 1FF19CB718D2324500B5FAB2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FF19CC018D2338000B5FAB2 /* UPPlatformSDK Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UPPlatformSDK Tests.xctest";
+			remoteRef = 1FF19CBF18D2338000B5FAB2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1FF19C5018D231A400B5FAB2 /* Resources */ = {
@@ -250,9 +394,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF19CA718D2320500B5FAB2 /* JBMealTestViewController.m in Sources */,
 				1FF19C6618D231A500B5FAB2 /* JBAppDelegate.m in Sources */,
-				1FF19C6C18D231A500B5FAB2 /* JBViewController.m in Sources */,
+				1FF19CA418D2320500B5FAB2 /* JBBodyEventTestViewController.m in Sources */,
+				1FF19CAA18D2320500B5FAB2 /* JBResultsViewController.m in Sources */,
+				1FF19CAB18D2320500B5FAB2 /* JBSleepTestViewController.m in Sources */,
 				1FF19C6218D231A500B5FAB2 /* main.m in Sources */,
+				1FF19CAE18D2320500B5FAB2 /* JBLandingViewController.m in Sources */,
+				1FF19CAD18D2320500B5FAB2 /* JBWorkoutTestViewController.m in Sources */,
+				1FF19CA518D2320500B5FAB2 /* JBCardiacEventTestViewController.m in Sources */,
+				1FF19CA318D2320500B5FAB2 /* JBBaseTestViewController.m in Sources */,
+				1FF19CA918D2320500B5FAB2 /* JBMoveTestViewController.m in Sources */,
+				1FF19CA618D2320500B5FAB2 /* JBGenericEventTestViewController.m in Sources */,
+				1FF19CA818D2320500B5FAB2 /* JBMoodTestViewController.m in Sources */,
+				1FF19CAC18D2320500B5FAB2 /* JBUserTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +426,11 @@
 			isa = PBXTargetDependency;
 			target = 1FF19C5118D231A400B5FAB2 /* APIExplorer */;
 			targetProxy = 1FF19C7818D231A500B5FAB2 /* PBXContainerItemProxy */;
+		};
+		1FF19CBA18D2324C00B5FAB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UPPlatformSDK;
+			targetProxy = 1FF19CB918D2324C00B5FAB2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -377,9 +537,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "APIExplorer/APIExplorer-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../UPPlatformSDK/UPPlatformSDK,
+				);
 				INFOPLIST_FILE = "APIExplorer/APIExplorer-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -390,9 +560,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "APIExplorer/APIExplorer-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../UPPlatformSDK/UPPlatformSDK,
+				);
 				INFOPLIST_FILE = "APIExplorer/APIExplorer-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,6 +637,7 @@
 				1FF19C8618D231A500B5FAB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FF19C8718D231A500B5FAB2 /* Build configuration list for PBXNativeTarget "APIExplorerTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +646,7 @@
 				1FF19C8918D231A500B5FAB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
