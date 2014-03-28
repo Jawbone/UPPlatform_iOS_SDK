@@ -242,9 +242,7 @@ static UPPlatform *_instance = nil;
 
 - (void)endCurrentSession
 {
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"com.jawbone.up.authtoken"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
+    [UPKeychain setKeychainItem:nil forServiceKey:kUPKeychainTokenServiceKey];
     self.currentSession = nil;
 }
 
