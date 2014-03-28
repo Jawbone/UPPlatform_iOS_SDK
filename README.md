@@ -104,7 +104,13 @@ Authentication is handled using the shared `UPPlatform` object. To start a new s
 
 Once a valid session has been established, there are a few ways to create API requests. You can use either the provided objects that encapsulate most of the available endpoints, or you can create custom requests. The API Objects are the simplest way to create requests to the REST platform. They take creating the network requests and parsing the resulting JSON into `NSObject`s.
 
-To validate that an existing session is still valid, call `validateSessionWithCompletion:`. If the `session` object passed to the completion block is not `nil`, the session is valid and API requests can be made.
+### Session Validation
+
+To validate that an existing session is still valid, call `validateSessionWithCompletion:`. If the `session` object passed to the completion block is not `nil`, the session is valid and API requests can be made. This method is useful in order to prevent any API requests from unexpectedly returning a `401 Unauthorized` response when the user's access token is not valid.
+
+### Debugging Options
+
+To enable additional logging for network requests and responses being sent and received via the SDK, `[UPPlatform SharedPlatform].enableNetworkLogging` should be set to YES.
 
 ## User Information
 
