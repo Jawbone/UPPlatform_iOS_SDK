@@ -66,23 +66,21 @@ typedef void(^UPMealAPICompletion)(UPMeal *meal, UPURLResponse *response, NSErro
  * Create a new meal event that can be posted to the user's feed.
  *
  * @param title New meal event.
- * @param note The note for the meal event.
  * @param items The items that constitute the new meal.
  */
-+ (UPMeal *)mealWithTitle:(NSString *)title note:(NSString *)note items:(NSArray *)items;
++ (UPMeal *)mealWithTitle:(NSString *)title items:(NSArray *)items;
 
 /**
  * Create a new meal event with specifed location that can be posted to the user's feed.
  *
  * @param title The title of the new meal event.
- * @param note The note for the meal event.
  * @param placeName The name of the location.
  * @param placeLatitude The latitude coordinate.
  * @param placeLongitude The longitude coordinate.
  * @param placeAccuracy The accuracy of the coordinates.
  * @param items The items that constitute the new meal.
  */
-+ (UPMeal *)mealWithTitle:(NSString *)title note:(NSString *)note placeName:(NSString *)placeName placeLatitude:(NSNumber *)placeLatitude placeLongitude:(NSNumber *)placeLongitude placeAccuracy:(NSNumber *)placeAccuracy items:(NSArray *)items;
++ (UPMeal *)mealWithTitle:(NSString *)title placeName:(NSString *)placeName placeLatitude:(NSNumber *)placeLatitude placeLongitude:(NSNumber *)placeLongitude placeAccuracy:(NSNumber *)placeAccuracy items:(NSArray *)items;
 
 @property (nonatomic, strong) UPMealNutritionInfo *overallNutritionInfo;
 @property (nonatomic, strong) NSArray *items;
@@ -91,10 +89,7 @@ typedef void(^UPMealAPICompletion)(UPMeal *meal, UPURLResponse *response, NSErro
 @property (nonatomic, strong) NSNumber *placeLongitude;
 @property (nonatomic, strong) NSNumber *placeAccuracy;
 @property (nonatomic, strong) NSNumber *foodCount;
-
-/// TODO: What is this drinkCount?
 @property (nonatomic, strong) NSNumber *drinkCount;
-@property (nonatomic, strong) NSString *note;
 
 /// The photo for the meal.
 @property (nonatomic, strong) UIImage *photo;
