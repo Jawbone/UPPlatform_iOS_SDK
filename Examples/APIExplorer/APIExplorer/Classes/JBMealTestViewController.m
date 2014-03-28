@@ -32,7 +32,7 @@
 	info.calcium = @(80);
 	
 	UPMealItem *item = [UPMealItem mealItemWithName:@"Granola Bar" description:@"A fancy granola bar." amount:@(1) measurementUnits:@"bar" servingType:UPMealItemServingTypePlate foodType:UPMealItemFoodTypeBrand nutritionInfo:info];
-	UPMeal *meal = [UPMeal mealWithTitle:@"Delicious Granola Bar" note:@"It was tasty" items:@[ item ]];
+	UPMeal *meal = [UPMeal mealWithTitle:@"Delicious Granola Bar" items:@[ item ]];
 	meal.photoURL = @"http://studylogic.net/wp-content/uploads/2013/01/burger.jpg";
 	
 	[UPMealAPI postMeal:meal completion:^(UPMeal *meal, UPURLResponse *response, NSError *error) {

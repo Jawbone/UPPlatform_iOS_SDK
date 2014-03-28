@@ -93,17 +93,16 @@ static NSString *kMealType = @"meals";
 
 @implementation UPMeal
 
-+ (UPMeal *)mealWithTitle:(NSString *)title note:(NSString *)note items:(NSArray *)items
++ (UPMeal *)mealWithTitle:(NSString *)title items:(NSArray *)items
 {
-	return [self mealWithTitle:title note:note placeName:nil placeLatitude:nil placeLongitude:nil placeAccuracy:nil items:items];
+	return [self mealWithTitle:title placeName:nil placeLatitude:nil placeLongitude:nil placeAccuracy:nil items:items];
 }
 
-+ (UPMeal *)mealWithTitle:(NSString *)title note:(NSString *)note placeName:(NSString *)placeName placeLatitude:(NSNumber *)placeLatitude placeLongitude:(NSNumber *)placeLongitude placeAccuracy:(NSNumber *)placeAccuracy items:(NSArray *)items
++ (UPMeal *)mealWithTitle:(NSString *)title placeName:(NSString *)placeName placeLatitude:(NSNumber *)placeLatitude placeLongitude:(NSNumber *)placeLongitude placeAccuracy:(NSNumber *)placeAccuracy items:(NSArray *)items
 {
 	UPMeal *meal = [[UPMeal alloc] init];
 	
 	meal.title = title;
-	meal.note = note;
 	meal.placeName = placeName;
 	meal.placeLatitude = placeLatitude;
 	meal.placeLongitude = placeLongitude;
@@ -130,7 +129,7 @@ static NSString *kMealType = @"meals";
 	self.placeAccuracy = [details numberForKey:@"accuracy"];
 	self.foodCount = [details numberForKey:@"num_foods"];
 	self.drinkCount = [details numberForKey:@"num_drinks"];
-	self.note = [dictionary stringForKey:@"note"];
+	self.title = [dictionary stringForKey:@"note"];
 	if ([dictionary stringForKey:@"image"].length > 0) self.photoURL = [NSString stringWithFormat:@"%@%@", [UPPlatform basePlatformURL], [dictionary stringForKey:@"image"]];
 	
 	UPMealNutritionInfo *nutrition = [[UPMealNutritionInfo alloc] init];
@@ -157,7 +156,7 @@ static NSString *kMealType = @"meals";
 {
 	NSMutableDictionary *dict = [[super encodeToDictionary] mutableCopy];
 	
-	if (self.note != nil) [dict setObject:self.note forKey:@"note"];
+	if (self.title != nil) [dict setObject:self.title forKey:@"note"];
 	if (self.placeName != nil) [dict setObject:self.placeName forKey:@"place_name"];
 	if (self.placeLatitude != nil) [dict setObject:self.placeLatitude forKey:@"place_lat"];
 	if (self.placeLongitude != nil) [dict setObject:self.self.placeLongitude forKey:@"place_lon"];
@@ -181,7 +180,7 @@ static NSString *kMealType = @"meals";
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"UPMeal: { xid: %@, title: %@, date: %@, placeName: %@, placeLatitude: %@, placeLongitude: %@, placeAccuracy: %@, foodCount: %@, drinkCount: %@, note: %@, photoURL: %@, overallNutritionInfo: %@, items: %@ }", self.xid, self.title, self.date, self.placeName, self.placeLatitude, self.placeLongitude, self.placeAccuracy, self.foodCount, self.drinkCount, self.note, self.photoURL, self.overallNutritionInfo, self.items];
+	return [NSString stringWithFormat:@"UPMeal: { xid: %@, title: %@, date: %@, placeName: %@, placeLatitude: %@, placeLongitude: %@, placeAccuracy: %@, foodCount: %@, drinkCount: %@, photoURL: %@, overallNutritionInfo: %@, items: %@ }", self.xid, self.title, self.date, self.placeName, self.placeLatitude, self.placeLongitude, self.placeAccuracy, self.foodCount, self.drinkCount, self.photoURL, self.overallNutritionInfo, self.items];
 }
 
 @end
