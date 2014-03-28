@@ -14,7 +14,20 @@
 #import "UPURLResponse.h"
 #import "UPUserAPI.h"
 
-NSString * const kUPPlatformDefaultRedirectURI = @"up-platform://redirect";
+NSString * const kUPPlatformDefaultRedirectURI      = @"up-platform://redirect";
+NSString * const kUPKeychainAccountKey              = @"com.jawbone.up";
+NSString * const kUPKeychainTokenServiceKey         = @"com.jawbone.up.api_token";
+
+#pragma mark - Keychain
+
+@interface UPKeychain : NSObject
+
++ (NSString *)keychainItemForService:(NSString *)serviceKey;
++ (void)setKeychainItem:(NSString *)item forServiceKey:(NSString *)serviceKey;
+
+@end
+
+#pragma mark - Platform
 
 #if !(!TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR)
 @interface UPPlatform () <UPAuthViewControllerDelegate>
@@ -78,13 +91,12 @@ static UPPlatform *_instance = nil;
 
 - (NSString *)existingAuthToken
 {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:@"com.jawbone.up.authtoken"];
+    return [UPKeychain keychainItemForService:kUPKeychainTokenServiceKey];
 }
 
 - (void)setExistingAuthToken:(NSString *)token
 {
-    [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"com.jawbone.up.authtoken"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [UPKeychain setKeychainItem:token forServiceKey:kUPKeychainTokenServiceKey];
 }
 
 - (void)validateSessionWithCompletion:(UPPlatformSessionCompletion)completion
@@ -360,6 +372,64 @@ static UPPlatform *_instance = nil;
 - (BOOL)responseDidFail:(UPURLResponse *)response
 {
 	return response.code == 500;
+}
+
+@end
+
+@implementation UPKeychain
+
++ (NSString *)keychainItemForService:(NSString *)serviceKey
+{
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    dictionary[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
+    dictionary[(__bridge id)kSecAttrAccount] = [kUPKeychainAccountKey dataUsingEncoding:NSUTF8StringEncoding];
+    dictionary[(__bridge id)kSecAttrService] = [serviceKey dataUsingEncoding:NSUTF8StringEncoding];
+    dictionary[(__bridge id)kSecMatchLimit] = (__bridge id)kSecMatchLimitOne;
+    dictionary[(__bridge id)kSecReturnData] = (__bridge id)kCFBooleanTrue;
+    
+    CFDataRef cfResult = nil;
+    OSStatus status = SecItemCopyMatching((__bridge CFDictionaryRef)dictionary, (CFTypeRef *)&cfResult);
+    NSData *result = (__bridge_transfer NSData *)cfResult;
+    
+    if (status == errSecSuccess && result != nil)
+    {
+        return [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+    }
+    
+    return nil;
+}
+
++ (void)setKeychainItem:(NSString *)item forServiceKey:(NSString *)serviceKey
+{
+    NSMutableDictionary *existingItemDictionary = [NSMutableDictionary dictionary];
+    
+    existingItemDictionary[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
+    existingItemDictionary[(__bridge id)kSecAttrAccount] = [kUPKeychainAccountKey dataUsingEncoding:NSUTF8StringEncoding];
+    existingItemDictionary[(__bridge id)kSecAttrService] = [serviceKey dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSString *oldItem = [self keychainItemForService:serviceKey];
+    if (item == nil)
+    {
+        if (oldItem != nil)
+        {
+            SecItemDelete((__bridge CFDictionaryRef)existingItemDictionary);
+        }
+    }
+    else
+    {
+        NSData *itemData = [item dataUsingEncoding:NSUTF8StringEncoding];
+        if (oldItem != nil)
+        {
+            NSMutableDictionary *updateDictionary = [NSMutableDictionary dictionary];
+            updateDictionary[(__bridge id)kSecValueData] = itemData;
+            (void)SecItemUpdate((__bridge CFDictionaryRef)existingItemDictionary, (__bridge CFDictionaryRef)updateDictionary);
+        }
+        else
+        {
+            existingItemDictionary[(__bridge id)kSecValueData] = itemData;
+            (void)SecItemAdd((__bridge CFDictionaryRef)existingItemDictionary, NULL);
+        }
+    }
 }
 
 @end
