@@ -10,11 +10,12 @@
 
 #import "UPBaseEventAPI.h"
 
-@class UPUser, UPURLResponse, UPUserGoals;
+@class UPUser, UPURLResponse, UPUserGoals, UPUserSharingSettings;
 
 typedef void(^UPUserAPICompletion)(UPUser *user, UPURLResponse *response, NSError *error);
 typedef void(^UPUserTrendsAPICompletion)(NSArray *trends, UPURLResponse *response, NSError *error);
 typedef void(^UPUserGoalsAPICompletion)(UPUserGoals *goals, UPURLResponse *response, NSError *error);
+typedef void(^UPUserSharingSettingsAPICompletion)(UPUserSharingSettings *sharingSettings, UPURLResponse *response, NSError *error);
 
 /**
  *  The type of range to request when getting user trends.
@@ -70,6 +71,11 @@ typedef NS_ENUM(NSUInteger, UPUserGender)
  *  Gets the user's most recent goals.
  */
 + (void)getUserGoalsWithCompletion:(UPUserGoalsAPICompletion)completion;
+
+/**
+ *  Gets the user's sharing settings.
+ */
++ (void)getUserSharingSettingsWithCompletion:(UPUserSharingSettingsAPICompletion)completion;
 
 @end
 
@@ -302,5 +308,37 @@ typedef NS_ENUM(NSUInteger, UPUserGender)
  *  The user's fiber eaten.
  */
 @property (nonatomic, strong) NSNumber *eatFiber;
+
+@end
+
+/**
+ *  The user's sharing settings.
+ */
+@interface UPUserSharingSettings : NSObject <UPBaseObject>
+
+/**
+ *  Whether the user has chosen to share body events.
+ */
+@property (nonatomic, assign) BOOL shareBody;
+
+/**
+ *  Whether the user has chosen to meals.
+ */
+@property (nonatomic, assign) BOOL shareEat;
+
+/**
+ *  Whether the user has chosen to share mood events.
+ */
+@property (nonatomic, assign) BOOL shareMood;
+
+/**
+ *  Whether the user has chosen to share move events.
+ */
+@property (nonatomic, assign) BOOL shareMove;
+
+/**
+ *  Whether the user has chosen to share sleep events.
+ */
+@property (nonatomic, assign) BOOL shareSleep;
 
 @end

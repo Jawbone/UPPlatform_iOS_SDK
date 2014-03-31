@@ -128,6 +128,22 @@
     }];
 }
 
++ (void)getUserSharingSettingsWithCompletion:(UPUserSharingSettingsAPICompletion)completion
+{
+    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/settings", [UPPlatform currentPlatformVersion]] params:nil];
+    [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
+        
+        UPUserSharingSettings *settings = nil;
+        if (!error)
+        {
+            settings = [[UPUserSharingSettings alloc] init];
+            [settings decodeFromDictionary:response.data];
+        }
+        
+        if (completion != nil) completion(settings, response, error);
+    }];
+}
+
 @end
 
 @implementation UPUser
@@ -181,6 +197,29 @@
 - (NSString *)description
 {
 	return [NSString stringWithFormat:@"UPUserGoal: { moveSteps: %@, sleepTotal: %@, bodyWeight: %@, eatSaturatedFat: %@, eatSodium: %@, eatCarbs: %@, eatCholesterol: %@, eatFiber: %@, eatProtein: %@, eatCalcium: %@, eatSugar: %@, eatUnsaturatedFat: %@ }", self.moveSteps, self.sleepTotal, self.bodyWeight, self.eatSaturatedFat, self.eatSodium, self.eatCarbs, self.eatCholesterol, self.eatFiber, self.eatProtein, self.eatCalcium, self.eatSugar, self.eatUnsaturatedFat];
+}
+
+@end
+
+@implementation UPUserSharingSettings
+
+- (void)decodeFromDictionary:(NSDictionary *)dictionary
+{
+	self.shareBody = [dictionary numberForKey:@"share_body"].boolValue;
+	self.shareEat = [dictionary numberForKey:@"share_eat"].boolValue;
+    self.shareMood = [dictionary numberForKey:@"share_mood"].boolValue;
+    self.shareMove = [dictionary numberForKey:@"share_move"].boolValue;
+    self.shareSleep = [dictionary numberForKey:@"share_sleep"].boolValue;
+}
+
+- (NSDictionary *)encodeToDictionary
+{
+	return nil;
+}
+
+- (NSString *)description
+{
+	return [NSString stringWithFormat:@"UPUserSharingSettings: { shareBody: %d, shareEat: %d, shareMood: %d, shareMove: %d, shareSleep: %d }", self.shareBody, self.shareEat, self.shareMood, self.shareMove, self.shareSleep];
 }
 
 @end
