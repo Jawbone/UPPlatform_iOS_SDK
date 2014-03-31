@@ -55,16 +55,16 @@
 	}];
 }
 
-- (void)getMoveSnapshot
+- (void)getMoveTicks
 {
 	[UPMoveAPI getMovesWithLimit:1 completion:^(NSArray *results, UPURLResponse *response, NSError *error) {
 		if (results.count > 0)
 		{
 			UPMove *move = results[0];
 			
-			[UPMoveAPI getMoveSnapshot:move completion:^(UPSnapshot *snapshot, UPURLResponse *response, NSError *error) {
-				[self showResults:snapshot];
-			}];
+			[UPMoveAPI getMoveTicks:move completion:^(NSArray *results, UPURLResponse *response, NSError *error) {
+                [self showResults:results];
+            }];
 		}
 	}];
 }
@@ -86,7 +86,7 @@
 			break;
 			
 		case 3:
-			[self getMoveSnapshot];
+			[self getMoveTicks];
 			break;
 			
 		default:

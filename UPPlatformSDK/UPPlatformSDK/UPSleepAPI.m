@@ -106,19 +106,24 @@ static NSString *kSleepType = @"sleeps";
 	});
 }
 
-+ (void)getSleepSnapshot:(UPSleep *)sleep completion:(UPBaseEventAPISnapshotCompletion)completion
++ (void)getSleepTicks:(UPSleep *)sleep completion:(UPBaseEventAPIArrayCompletion)completion
 {
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/sleeps/%@/snapshot", [UPPlatform currentPlatformVersion], sleep.xid] params:nil];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/sleeps/%@/ticks", [UPPlatform currentPlatformVersion], sleep.xid] params:nil];
 	[[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		
-		UPSnapshot *snapshot = nil;
+		NSMutableArray *ticks = [NSMutableArray array];
 		if (error == nil)
 		{
-			NSArray *data = (NSArray *)response.data;
-			snapshot = [UPSnapshot snapshotWithArray:data];
+			NSArray *data = response.data[@"items"];
+			for (NSDictionary *tickJSON in data)
+            {
+                UPSleepTick *tick = [[UPSleepTick alloc] init];
+                [tick decodeFromDictionary:tickJSON];
+                [ticks addObject:tick];
+            }
 		}
 		
-		if (completion) completion(snapshot, response, error);
+		if (completion) completion(ticks, response, error);
 	}];
 }
 
@@ -174,6 +179,26 @@ static NSString *kSleepType = @"sleeps";
 - (NSString *)description
 {
 	return [NSString stringWithFormat:@"UPSleep: { xid: %@, title: %@, date: %@, asleepTime: %@, awakeTime: %@, totalTimeAwake: %@, totalTimeSound: %@, totalTimeLight: %@, totalTime: %@, quality: %@, awakenings: %@, smartAlarmFireTime: %@, graphImageURL: %@ }", self.xid, self.title, self.date, self.asleepTime, self.awakeTime, self.totalTimeAwake, self.totalTimeSound, self.totalTimeLight, self.totalTime, self.quality, self.awakenings, self.smartAlarmFireTime, self.graphImageURL];
+}
+
+@end
+
+@implementation UPSleepTick
+
+- (void)decodeFromDictionary:(NSDictionary *)dictionary
+{
+	self.depth = [dictionary numberForKey:@"depth"];
+    self.timestamp = [NSDate dateWithTimeIntervalSince1970:[dictionary numberForKey:@"time"].doubleValue];
+}
+
+- (NSDictionary *)encodeToDictionary
+{
+    return nil;
+}
+
+- (NSString *)description
+{
+	return [NSString stringWithFormat:@"UPSleepTick: { depth: %@, timestamp: %@ }", self.depth, self.timestamp];
 }
 
 @end

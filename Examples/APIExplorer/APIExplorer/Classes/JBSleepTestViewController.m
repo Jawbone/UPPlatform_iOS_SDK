@@ -76,16 +76,16 @@
 	}];
 }
 
-- (void)getSleepSnapshot
+- (void)getSleepTicks
 {
 	[UPSleepAPI getSleepsWithLimit:1 completion:^(NSArray *results, UPURLResponse *response, NSError *error) {
 		if (results.count > 0)
 		{
 			UPSleep *sleep = results[0];
 			
-			[UPSleepAPI getSleepSnapshot:sleep completion:^(UPSnapshot *snapshot, UPURLResponse *response, NSError *error) {
-				[self showResults:snapshot];
-			}];
+			[UPSleepAPI getSleepTicks:sleep completion:^(NSArray *results, UPURLResponse *response, NSError *error) {
+                [self showResults:results];
+            }];
 		}
 	}];
 }
@@ -115,7 +115,7 @@
 			break;
 			
 		case 5:
-			[self getSleepSnapshot];
+			[self getSleepTicks];
 			break;
 			
 		default:

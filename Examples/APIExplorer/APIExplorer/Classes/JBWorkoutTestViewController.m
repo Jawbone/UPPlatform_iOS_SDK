@@ -94,16 +94,16 @@
 	}];
 }
 
-- (void)getWorkoutSnapshot
+- (void)getWorkoutTicks
 {
 	[UPWorkoutAPI getWorkoutsWithLimit:1 completion:^(NSArray *results, UPURLResponse *response, NSError *error) {
 		if (results.count > 0)
 		{
 			UPWorkout *workout = results[0];
 			
-			[UPWorkoutAPI getWorkoutSnapshot:workout completion:^(UPSnapshot *snapshot, UPURLResponse *response, NSError *error) {
-				[self showResults:snapshot];
-			}];
+			[UPWorkoutAPI getWorkoutTicks:workout completion:^(NSArray *results, UPURLResponse *response, NSError *error) {
+                [self showResults:results];
+            }];
 		}
 	}];
 }
@@ -137,7 +137,7 @@
 			break;
 			
 		case 6:
-			[self getWorkoutSnapshot];
+			[self getWorkoutTicks];
 			break;
 			
 		default:
