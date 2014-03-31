@@ -10,10 +10,12 @@
 
 #import "UPBaseEventAPI.h"
 
-@class UPUser, UPURLResponse;
+@class UPUser, UPURLResponse, UPUserGoals, UPUserSharingSettings;
 
 typedef void(^UPUserAPICompletion)(UPUser *user, UPURLResponse *response, NSError *error);
 typedef void(^UPUserTrendsAPICompletion)(NSArray *trends, UPURLResponse *response, NSError *error);
+typedef void(^UPUserGoalsAPICompletion)(UPUserGoals *goals, UPURLResponse *response, NSError *error);
+typedef void(^UPUserSharingSettingsAPICompletion)(UPUserSharingSettings *sharingSettings, UPURLResponse *response, NSError *error);
 
 /**
  *  The type of range to request when getting user trends.
@@ -65,6 +67,16 @@ typedef NS_ENUM(NSUInteger, UPUserGender)
  */
 + (void)getTrendsWithEndDate:(NSDate *)endDate rangeType:(UPUserTrendsRangeType)rangeType rangeDuration:(NSUInteger)rangeDuration bucketSize:(UPUserTrendsBucketSize)bucketSize completion:(UPUserTrendsAPICompletion)completion;
 
+/**
+ *  Gets the user's most recent goals.
+ */
++ (void)getUserGoalsWithCompletion:(UPUserGoalsAPICompletion)completion;
+
+/**
+ *  Gets the user's sharing settings.
+ */
++ (void)getUserSharingSettingsWithCompletion:(UPUserSharingSettingsAPICompletion)completion;
+
 @end
 
 /**
@@ -91,6 +103,88 @@ typedef NS_ENUM(NSUInteger, UPUserGender)
  *  The user's image URL.
  */
 @property (nonatomic, strong) NSString *imageURL;
+
+/**
+ *  The user's most recent weight, in kilograms.
+ */
+@property (nonatomic, strong) NSNumber *weight;
+
+/**
+ *  The user's height, in meters.
+ */
+@property (nonatomic, strong) NSNumber *height;
+
+/**
+ *  The user's gender.
+ */
+@property (nonatomic, assign) UPUserGender gender;
+
+@end
+
+/**
+ *  The user's current goals.
+ */
+@interface UPUserGoals : NSObject <UPBaseObject>
+
+/**
+ *  The user's daily step goal.
+ */
+@property (nonatomic, strong) NSNumber *moveSteps;
+
+/**
+ *  The user's daily sleep goal.
+ */
+@property (nonatomic, strong) NSNumber *sleepTotal;
+
+/**
+ *  The user's current weight goal.
+ */
+@property (nonatomic, strong) NSNumber *bodyWeight;
+
+/**
+ *  The user's saturated fat goal.
+ */
+@property (nonatomic, strong) NSNumber *eatSaturatedFat;
+
+/**
+ *  The user's sodium goal.
+ */
+@property (nonatomic, strong) NSNumber *eatSodium;
+
+/**
+ *  The user's carbohydrate goal.
+ */
+@property (nonatomic, strong) NSNumber *eatCarbs;
+
+/**
+ *  The user's cholesterol goal.
+ */
+@property (nonatomic, strong) NSNumber *eatCholesterol;
+
+/**
+ *  The user's fiber goal.
+ */
+@property (nonatomic, strong) NSNumber *eatFiber;
+
+/**
+ *  The user's protein goal.
+ */
+@property (nonatomic, strong) NSNumber *eatProtein;
+
+/**
+ *  The user's calcium goal.
+ */
+@property (nonatomic, strong) NSNumber *eatCalcium;
+
+/**
+ *  The user's sugar goal.
+ */
+@property (nonatomic, strong) NSNumber *eatSugar;
+
+/**
+ *  The user's unsaturated fat goal.
+ */
+@property (nonatomic, strong) NSNumber *eatUnsaturatedFat;
 
 @end
 
@@ -171,7 +265,7 @@ typedef NS_ENUM(NSUInteger, UPUserGender)
 @property (nonatomic, strong) NSNumber *sleepTimeAsleep;
 
 /**
- *  The user's total awake time.
+ *  The last time the user woke up, in seconds from/to midnight.
  */
 @property (nonatomic, strong) NSNumber *sleepTimeAwake;
 
@@ -214,5 +308,37 @@ typedef NS_ENUM(NSUInteger, UPUserGender)
  *  The user's fiber eaten.
  */
 @property (nonatomic, strong) NSNumber *eatFiber;
+
+@end
+
+/**
+ *  The user's sharing settings.
+ */
+@interface UPUserSharingSettings : NSObject <UPBaseObject>
+
+/**
+ *  Whether the user has chosen to share body events.
+ */
+@property (nonatomic, assign) BOOL shareBody;
+
+/**
+ *  Whether the user has chosen to meals.
+ */
+@property (nonatomic, assign) BOOL shareEat;
+
+/**
+ *  Whether the user has chosen to share mood events.
+ */
+@property (nonatomic, assign) BOOL shareMood;
+
+/**
+ *  Whether the user has chosen to share move events.
+ */
+@property (nonatomic, assign) BOOL shareMove;
+
+/**
+ *  Whether the user has chosen to share sleep events.
+ */
+@property (nonatomic, assign) BOOL shareSleep;
 
 @end

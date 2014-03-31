@@ -10,12 +10,11 @@
 
 #import "UPURLRequest.h"
 
-@class UPURLResponse, UPBaseEvent, UPSnapshot;
+@class UPURLResponse, UPBaseEvent;
 
 typedef void(^UPBaseEventAPICompletion)(id result, UPURLResponse *response, NSError *error);
 typedef void(^UPBaseEventAPIArrayCompletion)(NSArray *results, UPURLResponse *response, NSError *error);
 typedef void(^UPBaseEventAPIImageCompletion)(UIImage *image);
-typedef void(^UPBaseEventAPISnapshotCompletion)(UPSnapshot *snapshot, UPURLResponse *response, NSError *error);
 
 /**
  *  The base event API provides a common interface for event management.
@@ -131,39 +130,5 @@ typedef void(^UPBaseEventAPISnapshotCompletion)(UPSnapshot *snapshot, UPURLRespo
  *  Encodes an object to a JSON dictionary.
  */
 - (NSDictionary *)encodeToDictionary;
-
-@end
-
-/**
- *  A collection of ticks representing values over a span of time.
- */
-@interface UPSnapshot : NSObject
-
-/**
- *  The array of ticks in the snapshot.
- */
-@property (nonatomic, strong) NSArray *ticks;
-
-/**
- *  Creates a new snapshot given a tuple.
- */
-+ (UPSnapshot *)snapshotWithArray:(NSArray *)array;
-
-@end
-
-/**
- *  A single snapshot tick, which represents a timestamp and value.
- */
-@interface UPSnapshotTick : NSObject
-
-/**
- *  The timestamp of the tick.
- */
-@property (nonatomic, strong) NSDate *timestamp;
-
-/**
- *  The value of the tick.
- */
-@property (nonatomic, strong) NSNumber *value;
 
 @end

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>UPSnapshot Class Reference</title>
+		<title>UPBandEvent Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">UPSnapshot Class Reference</h1>
+				<h1 class="hideInXcode">UPBandEvent Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -39,16 +39,18 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/ticks">&nbsp;&nbsp;&nbsp;&nbsp;ticks</option>
+	<option value="//api/name/actionType">&nbsp;&nbsp;&nbsp;&nbsp;actionType</option>
 	
 	
 	
 	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/snapshotWithArray:">&nbsp;&nbsp;&nbsp;&nbsp;+ snapshotWithArray:</option>
 	
 	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/apiType">&nbsp;&nbsp;&nbsp;&nbsp;- apiType</option>
+	
+	<option value="//api/name/decodeFromDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;- decodeFromDictionary:</option>
 	
 	
 	
@@ -74,26 +76,28 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ticks">ticks</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/actionType">actionType</a></span></li>
 	
 </ul></li>
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/snapshotWithArray:">snapshotWithArray:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/apiType">apiType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/decodeFromDictionary:">decodeFromDictionary:</a></span></li>
 	
 </ul></li>
-
-
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="UPSnapshot Class Reference" name="top"></a>
+				<a title="UPBandEvent Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -102,7 +106,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">UPSnapshot Class Reference</h1>
+						<h1 class="title title-header">UPBandEvent Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -110,10 +114,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
+	<td class="specification-value"><a href="../Classes/UPBaseEvent.html">UPBaseEvent</a> : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">UPBaseEventAPI.h<br />UPBaseEventAPI.m</td>
+	<td class="specification-value">UPBandEventAPI.h<br />UPBandEventAPI.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -123,7 +127,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A collection of <a href="#//api/name/ticks">ticks</a> representing values over a span of time.</p>
+						<p>An UP24 hardware band event, which includes entering and exiting both sleep mode and stopwatch (workout) mode.</p>
 					</div>
 					
 					
@@ -136,18 +140,32 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/ticks">&nbsp;&nbsp;ticks</a></code>
+		<code><a href="#//api/name/actionType">&nbsp;&nbsp;actionType</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/apiType">&ndash;&nbsp;apiType</a></code>
+	</span>
+	
+	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/snapshotWithArray:">+&nbsp;snapshotWithArray:</a></code>
+		<code><a href="#//api/name/decodeFromDictionary:">&ndash;&nbsp;decodeFromDictionary:</a></code>
 	</span>
 	
 	
@@ -165,18 +183,18 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/ticks" title="ticks"></a>
-	<h3 class="subsubtitle method-title">ticks</h3>
+	<a name="//api/name/actionType" title="actionType"></a>
+	<h3 class="subsubtitle method-title">actionType</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The array of ticks in the snapshot.</p>
+		<p>The action type of the band event.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSArray *ticks</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UPBandEventActionType actionType</code></div>
 
     
 	
@@ -188,7 +206,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The array of ticks in the snapshot.</p>
+		<p>The action type of the band event.</p>
 	</div>
 	
 	
@@ -199,33 +217,35 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPBaseEventAPI.h</code><br />
+		<code class="declared-in-ref">UPBandEventAPI.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
+					
+					
 					
 					
 					
 					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/snapshotWithArray:" title="snapshotWithArray:"></a>
-	<h3 class="subsubtitle method-title">snapshotWithArray:</h3>
+	<a name="//api/name/apiType" title="apiType"></a>
+	<h3 class="subsubtitle method-title">apiType</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Creates a new snapshot given a tuple.</p>
+		<p>The API type of the event, used by the events API.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (UPSnapshot *)snapshotWithArray:(NSArray *)<em>array</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSString *)apiType</code></div>
 
     
 	
@@ -237,7 +257,48 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Creates a new snapshot given a tuple.</p>
+		<p>The API type of the event, used by the events API.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPBaseEventAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/decodeFromDictionary:" title="decodeFromDictionary:"></a>
+	<h3 class="subsubtitle method-title">decodeFromDictionary:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Decodes an object from a JSON dictionary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)decodeFromDictionary:(NSDictionary *)<em>dictionary</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Decodes an object from a JSON dictionary.</p>
 	</div>
 	
 	
@@ -255,8 +316,6 @@
 </div>
 						
 					</div>
-					
-					
 					
 					
                     
