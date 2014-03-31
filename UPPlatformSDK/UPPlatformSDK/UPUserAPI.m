@@ -122,6 +122,9 @@
 	self.xid = [dictionary stringForKey:@"xid"];
 	self.firstName = [dictionary stringForKey:@"first"];
 	self.lastName = [dictionary stringForKey:@"last"];
+    self.weight = [dictionary numberForKey:@"weight"];
+    self.height = [dictionary numberForKey:@"height"];
+    self.gender = [[dictionary numberForKey:@"gender"] intValue] == 0 ? UPUserGenderMale : UPUserGenderFemale;
 	if ([dictionary stringForKey:@"image"].length > 0) self.imageURL = [NSString stringWithFormat:@"%@/%@", [UPPlatform basePlatformURL], [dictionary stringForKey:@"image"]];
 }
 
@@ -132,7 +135,7 @@
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"UPUser: { xid: %@, firstName: %@, lastName: %@, imageURL: %@ }", self.xid, self.firstName, self.lastName, self.imageURL];
+	return [NSString stringWithFormat:@"UPUser: { xid: %@, firstName: %@, lastName: %@, imageURL: %@, weight: %@, height: %@, gender: %@ }", self.xid, self.firstName, self.lastName, self.imageURL, self.weight, self.height, self.gender == UPUserGenderMale ? @"Male" : @"Female"];
 }
 
 @end

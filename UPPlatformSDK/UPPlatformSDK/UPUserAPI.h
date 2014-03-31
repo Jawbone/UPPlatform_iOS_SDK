@@ -92,6 +92,21 @@ typedef NS_ENUM(NSUInteger, UPUserGender)
  */
 @property (nonatomic, strong) NSString *imageURL;
 
+/**
+ *  The user's most recent weight, in kilograms.
+ */
+@property (nonatomic, strong) NSNumber *weight;
+
+/**
+ *  The user's height, in meters.
+ */
+@property (nonatomic, strong) NSNumber *height;
+
+/**
+ *  The user's gender.
+ */
+@property (nonatomic, assign) UPUserGender gender;
+
 @end
 
 /**
