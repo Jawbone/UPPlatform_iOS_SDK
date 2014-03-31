@@ -18,12 +18,6 @@
 
 - (void)getMoves
 {
-    /*
-	[UPMoveAPI getMovesWithLimit:14 completion:^(NSArray *results, UPURLResponse *response, NSError *error) {
-		[self showResults:results];
-	}];
-     */
-    
     NSDate *endDate = [NSDate date];
     NSDate *startDate = [NSDate dateWithTimeIntervalSince1970:[endDate timeIntervalSince1970] - (24 * 60 * 60 * 14)];
     [UPMoveAPI getMovesFromStartDate:startDate toEndDate:endDate completion:^(NSArray *results, UPURLResponse *response, NSError *error) {

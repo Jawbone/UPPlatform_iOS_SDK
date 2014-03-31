@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F7F026E18EA09FC00F5C39C /* JBBandEventTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7F026D18EA09FC00F5C39C /* JBBandEventTestViewController.m */; };
 		1FF19C5618D231A400B5FAB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF19C5518D231A400B5FAB2 /* Foundation.framework */; };
 		1FF19C5818D231A500B5FAB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF19C5718D231A500B5FAB2 /* CoreGraphics.framework */; };
 		1FF19C5A18D231A500B5FAB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF19C5918D231A500B5FAB2 /* UIKit.framework */; };
@@ -36,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1F7F027218EA09FD00F5C39C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FF19CB018D2324500B5FAB2 /* UPPlatformSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1FE2964118D24AD80047F094;
+			remoteInfo = UPPlatform;
+		};
 		1FF19C7818D231A500B5FAB2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1FF19C4A18D231A400B5FAB2 /* Project object */;
@@ -64,16 +72,11 @@
 			remoteGlobalIDString = E3E46BFF17173670009CCA56;
 			remoteInfo = UPPlatformSDK;
 		};
-		1FF19CBF18D2338000B5FAB2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1FF19CB018D2324500B5FAB2 /* UPPlatformSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BF3041791821FC5400903744;
-			remoteInfo = "UPPlatformSDK Tests";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F7F026C18EA09FC00F5C39C /* JBBandEventTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBandEventTestViewController.h; sourceTree = "<group>"; };
+		1F7F026D18EA09FC00F5C39C /* JBBandEventTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBandEventTestViewController.m; sourceTree = "<group>"; };
 		1FF19C5218D231A400B5FAB2 /* APIExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF19C5518D231A400B5FAB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1FF19C5718D231A500B5FAB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -243,6 +246,8 @@
 				1FF19C9E18D2320500B5FAB2 /* JBUserTestViewController.m */,
 				1FF19C9F18D2320500B5FAB2 /* JBWorkoutTestViewController.h */,
 				1FF19CA018D2320500B5FAB2 /* JBWorkoutTestViewController.m */,
+				1F7F026C18EA09FC00F5C39C /* JBBandEventTestViewController.h */,
+				1F7F026D18EA09FC00F5C39C /* JBBandEventTestViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -260,7 +265,7 @@
 			children = (
 				1FF19CB618D2324500B5FAB2 /* libUPPlatformSDK.a */,
 				1FF19CB818D2324500B5FAB2 /* libUPPlatformSDK-OSX.a */,
-				1FF19CC018D2338000B5FAB2 /* UPPlatformSDK Tests.xctest */,
+				1F7F027318EA09FD00F5C39C /* libUPPlatform.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -345,6 +350,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1F7F027318EA09FD00F5C39C /* libUPPlatform.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUPPlatform.a;
+			remoteRef = 1F7F027218EA09FD00F5C39C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1FF19CB618D2324500B5FAB2 /* libUPPlatformSDK.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -357,13 +369,6 @@
 			fileType = archive.ar;
 			path = "libUPPlatformSDK-OSX.a";
 			remoteRef = 1FF19CB718D2324500B5FAB2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1FF19CC018D2338000B5FAB2 /* UPPlatformSDK Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "UPPlatformSDK Tests.xctest";
-			remoteRef = 1FF19CBF18D2338000B5FAB2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -398,6 +403,7 @@
 				1FF19C6618D231A500B5FAB2 /* JBAppDelegate.m in Sources */,
 				1FF19CA418D2320500B5FAB2 /* JBBodyEventTestViewController.m in Sources */,
 				1FF19CAA18D2320500B5FAB2 /* JBResultsViewController.m in Sources */,
+				1F7F026E18EA09FC00F5C39C /* JBBandEventTestViewController.m in Sources */,
 				1FF19CAB18D2320500B5FAB2 /* JBSleepTestViewController.m in Sources */,
 				1FF19C6218D231A500B5FAB2 /* main.m in Sources */,
 				1FF19CAE18D2320500B5FAB2 /* JBLandingViewController.m in Sources */,
