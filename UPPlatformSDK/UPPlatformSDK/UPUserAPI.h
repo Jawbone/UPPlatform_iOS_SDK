@@ -171,7 +171,7 @@ typedef NS_ENUM(NSUInteger, UPUserGender)
 @property (nonatomic, strong) NSNumber *sleepTimeAsleep;
 
 /**
- *  The user's total awake time.
+ *  The last time the user woke up, in seconds from/to midnight.
  */
 @property (nonatomic, strong) NSNumber *sleepTimeAwake;
 

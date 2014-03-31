@@ -21,7 +21,7 @@ static NSString *kWorkoutType = @"workouts";
 {
 	if (limit == 0) limit = 10;
 	NSDictionary *params = @{ @"limit" : @(limit) };
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me/workouts" params:params];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/workouts", [UPPlatform currentPlatformVersion]] params:params];
     
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		
@@ -46,7 +46,7 @@ static NSString *kWorkoutType = @"workouts";
 + (void)getWorkoutsFromStartDate:(NSDate *)startDate toEndDate:(NSDate *)endDate completion:(UPBaseEventAPIArrayCompletion)completion
 {
 	NSDictionary *params = @{ @"start_time" : @([startDate timeIntervalSince1970]), @"end_time" : @([endDate timeIntervalSince1970]) };
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me/workouts" params:params];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/workouts", [UPPlatform currentPlatformVersion]] params:params];
     
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		
@@ -108,7 +108,7 @@ static NSString *kWorkoutType = @"workouts";
 
 + (void)getWorkoutSnapshot:(UPWorkout *)workout completion:(UPBaseEventAPISnapshotCompletion)completion
 {
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/workouts/%@/snapshot", workout.xid] params:nil];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/workouts/%@/snapshot", [UPPlatform currentPlatformVersion], workout.xid] params:nil];
 	[[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		
 		UPSnapshot *snapshot = nil;

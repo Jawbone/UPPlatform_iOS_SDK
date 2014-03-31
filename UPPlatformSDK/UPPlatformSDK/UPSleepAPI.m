@@ -21,7 +21,7 @@ static NSString *kSleepType = @"sleeps";
 {
 	if (limit == 0) limit = 10;
 	NSDictionary *params = @{ @"limit" : @(limit) };
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me/sleeps" params:params];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/sleeps", [UPPlatform currentPlatformVersion]] params:params];
     
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		
@@ -46,7 +46,7 @@ static NSString *kSleepType = @"sleeps";
 + (void)getSleepsFromStartDate:(NSDate *)startDate toEndDate:(NSDate *)endDate completion:(UPBaseEventAPIArrayCompletion)completion
 {
 	NSDictionary *params = @{ @"start_time" : @([startDate timeIntervalSince1970]), @"end_time" : @([endDate timeIntervalSince1970]) };
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me/sleeps" params:params];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/sleeps", [UPPlatform currentPlatformVersion]] params:params];
     
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		
@@ -108,7 +108,7 @@ static NSString *kSleepType = @"sleeps";
 
 + (void)getSleepSnapshot:(UPSleep *)sleep completion:(UPBaseEventAPISnapshotCompletion)completion
 {
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/sleeps/%@/snapshot", sleep.xid] params:nil];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/sleeps/%@/snapshot", [UPPlatform currentPlatformVersion], sleep.xid] params:nil];
 	[[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		
 		UPSnapshot *snapshot = nil;
@@ -146,12 +146,12 @@ static NSString *kSleepType = @"sleeps";
 {
 	[super decodeFromDictionary:dictionary];
 	
-	// These values are a bit different than UPMove
 	NSDictionary *details = dictionary[@"details"];
+    
 	self.asleepTime = [NSDate dateWithTimeIntervalSince1970:[[details numberForKey:@"asleep_time"] doubleValue]];
 	self.awakeTime = [NSDate dateWithTimeIntervalSince1970:[[details numberForKey:@"awake_time"] doubleValue]];
 	self.totalTimeAwake = [details numberForKey:@"awake"];
-	self.totalTimeSound = [details numberForKey:@"deep"];
+	self.totalTimeSound = [details numberForKey:@"sound"];
 	self.totalTimeLight = [details numberForKey:@"light"];
 	self.totalTime = [details numberForKey:@"duration"];
 	self.quality = [details numberForKey:@"quality"];

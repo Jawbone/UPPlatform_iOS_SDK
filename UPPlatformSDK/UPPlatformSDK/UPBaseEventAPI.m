@@ -19,7 +19,7 @@
 
 + (void)getEventsOfType:(NSString *)type destinationClass:(Class)destClass completion:(UPBaseEventAPICompletion)completion
 {
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/users/@me/%@", type] params:nil];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/%@", [UPPlatform currentPlatformVersion], type] params:nil];
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
         NSMutableArray *results = [NSMutableArray array];
         NSArray *jsonItems = response.data[@"items"];
@@ -41,7 +41,7 @@
 	UIImage *image = [event respondsToSelector:@selector(image)] ? [event performSelector:@selector(image)] : nil;
 	if (image == nil && [event respondsToSelector:@selector(photo)]) image = [event performSelector:@selector(photo)];
 	
-	UPURLRequest *request = [UPURLRequest postRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/%@/partialUpdate", event.apiType, event.xid] params:params image:image];
+	UPURLRequest *request = [UPURLRequest postRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/%@/%@/partialUpdate", [UPPlatform currentPlatformVersion], event.apiType, event.xid] params:params image:image];
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		if (error == nil)
 		{
@@ -58,7 +58,7 @@
 	UIImage *image = [event respondsToSelector:@selector(image)] ? [event performSelector:@selector(image)] : nil;
 	if (image == nil && [event respondsToSelector:@selector(photo)]) image = [event performSelector:@selector(photo)];
 	
-	UPURLRequest *request = [UPURLRequest postRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/users/@me/%@", event.apiType] params:params image:image];
+	UPURLRequest *request = [UPURLRequest postRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/%@", [UPPlatform currentPlatformVersion], event.apiType] params:params image:image];
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		if (error == nil)
 		{
@@ -71,7 +71,7 @@
 
 + (void)refreshEvent:(UPBaseEvent *)event completion:(UPBaseEventAPICompletion)completion
 {
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/%@", event.apiType, event.xid] params:nil];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/%@/%@", [UPPlatform currentPlatformVersion], event.apiType, event.xid] params:nil];
 	[[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		if (error == nil)
 		{
@@ -84,7 +84,7 @@
 
 + (void)deleteEvent:(UPBaseEvent *)event completion:(UPBaseEventAPICompletion)completion
 {
-	UPURLRequest *request = [UPURLRequest deleteRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/%@", event.apiType, event.xid] params:nil];
+	UPURLRequest *request = [UPURLRequest deleteRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/%@/%@", [UPPlatform currentPlatformVersion], event.apiType, event.xid] params:nil];
 	[[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		if (completion != nil) completion(nil, response, error);
 	}];

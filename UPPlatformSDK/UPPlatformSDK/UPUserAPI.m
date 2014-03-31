@@ -18,7 +18,8 @@
 
 + (void)getCurrentUserWithCompletion:(UPUserAPICompletion)completion
 {
-    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me" params:nil];
+    
+    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me", [UPPlatform currentPlatformVersion]] params:nil];
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
         
         UPUser *user = nil;
@@ -34,7 +35,7 @@
 
 + (void)getFriendsWithCompletion:(UPBaseEventAPIArrayCompletion)completion
 {
-    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me/friends" params:nil];
+    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/friends", [UPPlatform currentPlatformVersion]] params:nil];
     
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
         NSMutableArray *results = [NSMutableArray array];
@@ -95,7 +96,7 @@
 	NSMutableDictionary *params = [@{ @"range_duration" : @(rangeDuration), @"range" : range, @"bucket_size" : bucket } mutableCopy];
 	if (endDate != nil) [params setObject:dateString forKey:@"end_date"];
 	
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me/trends" params:params];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/trends", [UPPlatform currentPlatformVersion]] params:params];
     
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
         NSMutableArray *results = [NSMutableArray array];
@@ -155,7 +156,7 @@
 	self.moveWorkoutTime = [values numberForKey:@"m_workout_time"];
 	self.moveActiveTime = [values numberForKey:@"m_active_time"];
 	self.moveCalories = [values numberForKey:@"m_calories"];
-	self.sleepSound = [values numberForKey:@"s_deep"];
+	self.sleepSound = [values numberForKey:@"s_sound"];
 	self.sleepAwake = [values numberForKey:@"s_awake"];
 	self.sleepTimeAsleep = [values numberForKey:@"s_asleep_time"];
 	self.sleepTimeAwake = [values numberForKey:@"s_awake_time"];
