@@ -1,6 +1,8 @@
 ![image](https://d3osil7svxrrgt.cloudfront.net/static/www/logos/jawbone/jawbone-logo-lowres.png)
 # UP Platform iOS SDK
 
+Full SDK documentation can be viewed at [http://jawbone.github.io/UPPlatform_iOS_SDK/](http://jawbone.github.io/UPPlatform_iOS_SDK/)
+
 ## Overview
 
 This SDK provides an Objective-C interface for integrating iOS apps with the [UP Platform](https://jawbone.com/up/developer). It handles authentication using OAuth 2.0 via a UIWebView and provides simple interfaces for making requests to the platform's REST endpoints.
