@@ -18,7 +18,6 @@
 
 + (void)getCurrentUserWithCompletion:(UPUserAPICompletion)completion
 {
-    
     UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me", [UPPlatform currentPlatformVersion]] params:nil];
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
         
@@ -113,6 +112,22 @@
     }];
 }
 
++ (void)getUserGoalsWithCompletion:(UPUserGoalsAPICompletion)completion
+{
+    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/goals", [UPPlatform currentPlatformVersion]] params:nil];
+    [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
+        
+        UPUserGoals *goals = nil;
+        if (!error)
+        {
+            goals = [[UPUserGoals alloc] init];
+            [goals decodeFromDictionary:response.data];
+        }
+        
+        if (completion != nil) completion(goals, response, error);
+    }];
+}
+
 @end
 
 @implementation UPUser
@@ -136,6 +151,36 @@
 - (NSString *)description
 {
 	return [NSString stringWithFormat:@"UPUser: { xid: %@, firstName: %@, lastName: %@, imageURL: %@, weight: %@, height: %@, gender: %@ }", self.xid, self.firstName, self.lastName, self.imageURL, self.weight, self.height, self.gender == UPUserGenderMale ? @"Male" : @"Female"];
+}
+
+@end
+
+@implementation UPUserGoals
+
+- (void)decodeFromDictionary:(NSDictionary *)dictionary
+{
+	self.moveSteps = [dictionary numberForKey:@"move_steps"];
+	self.sleepTotal = [dictionary numberForKey:@"sleep_total"];
+    self.bodyWeight = [dictionary numberForKey:@"body_weight"];
+    self.eatSaturatedFat = [dictionary numberForKey:@"eat_sat_fat"];
+    self.eatSodium = [dictionary numberForKey:@"eat_sodium"];
+    self.eatCarbs = [dictionary numberForKey:@"eat_carbs"];
+    self.eatCholesterol = [dictionary numberForKey:@"eat_cholesterol"];
+    self.eatFiber = [dictionary numberForKey:@"eat_fiber"];
+    self.eatProtein = [dictionary numberForKey:@"eat_protein"];
+    self.eatCalcium = [dictionary numberForKey:@"eat_calcium"];
+    self.eatSugar = [dictionary numberForKey:@"eat_sugar"];
+    self.eatUnsaturatedFat = [dictionary numberForKey:@"eat_unsat_fat"];
+}
+
+- (NSDictionary *)encodeToDictionary
+{
+	return nil;
+}
+
+- (NSString *)description
+{
+	return [NSString stringWithFormat:@"UPUserGoal: { moveSteps: %@, sleepTotal: %@, bodyWeight: %@, eatSaturatedFat: %@, eatSodium: %@, eatCarbs: %@, eatCholesterol: %@, eatFiber: %@, eatProtein: %@, eatCalcium: %@, eatSugar: %@, eatUnsaturatedFat: %@ }", self.moveSteps, self.sleepTotal, self.bodyWeight, self.eatSaturatedFat, self.eatSodium, self.eatCarbs, self.eatCholesterol, self.eatFiber, self.eatProtein, self.eatCalcium, self.eatSugar, self.eatUnsaturatedFat];
 }
 
 @end
