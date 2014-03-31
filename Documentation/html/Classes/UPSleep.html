@@ -26,6 +26,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -55,9 +57,9 @@
 	
 	<option value="//api/name/totalTimeAwake">&nbsp;&nbsp;&nbsp;&nbsp;totalTimeAwake</option>
 	
-	<option value="//api/name/totalTimeDeep">&nbsp;&nbsp;&nbsp;&nbsp;totalTimeDeep</option>
-	
 	<option value="//api/name/totalTimeLight">&nbsp;&nbsp;&nbsp;&nbsp;totalTimeLight</option>
+	
+	<option value="//api/name/totalTimeSound">&nbsp;&nbsp;&nbsp;&nbsp;totalTimeSound</option>
 	
 	
 	
@@ -69,6 +71,15 @@
 	
 	
 	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/apiType">&nbsp;&nbsp;&nbsp;&nbsp;- apiType</option>
+	
+	<option value="//api/name/decodeFromDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;- decodeFromDictionary:</option>
+	
+	<option value="//api/name/encodeToDictionary">&nbsp;&nbsp;&nbsp;&nbsp;- encodeToDictionary</option>
+	
+	
 	
 </select>
 				</li>
@@ -77,6 +88,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -108,9 +121,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/totalTimeAwake">totalTimeAwake</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/totalTimeDeep">totalTimeDeep</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/totalTimeLight">totalTimeLight</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/totalTimeSound">totalTimeSound</a></span></li>
 	
 </ul></li>
 
@@ -123,6 +136,16 @@
 </ul></li>
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/apiType">apiType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/decodeFromDictionary:">decodeFromDictionary:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/encodeToDictionary">encodeToDictionary</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
@@ -146,7 +169,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UPBaseEvent : NSObject</td>
+	<td class="specification-value"><a href="../Classes/UPBaseEvent.html">UPBaseEvent</a> : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">UPSleepAPI.h<br />UPSleepAPI.m</td>
@@ -156,6 +179,14 @@
                     
                     
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Represents a single sleep session. A user can have multiple sleeps per day.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -164,7 +195,7 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
@@ -205,7 +236,7 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/totalTimeDeep">&nbsp;&nbsp;totalTimeDeep</a></code>
+		<code><a href="#//api/name/totalTimeSound">&nbsp;&nbsp;totalTimeSound</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -238,6 +269,32 @@
 		<code><a href="#//api/name/graphImageURL">&nbsp;&nbsp;graphImageURL</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/apiType">&ndash;&nbsp;apiType</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/decodeFromDictionary:">&ndash;&nbsp;decodeFromDictionary:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/encodeToDictionary">&ndash;&nbsp;encodeToDictionary</a></code>
+	</span>
+	
 	
 </li>
 						</ul>
@@ -300,7 +357,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>TODO: What is the difference between this and <a href="#//api/name/timeCompleted">timeCompleted</a>?</p>
+		<p>The time when the user woke up.</p>
 	</div>		
 	
     
@@ -317,7 +374,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>TODO: What is the difference between this and <a href="#//api/name/timeCompleted">timeCompleted</a>?</p>
+		<p>The time when the user woke up.</p>
 	</div>
 	
 	
@@ -341,7 +398,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>How many times did the user wake up during their sleep?</p>
+		<p>The number of times the user woke up during the sleep.</p>
 	</div>		
 	
     
@@ -358,7 +415,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>How many times did the user wake up during their sleep?</p>
+		<p>The number of times the user woke up during the sleep.</p>
 	</div>
 	
 	
@@ -423,7 +480,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The quality of the sleep. TODO: What is the min and max?</p>
+		<p>The quality of the sleep.</p>
 	</div>		
 	
     
@@ -440,7 +497,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The quality of the sleep. TODO: What is the min and max?</p>
+		<p>The quality of the sleep.</p>
 	</div>
 	
 	
@@ -464,7 +521,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>What time was the smart alarm scheduled to go off?</p>
+		<p>The time that the user&rsquo;s smart sleep alarm fired.</p>
 	</div>		
 	
     
@@ -481,7 +538,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>What time was the smart alarm scheduled to go off?</p>
+		<p>The time that the user&rsquo;s smart sleep alarm fired.</p>
 	</div>
 	
 	
@@ -505,7 +562,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>TODO: What is the difference between this and <a href="#//api/name/awakeTime">awakeTime</a>?</p>
+		<p>The time the sleep was completed.</p>
 	</div>		
 	
     
@@ -522,7 +579,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>TODO: What is the difference between this and <a href="#//api/name/awakeTime">awakeTime</a>?</p>
+		<p>The time the sleep was completed.</p>
 	</div>
 	
 	
@@ -587,7 +644,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The total amount of time the user was awake (e.g., woken up by a car alarm) during the times they went to sleep and woke up.</p>
+		<p>The total amount of time the user was awake during the sleep.</p>
 	</div>		
 	
     
@@ -604,48 +661,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The total amount of time the user was awake (e.g., woken up by a car alarm) during the times they went to sleep and woke up.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPSleepAPI.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/totalTimeDeep" title="totalTimeDeep"></a>
-	<h3 class="subsubtitle method-title">totalTimeDeep</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The total  time the user spent in deep sleep.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *totalTimeDeep</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The total  time the user spent in deep sleep.</p>
+		<p>The total amount of time the user was awake during the sleep.</p>
 	</div>
 	
 	
@@ -687,6 +703,47 @@
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>The total time the user spent in light sleep.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPSleepAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/totalTimeSound" title="totalTimeSound"></a>
+	<h3 class="subsubtitle method-title">totalTimeSound</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The total  time the user spent in sound sleep.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *totalTimeSound</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The total  time the user spent in sound sleep.</p>
 	</div>
 	
 	
@@ -776,6 +833,135 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/apiType" title="apiType"></a>
+	<h3 class="subsubtitle method-title">apiType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The API type of the event, used by the events API.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)apiType</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The API type of the event, used by the events API.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPBaseEventAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/decodeFromDictionary:" title="decodeFromDictionary:"></a>
+	<h3 class="subsubtitle method-title">decodeFromDictionary:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Decodes an object from a JSON dictionary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)decodeFromDictionary:(NSDictionary *)<em>dictionary</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Decodes an object from a JSON dictionary.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPBaseEventAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/encodeToDictionary" title="encodeToDictionary"></a>
+	<h3 class="subsubtitle method-title">encodeToDictionary</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Encodes an object to a JSON dictionary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)encodeToDictionary</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Encodes an object to a JSON dictionary.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPBaseEventAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
                     
                     
@@ -789,7 +975,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Jawbone. All rights reserved. (Last updated: 2014-03-28)</span><br />
+						<p><span class="copyright">&copy; 2014 Jawbone. All rights reserved. (Last updated: 2014-03-31)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						

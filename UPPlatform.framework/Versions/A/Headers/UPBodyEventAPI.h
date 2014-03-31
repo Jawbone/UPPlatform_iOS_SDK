@@ -15,6 +15,9 @@
 
 typedef void(^UPBodyEventAPICompletion)(UPBodyEvent *event, UPURLResponse *response, NSError *error);
 
+/**
+ *  Provides an interface for interacting with body events.
+ */
 @interface UPBodyEventAPI : NSObject
 
 /**
@@ -47,6 +50,9 @@ typedef void(^UPBodyEventAPICompletion)(UPBodyEvent *event, UPURLResponse *respo
 
 @end
 
+/**
+ *  A body event describes body characteristics, like weight and body fat.
+ */
 @interface UPBodyEvent : UPGenericEvent
 
 /**

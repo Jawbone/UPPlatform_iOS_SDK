@@ -151,7 +151,7 @@ static NSString *kSleepType = @"sleeps";
 	self.asleepTime = [NSDate dateWithTimeIntervalSince1970:[[details numberForKey:@"asleep_time"] doubleValue]];
 	self.awakeTime = [NSDate dateWithTimeIntervalSince1970:[[details numberForKey:@"awake_time"] doubleValue]];
 	self.totalTimeAwake = [details numberForKey:@"awake"];
-	self.totalTimeDeep = [details numberForKey:@"deep"];
+	self.totalTimeSound = [details numberForKey:@"deep"];
 	self.totalTimeLight = [details numberForKey:@"light"];
 	self.totalTime = [details numberForKey:@"duration"];
 	self.quality = [details numberForKey:@"quality"];
@@ -173,7 +173,7 @@ static NSString *kSleepType = @"sleeps";
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"UPSleep: { xid: %@, title: %@, date: %@, asleepTime: %@, awakeTime: %@, totalTimeAwake: %@, totalTimeDeep: %@, totalTimeLight: %@, totalTime: %@, quality: %@, awakenings: %@, smartAlarmFireTime: %@, graphImageURL: %@ }", self.xid, self.title, self.date, self.asleepTime, self.awakeTime, self.totalTimeAwake, self.totalTimeDeep, self.totalTimeLight, self.totalTime, self.quality, self.awakenings, self.smartAlarmFireTime, self.graphImageURL];
+	return [NSString stringWithFormat:@"UPSleep: { xid: %@, title: %@, date: %@, asleepTime: %@, awakeTime: %@, totalTimeAwake: %@, totalTimeSound: %@, totalTimeLight: %@, totalTime: %@, quality: %@, awakenings: %@, smartAlarmFireTime: %@, graphImageURL: %@ }", self.xid, self.title, self.date, self.asleepTime, self.awakeTime, self.totalTimeAwake, self.totalTimeSound, self.totalTimeLight, self.totalTime, self.quality, self.awakenings, self.smartAlarmFireTime, self.graphImageURL];
 }
 
 @end

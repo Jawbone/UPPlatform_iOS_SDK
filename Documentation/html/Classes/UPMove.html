@@ -26,6 +26,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -62,6 +64,13 @@
 	
 	
 	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/apiType">&nbsp;&nbsp;&nbsp;&nbsp;- apiType</option>
+	
+	<option value="//api/name/decodeFromDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;- decodeFromDictionary:</option>
+	
+	
 	
 </select>
 				</li>
@@ -70,6 +79,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -109,6 +120,14 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/apiType">apiType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/decodeFromDictionary:">decodeFromDictionary:</a></span></li>
+	
+</ul></li>
+
 
 			</ul>
 		</nav>
@@ -131,7 +150,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UPBaseEvent : NSObject</td>
+	<td class="specification-value"><a href="../Classes/UPBaseEvent.html">UPBaseEvent</a> : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">UPMoveAPI.h<br />UPMoveAPI.m</td>
@@ -141,6 +160,14 @@
                     
                     
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A move represents the user&rsquo;s activity throughout a day.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -149,7 +176,7 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
@@ -215,6 +242,26 @@
 </li>
 						</ul>
 						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/apiType">&ndash;&nbsp;apiType</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/decodeFromDictionary:">&ndash;&nbsp;decodeFromDictionary:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
 					</div>
 					
 					
@@ -232,7 +279,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The number of active calories burned. TODO: What does this mean?</p>
+		<p>The number of active calories burned.</p>
 	</div>		
 	
     
@@ -249,7 +296,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The number of active calories burned. TODO: What does this mean?</p>
+		<p>The number of active calories burned.</p>
 	</div>
 	
 	
@@ -519,7 +566,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The number of resting calories burned. TODO: What does this mean?</p>
+		<p>The number of resting calories burned.</p>
 	</div>		
 	
     
@@ -536,7 +583,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The number of resting calories burned. TODO: What does this mean?</p>
+		<p>The number of resting calories burned.</p>
 	</div>
 	
 	
@@ -641,6 +688,94 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/apiType" title="apiType"></a>
+	<h3 class="subsubtitle method-title">apiType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The API type of the event, used by the events API.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)apiType</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The API type of the event, used by the events API.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPBaseEventAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/decodeFromDictionary:" title="decodeFromDictionary:"></a>
+	<h3 class="subsubtitle method-title">decodeFromDictionary:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Decodes an object from a JSON dictionary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)decodeFromDictionary:(NSDictionary *)<em>dictionary</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Decodes an object from a JSON dictionary.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPBaseEventAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
                     
                     
@@ -654,7 +789,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Jawbone. All rights reserved. (Last updated: 2014-03-28)</span><br />
+						<p><span class="copyright">&copy; 2014 Jawbone. All rights reserved. (Last updated: 2014-03-31)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						

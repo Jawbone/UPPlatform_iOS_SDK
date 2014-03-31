@@ -14,6 +14,9 @@
 
 typedef void(^UPGenericEventAPICompletion)(UPGenericEvent *event, UPURLResponse *response, NSError *error);
 
+/**
+ *  Provides an interface for interacting with generic events.
+ */
 @interface UPGenericEventAPI : NSObject
 
 /**
@@ -46,6 +49,10 @@ typedef void(^UPGenericEventAPICompletion)(UPGenericEvent *event, UPURLResponse 
 
 @end
 
+/**
+ *  A generic event represents any event posted to the UP platform that isn't already represented.
+ *  This can be used for generic messaging, or events that are specific to 3rd party application (i.e. posting a photo)
+ */
 @interface UPGenericEvent : UPBaseEvent
 
 /**

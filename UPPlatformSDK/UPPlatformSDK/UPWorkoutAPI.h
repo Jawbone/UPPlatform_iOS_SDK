@@ -15,6 +15,9 @@
 
 typedef void(^UPWorkoutAPICompletion)(UPWorkout *workout, UPURLResponse *response, NSError *error);
 
+/**
+ *  Provides an interface for interacting with the user's workouts.
+ */
 @interface UPWorkoutAPI : NSObject
 
 /**
@@ -67,7 +70,7 @@ typedef void(^UPWorkoutAPICompletion)(UPWorkout *workout, UPURLResponse *respons
 + (void)getWorkoutGraphImage:(UPWorkout *)workout completion:(UPBaseEventAPIImageCompletion)completion;
 
 /**
- * TODO: What is workout snapshot?
+ * Requests a snapshot of the workout. The snapshot is a series of ticks over the duration of the workout.
  *
  * @param workout The workout for which to request the snapshot.
  * @param completion Block to be executed upon completion. The block is passed the snapshot.
@@ -76,6 +79,9 @@ typedef void(^UPWorkoutAPICompletion)(UPWorkout *workout, UPURLResponse *respons
 
 @end
 
+/**
+ * The available types of workouts.
+ */
 typedef NS_ENUM(NSUInteger, UPWorkoutType)
 {
 	UPWorkoutTypeWalk					= 1,
@@ -108,6 +114,9 @@ typedef NS_ENUM(NSUInteger, UPWorkoutType)
 	UPWorkoutTypeGame					= 28
 };
 
+/**
+ * The available types of workout intensities.
+ */
 typedef NS_ENUM(NSUInteger, UPWorkoutIntensity)
 {
 	UPWorkoutIntensityEasy				= 1,
@@ -117,6 +126,9 @@ typedef NS_ENUM(NSUInteger, UPWorkoutIntensity)
 	UPWorkoutIntensityHard				= 5
 };
 
+/**
+ *  A workout represents a duration within the days move where the user worked out.
+ */
 @interface UPWorkout : UPMove
 
 /**
@@ -131,11 +143,34 @@ typedef NS_ENUM(NSUInteger, UPWorkoutIntensity)
  */
 + (UPWorkout *)workoutWithType:(UPWorkoutType)type startTime:(NSDate *)startTime endTime:(NSDate *)endTime intensity:(UPWorkoutIntensity)intensity caloriesBurned:(NSNumber *)caloriesBurned;
 
+/**
+ *  The workout type.
+ */
 @property (nonatomic, assign) UPWorkoutType type;
+
+/**
+ *  The workout intensity.
+ */
 @property (nonatomic, assign) UPWorkoutIntensity intensity;
+
+/**
+ *  The time the workout was completed.
+ */
 @property (nonatomic, strong) NSDate *timeCompleted;
+
+/**
+ *  The URL for the workout's image.
+ */
 @property (nonatomic, strong) NSString *imageURL;
+
+/**
+ *  The URL for the workout's route image.
+ */
 @property (nonatomic, strong) NSString *routeImageURL;
+
+/**
+ *  The workout's image.
+ */
 @property (nonatomic, strong) UIImage *image;
 
 @end

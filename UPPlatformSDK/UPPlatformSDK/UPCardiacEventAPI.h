@@ -15,6 +15,9 @@
 
 typedef void(^UPCardiacEventAPICompletion)(UPCardiacEvent *event, UPURLResponse *response, NSError *error);
 
+/**
+ *  Provides an interface for interacting with cardiac events.
+ */
 @interface UPCardiacEventAPI : NSObject
 
 /**
@@ -50,6 +53,9 @@ typedef void(^UPCardiacEventAPICompletion)(UPCardiacEvent *event, UPURLResponse 
 
 @end
 
+/**
+ *  A cardiac represents cardiac characteristics of the user, like heart rate.
+ */
 @interface UPCardiacEvent : UPGenericEvent
 
 /**

@@ -155,8 +155,7 @@
 	self.moveWorkoutTime = [values numberForKey:@"m_workout_time"];
 	self.moveActiveTime = [values numberForKey:@"m_active_time"];
 	self.moveCalories = [values numberForKey:@"m_calories"];
-	self.sleepLight = [values numberForKey:@"s_light"];
-	self.sleepDeep = [values numberForKey:@"s_deep"];
+	self.sleepSound = [values numberForKey:@"s_deep"];
 	self.sleepAwake = [values numberForKey:@"s_awake"];
 	self.sleepTimeAsleep = [values numberForKey:@"s_asleep_time"];
 	self.sleepTimeAwake = [values numberForKey:@"s_awake_time"];
@@ -188,7 +187,7 @@
 			"moveActiveTime: %@, " \
 			"moveCalories: %@, " \
 			"sleepLight: %@, " \
-			"sleepDeep: %@, " \
+			"sleepSound: %@, " \
 			"sleepAwake: %@, " \
 			"sleepTimeAsleep: %@, " \
 			"sleepTimeAwake: %@, " \
@@ -212,7 +211,7 @@
 			self.moveActiveTime,
 			self.moveCalories,
 			self.sleepLight,
-			self.sleepDeep,
+			self.sleepSound,
 			self.sleepAwake,
 			self.sleepTimeAsleep,
 			self.sleepTimeAwake,

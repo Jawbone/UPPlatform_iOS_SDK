@@ -14,6 +14,9 @@
 
 typedef void(^UPSleepAPICompletion)(UPSleep *sleep, UPURLResponse *response, NSError *error);
 
+/**
+ *  Provides an interface for interacting with the user's sleeps.
+ */
 @interface UPSleepAPI : NSObject
 
 /**
@@ -64,7 +67,7 @@ typedef void(^UPSleepAPICompletion)(UPSleep *sleep, UPURLResponse *response, NSE
 + (void)getSleepGraphImage:(UPSleep *)sleep completion:(UPBaseEventAPIImageCompletion)completion;
 
 /**
- * TODO: What is a sleep snapshot?
+ * Requests a snapshot of the sleep. The snapshot is a series of ticks over the duration of the sleep.
  *
  * @param sleep The sleep event to request the snapshot for.
  * @param completion Block to be executed upon completion. The block is passed the result.
@@ -73,6 +76,9 @@ typedef void(^UPSleepAPICompletion)(UPSleep *sleep, UPURLResponse *response, NSE
 
 @end
 
+/**
+ *  Represents a single sleep session. A user can have multiple sleeps per day.
+ */
 @interface UPSleep : UPBaseEvent
 
 /**
@@ -84,37 +90,59 @@ typedef void(^UPSleepAPICompletion)(UPSleep *sleep, UPURLResponse *response, NSE
  */
 + (UPSleep *)sleepWithStartTime:(NSDate *)startTime endTime:(NSDate *)endTime;
 
-/// TODO: What is the difference between this and awakeTime?
+/**
+ *  The time the sleep was completed.
+ */
 @property (nonatomic, strong) NSDate *timeCompleted;
 
-/// The time when the user went to sleep.
+/**
+ *  The time when the user went to sleep.
+ */
 @property (nonatomic, strong) NSDate *asleepTime;
 
-/// TODO: What is the difference between this and timeCompleted?
+/**
+ *  The time when the user woke up.
+ */
 @property (nonatomic, strong) NSDate *awakeTime;
 
-/// The total amount of time the user was awake (e.g., woken up by a car alarm) during the times they went to sleep and woke up.
+/**
+ *  The total amount of time the user was awake during the sleep.
+ */
 @property (nonatomic, strong) NSNumber *totalTimeAwake;
 
-/// The total time the user spent in light sleep.
+/**
+ *  The total time the user spent in light sleep.
+ */
 @property (nonatomic, strong) NSNumber *totalTimeLight;
 
-/// The total  time the user spent in deep sleep.
-@property (nonatomic, strong) NSNumber *totalTimeDeep;
+/**
+ *  The total  time the user spent in sound sleep.
+ */
+@property (nonatomic, strong) NSNumber *totalTimeSound;
 
-/// The total time the user was asleep.
+/**
+ *  The total time the user was asleep.
+ */
 @property (nonatomic, strong) NSNumber *totalTime;
 
-/// The quality of the sleep. TODO: What is the min and max?
+/**
+ *  The quality of the sleep.
+ */
 @property (nonatomic, strong) NSNumber *quality;
 
-/// How many times did the user wake up during their sleep?
+/**
+ *  The number of times the user woke up during the sleep.
+ */
 @property (nonatomic, strong) NSNumber *awakenings;
 
-/// What time was the smart alarm scheduled to go off?
+/**
+ *  The time that the user's smart sleep alarm fired.
+ */
 @property (nonatomic, strong) NSDate *smartAlarmFireTime;
 
-/// The URL to the graph of the sleep event.
+/**
+ *  The URL to the graph of the sleep event.
+ */
 @property (nonatomic, strong) NSString *graphImageURL;
 
 @end

@@ -14,6 +14,9 @@
 
 typedef void(^UPMoodAPICompletion)(UPMood *mood, UPURLResponse *response, NSError *error);
 
+/**
+ *  Provides an interface for interacting with the user's moods.
+ */
 @interface UPMoodAPI : NSObject
 
 /**
@@ -49,6 +52,9 @@ typedef void(^UPMoodAPICompletion)(UPMood *mood, UPURLResponse *response, NSErro
 
 @end
 
+/**
+ *  The avaiable types of moods.
+ */
 typedef NS_ENUM(NSUInteger, UPMoodType)
 {
     UPMoodTypeAmazing,
@@ -61,17 +67,22 @@ typedef NS_ENUM(NSUInteger, UPMoodType)
     UPMoodTypeTotallyDone,
 };
 
+/**
+ *  An event that represents how the user is feeling.
+ */
 @interface UPMood : UPBaseEvent
 
 /**
  * Create a new mood event.
  *
- * @param type The mood type of new mood event. TODO: What are the different types?
+ * @param type The mood type of new mood event.
  * @param completion Block to be executed upon completion. This block is passed the result or any error information.
  */
 + (UPMood *)moodWithType:(UPMoodType)type title:(NSString *)title;
 
-/// The type of the mood event. TODO: What are the different types?
+/**
+ *  The type of mood, which controls which icon is used.
+ */
 @property (nonatomic, assign) UPMoodType type;
 
 @end

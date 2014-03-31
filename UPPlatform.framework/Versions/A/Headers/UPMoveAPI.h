@@ -14,6 +14,9 @@
 
 typedef void(^UPMoveAPICompletion)(UPMove *move, UPURLResponse *response, NSError *error);
 
+/**
+ *  Provides an interface for interacting with the user's move events.
+ */
 @interface UPMoveAPI : NSObject
 
 /**
@@ -50,7 +53,7 @@ typedef void(^UPMoveAPICompletion)(UPMove *move, UPURLResponse *response, NSErro
 + (void)getMoveGraphImage:(UPMove *)move completion:(UPBaseEventAPIImageCompletion)completion;
 
 /**
- * TODO: What is a snapshot?
+ * Requests a snapshot of the move. The snapshot is a series of ticks over the duration of the move.
  *
  * @param move The move event to request the snapshot for.
  * @param completion Block to be executed upon completion. The block is passed the snapshot of any error information.
@@ -59,36 +62,59 @@ typedef void(^UPMoveAPICompletion)(UPMove *move, UPURLResponse *response, NSErro
 
 @end
 
+/**
+ *  A move represents the user's activity throughout a day.
+ */
 @interface UPMove : UPBaseEvent
 
-/// The duration of time for which the user was active.
+/**
+ *  The duration of time for which the user was active.
+ */
 @property (nonatomic, strong) NSNumber *activeTime;
 
-/// The duration of time for which the user was inactive.
+/**
+ *  The duration of time for which the user was inactive.
+ */
 @property (nonatomic, strong) NSNumber *inactiveTime;
 
-/// The number of resting calories burned. TODO: What does this mean?
+/**
+ *  The number of resting calories burned.
+ */
 @property (nonatomic, strong) NSNumber *restingCalories;
 
-/// The number of active calories burned. TODO: What does this mean?
+/**
+ *  The number of active calories burned.
+ */
 @property (nonatomic, strong) NSNumber *activeCalories;
 
-/// The number of total calories burned.
+/**
+ *  The number of total calories burned.
+ */
 @property (nonatomic, strong) NSNumber *totalCalories;
 
-/// The distance traveled during the move event.
+/**
+ *  The distance traveled during the move event.
+ */
 @property (nonatomic, strong) NSNumber *distance;
 
-/// The number of steps taken during the event.
+/**
+ *  The number of steps taken during the event.
+ */
 @property (nonatomic, strong) NSNumber *steps;
 
-/// The longest time that the user spent idle during the move event.
+/**
+ *  The longest time that the user spent idle during the move event.
+ */
 @property (nonatomic, strong) NSNumber *longestIdle;
 
-/// The longest period of time that the user spent active during the move event.
+/**
+ *  The longest period of time that the user spent active during the move event.
+ */
 @property (nonatomic, strong) NSNumber *longestActive;
 
-/// The URL for the graph image for the move event.
+/**
+ *  The URL for the graph image for the move event.
+ */
 @property (nonatomic, strong) NSString *graphImageURL;
 
 @end
