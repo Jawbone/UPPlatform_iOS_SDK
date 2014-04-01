@@ -18,12 +18,6 @@
 
 - (void)getMoves
 {
-    /*
-	[UPMoveAPI getMovesWithLimit:14 completion:^(NSArray *results, UPURLResponse *response, NSError *error) {
-		[self showResults:results];
-	}];
-     */
-    
     NSDate *endDate = [NSDate date];
     NSDate *startDate = [NSDate dateWithTimeIntervalSince1970:[endDate timeIntervalSince1970] - (24 * 60 * 60 * 14)];
     [UPMoveAPI getMovesFromStartDate:startDate toEndDate:endDate completion:^(NSArray *results, UPURLResponse *response, NSError *error) {
@@ -61,16 +55,16 @@
 	}];
 }
 
-- (void)getMoveSnapshot
+- (void)getMoveTicks
 {
 	[UPMoveAPI getMovesWithLimit:1 completion:^(NSArray *results, UPURLResponse *response, NSError *error) {
 		if (results.count > 0)
 		{
 			UPMove *move = results[0];
 			
-			[UPMoveAPI getMoveSnapshot:move completion:^(UPSnapshot *snapshot, UPURLResponse *response, NSError *error) {
-				[self showResults:snapshot];
-			}];
+			[UPMoveAPI getMoveTicks:move completion:^(NSArray *results, UPURLResponse *response, NSError *error) {
+                [self showResults:results];
+            }];
 		}
 	}];
 }
@@ -92,7 +86,7 @@
 			break;
 			
 		case 3:
-			[self getMoveSnapshot];
+			[self getMoveTicks];
 			break;
 			
 		default:

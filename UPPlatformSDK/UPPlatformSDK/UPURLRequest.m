@@ -44,7 +44,11 @@ NSString const *APIMultipartBoundary = @"t5abJf886c95bfexhOzryaoq2xuedO34ru8osiq
 
 - (id)initWithEndpoint:(NSString *)endpoint params:(NSDictionary *)params method:(NSString *)method image:(UIImage *)image
 {
-    NSAssert([UPPlatform sharedPlatform].currentSession != nil, @"Must have a valid session to create an UPURLRequest.");
+    if ([UPPlatform sharedPlatform].currentSession == nil)
+    {
+        NSLog(@"Cannot create an UPURLRequest without a current session.");
+        return nil;
+    }
     
     NSString *url = [NSString stringWithFormat:@"%@/%@", [UPPlatform basePlatformURL], endpoint];
     self = [super initWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:kDefaultRequestTimeout];

@@ -70,12 +70,12 @@ typedef void(^UPWorkoutAPICompletion)(UPWorkout *workout, UPURLResponse *respons
 + (void)getWorkoutGraphImage:(UPWorkout *)workout completion:(UPBaseEventAPIImageCompletion)completion;
 
 /**
- * Requests a snapshot of the workout. The snapshot is a series of ticks over the duration of the workout.
+ * Requests individual ticks in the workout. Ticks have finer grain detail about the move.
  *
- * @param workout The workout for which to request the snapshot.
- * @param completion Block to be executed upon completion. The block is passed the snapshot.
+ * @param workout The workout for which to request the ticks.
+ * @param completion Block to be executed upon completion. The block is passed the array of ticks.
  */
-+ (void)getWorkoutSnapshot:(UPWorkout *)workout completion:(UPBaseEventAPISnapshotCompletion)completion;
++ (void)getWorkoutTicks:(UPWorkout *)workout completion:(UPBaseEventAPIArrayCompletion)completion;
 
 @end
 

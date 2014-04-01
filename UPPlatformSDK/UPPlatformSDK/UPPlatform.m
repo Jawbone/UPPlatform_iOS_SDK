@@ -87,6 +87,11 @@ static UPPlatform *_instance = nil;
     return @"https://jawbone.com";
 }
 
++ (NSString *)currentPlatformVersion
+{
+    return @"v.1.1";
+}
+
 #pragma mark - Auth Flow
 
 - (NSString *)existingAuthToken

@@ -45,7 +45,7 @@
 	
 	<option value="//api/name/getWorkoutGraphImage:completion:">&nbsp;&nbsp;&nbsp;&nbsp;+ getWorkoutGraphImage:completion:</option>
 	
-	<option value="//api/name/getWorkoutSnapshot:completion:">&nbsp;&nbsp;&nbsp;&nbsp;+ getWorkoutSnapshot:completion:</option>
+	<option value="//api/name/getWorkoutTicks:completion:">&nbsp;&nbsp;&nbsp;&nbsp;+ getWorkoutTicks:completion:</option>
 	
 	<option value="//api/name/getWorkoutsFromStartDate:toEndDate:completion:">&nbsp;&nbsp;&nbsp;&nbsp;+ getWorkoutsFromStartDate:toEndDate:completion:</option>
 	
@@ -87,7 +87,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getWorkoutGraphImage:completion:">getWorkoutGraphImage:completion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getWorkoutSnapshot:completion:">getWorkoutSnapshot:completion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getWorkoutTicks:completion:">getWorkoutTicks:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getWorkoutsFromStartDate:toEndDate:completion:">getWorkoutsFromStartDate:toEndDate:completion:</a></span></li>
 	
@@ -190,7 +190,7 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getWorkoutSnapshot:completion:">+&nbsp;getWorkoutSnapshot:completion:</a></code>
+		<code><a href="#//api/name/getWorkoutTicks:completion:">+&nbsp;getWorkoutTicks:completion:</a></code>
 	</span>
 	
 	
@@ -322,18 +322,18 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/getWorkoutSnapshot:completion:" title="getWorkoutSnapshot:completion:"></a>
-	<h3 class="subsubtitle method-title">getWorkoutSnapshot:completion:</h3>
+	<a name="//api/name/getWorkoutTicks:completion:" title="getWorkoutTicks:completion:"></a>
+	<h3 class="subsubtitle method-title">getWorkoutTicks:completion:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Requests a snapshot of the workout. The snapshot is a series of ticks over the duration of the workout.</p>
+		<p>Requests individual ticks in the workout. Ticks have finer grain detail about the move.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (void)getWorkoutSnapshot:(UPWorkout *)<em>workout</em> completion:(UPBaseEventAPISnapshotCompletion)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (void)getWorkoutTicks:(UPWorkout *)<em>workout</em> completion:(UPBaseEventAPIArrayCompletion)<em>completion</em></code></div>
 
     
 	
@@ -342,12 +342,12 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>workout</em></dt>
-			<dd><p>The workout for which to request the snapshot.</p></dd>
+			<dd><p>The workout for which to request the ticks.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>Block to be executed upon completion. The block is passed the snapshot.</p></dd>
+			<dd><p>Block to be executed upon completion. The block is passed the array of ticks.</p></dd>
 		</dl>
 		
 	</div>
@@ -360,7 +360,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Requests a snapshot of the workout. The snapshot is a series of ticks over the duration of the workout.</p>
+		<p>Requests individual ticks in the workout. Ticks have finer grain detail about the move.</p>
 	</div>
 	
 	

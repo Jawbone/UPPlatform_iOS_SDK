@@ -18,7 +18,7 @@
 
 + (void)getCurrentUserWithCompletion:(UPUserAPICompletion)completion
 {
-    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me" params:nil];
+    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me", [UPPlatform currentPlatformVersion]] params:nil];
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
         
         UPUser *user = nil;
@@ -34,7 +34,7 @@
 
 + (void)getFriendsWithCompletion:(UPBaseEventAPIArrayCompletion)completion
 {
-    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me/friends" params:nil];
+    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/friends", [UPPlatform currentPlatformVersion]] params:nil];
     
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
         NSMutableArray *results = [NSMutableArray array];
@@ -95,7 +95,7 @@
 	NSMutableDictionary *params = [@{ @"range_duration" : @(rangeDuration), @"range" : range, @"bucket_size" : bucket } mutableCopy];
 	if (endDate != nil) [params setObject:dateString forKey:@"end_date"];
 	
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me/trends" params:params];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/trends", [UPPlatform currentPlatformVersion]] params:params];
     
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
         NSMutableArray *results = [NSMutableArray array];
@@ -112,6 +112,38 @@
     }];
 }
 
++ (void)getUserGoalsWithCompletion:(UPUserGoalsAPICompletion)completion
+{
+    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/goals", [UPPlatform currentPlatformVersion]] params:nil];
+    [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
+        
+        UPUserGoals *goals = nil;
+        if (!error)
+        {
+            goals = [[UPUserGoals alloc] init];
+            [goals decodeFromDictionary:response.data];
+        }
+        
+        if (completion != nil) completion(goals, response, error);
+    }];
+}
+
++ (void)getUserSharingSettingsWithCompletion:(UPUserSharingSettingsAPICompletion)completion
+{
+    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/settings", [UPPlatform currentPlatformVersion]] params:nil];
+    [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
+        
+        UPUserSharingSettings *settings = nil;
+        if (!error)
+        {
+            settings = [[UPUserSharingSettings alloc] init];
+            [settings decodeFromDictionary:response.data];
+        }
+        
+        if (completion != nil) completion(settings, response, error);
+    }];
+}
+
 @end
 
 @implementation UPUser
@@ -121,6 +153,9 @@
 	self.xid = [dictionary stringForKey:@"xid"];
 	self.firstName = [dictionary stringForKey:@"first"];
 	self.lastName = [dictionary stringForKey:@"last"];
+    self.weight = [dictionary numberForKey:@"weight"];
+    self.height = [dictionary numberForKey:@"height"];
+    self.gender = [[dictionary numberForKey:@"gender"] intValue] == 0 ? UPUserGenderMale : UPUserGenderFemale;
 	if ([dictionary stringForKey:@"image"].length > 0) self.imageURL = [NSString stringWithFormat:@"%@/%@", [UPPlatform basePlatformURL], [dictionary stringForKey:@"image"]];
 }
 
@@ -131,7 +166,60 @@
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"UPUser: { xid: %@, firstName: %@, lastName: %@, imageURL: %@ }", self.xid, self.firstName, self.lastName, self.imageURL];
+	return [NSString stringWithFormat:@"UPUser: { xid: %@, firstName: %@, lastName: %@, imageURL: %@, weight: %@, height: %@, gender: %@ }", self.xid, self.firstName, self.lastName, self.imageURL, self.weight, self.height, self.gender == UPUserGenderMale ? @"Male" : @"Female"];
+}
+
+@end
+
+@implementation UPUserGoals
+
+- (void)decodeFromDictionary:(NSDictionary *)dictionary
+{
+	self.moveSteps = [dictionary numberForKey:@"move_steps"];
+	self.sleepTotal = [dictionary numberForKey:@"sleep_total"];
+    self.bodyWeight = [dictionary numberForKey:@"body_weight"];
+    self.eatSaturatedFat = [dictionary numberForKey:@"eat_sat_fat"];
+    self.eatSodium = [dictionary numberForKey:@"eat_sodium"];
+    self.eatCarbs = [dictionary numberForKey:@"eat_carbs"];
+    self.eatCholesterol = [dictionary numberForKey:@"eat_cholesterol"];
+    self.eatFiber = [dictionary numberForKey:@"eat_fiber"];
+    self.eatProtein = [dictionary numberForKey:@"eat_protein"];
+    self.eatCalcium = [dictionary numberForKey:@"eat_calcium"];
+    self.eatSugar = [dictionary numberForKey:@"eat_sugar"];
+    self.eatUnsaturatedFat = [dictionary numberForKey:@"eat_unsat_fat"];
+}
+
+- (NSDictionary *)encodeToDictionary
+{
+	return nil;
+}
+
+- (NSString *)description
+{
+	return [NSString stringWithFormat:@"UPUserGoal: { moveSteps: %@, sleepTotal: %@, bodyWeight: %@, eatSaturatedFat: %@, eatSodium: %@, eatCarbs: %@, eatCholesterol: %@, eatFiber: %@, eatProtein: %@, eatCalcium: %@, eatSugar: %@, eatUnsaturatedFat: %@ }", self.moveSteps, self.sleepTotal, self.bodyWeight, self.eatSaturatedFat, self.eatSodium, self.eatCarbs, self.eatCholesterol, self.eatFiber, self.eatProtein, self.eatCalcium, self.eatSugar, self.eatUnsaturatedFat];
+}
+
+@end
+
+@implementation UPUserSharingSettings
+
+- (void)decodeFromDictionary:(NSDictionary *)dictionary
+{
+	self.shareBody = [dictionary numberForKey:@"share_body"].boolValue;
+	self.shareEat = [dictionary numberForKey:@"share_eat"].boolValue;
+    self.shareMood = [dictionary numberForKey:@"share_mood"].boolValue;
+    self.shareMove = [dictionary numberForKey:@"share_move"].boolValue;
+    self.shareSleep = [dictionary numberForKey:@"share_sleep"].boolValue;
+}
+
+- (NSDictionary *)encodeToDictionary
+{
+	return nil;
+}
+
+- (NSString *)description
+{
+	return [NSString stringWithFormat:@"UPUserSharingSettings: { shareBody: %d, shareEat: %d, shareMood: %d, shareMove: %d, shareSleep: %d }", self.shareBody, self.shareEat, self.shareMood, self.shareMove, self.shareSleep];
 }
 
 @end
@@ -155,7 +243,7 @@
 	self.moveWorkoutTime = [values numberForKey:@"m_workout_time"];
 	self.moveActiveTime = [values numberForKey:@"m_active_time"];
 	self.moveCalories = [values numberForKey:@"m_calories"];
-	self.sleepSound = [values numberForKey:@"s_deep"];
+	self.sleepSound = [values numberForKey:@"s_sound"];
 	self.sleepAwake = [values numberForKey:@"s_awake"];
 	self.sleepTimeAsleep = [values numberForKey:@"s_asleep_time"];
 	self.sleepTimeAwake = [values numberForKey:@"s_awake_time"];

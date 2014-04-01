@@ -39,6 +39,20 @@
 	}];
 }
 
+- (void)getGoals
+{
+	[UPUserAPI getUserGoalsWithCompletion:^(UPUserGoals *goals, UPURLResponse *response, NSError *error) {
+        [self showResults:goals];
+    }];
+}
+
+- (void)getSettings
+{
+	[UPUserAPI getUserSharingSettingsWithCompletion:^(UPUserSharingSettings *sharingSettings, UPURLResponse *response, NSError *error) {
+        [self showResults:sharingSettings];
+    }];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	switch (indexPath.row)
@@ -53,6 +67,14 @@
 			
 		case 2:
 			[self getTrends];
+			break;
+            
+        case 3:
+			[self getGoals];
+			break;
+            
+        case 4:
+			[self getSettings];
 			break;
 			
 		default:

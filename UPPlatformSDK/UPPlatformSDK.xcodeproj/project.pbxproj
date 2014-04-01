@@ -23,6 +23,12 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		1F7F026518EA053C00F5C39C /* UPBandEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7F026318EA053C00F5C39C /* UPBandEventAPI.h */; };
+		1F7F026618EA053C00F5C39C /* UPBandEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7F026318EA053C00F5C39C /* UPBandEventAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F7F026718EA053C00F5C39C /* UPBandEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7F026418EA053C00F5C39C /* UPBandEventAPI.m */; };
+		1F7F026818EA053C00F5C39C /* UPBandEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7F026418EA053C00F5C39C /* UPBandEventAPI.m */; };
+		1F7F026A18EA057400F5C39C /* UPBandEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7F026318EA053C00F5C39C /* UPBandEventAPI.h */; };
+		1F7F026B18EA057D00F5C39C /* UPBandEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7F026418EA053C00F5C39C /* UPBandEventAPI.m */; };
 		1F971807177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 1F971806177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch */; };
 		1FE2961718D24AD80047F094 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2921837EAAE00F6A596 /* UPCardiacEventAPI.m */; };
 		1FE2961818D24AD80047F094 /* NSDate+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2451837EA3F00F6A596 /* NSDate+UPPlatform.m */; };
@@ -164,6 +170,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F7F026318EA053C00F5C39C /* UPBandEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPBandEventAPI.h; path = UPPlatformSDK/UPBandEventAPI.h; sourceTree = SOURCE_ROOT; };
+		1F7F026418EA053C00F5C39C /* UPBandEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPBandEventAPI.m; path = UPPlatformSDK/UPBandEventAPI.m; sourceTree = SOURCE_ROOT; };
 		1F971806177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UPPlatformSDK-OS-X-Prefix.pch"; sourceTree = "<group>"; };
 		1FE2964118D24AD80047F094 /* libUPPlatform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUPPlatform.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FA5F891768CA7900025723 /* libUPPlatformSDK-OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUPPlatformSDK-OSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,6 +317,8 @@
 				BF7FB27D1837EA8F00F6A596 /* UPSleepAPI.m */,
 				BF7FB2751837EA8800F6A596 /* UPMealAPI.h */,
 				BF7FB2761837EA8800F6A596 /* UPMealAPI.m */,
+				1F7F026318EA053C00F5C39C /* UPBandEventAPI.h */,
+				1F7F026418EA053C00F5C39C /* UPBandEventAPI.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -385,6 +395,7 @@
 				1FE2962D18D24AD80047F094 /* UPURLRequest.h in Headers */,
 				1FE2962E18D24AD80047F094 /* UPMoveAPI.h in Headers */,
 				1FE2962F18D24AD80047F094 /* UPSession.h in Headers */,
+				1F7F026618EA053C00F5C39C /* UPBandEventAPI.h in Headers */,
 				1FE2963018D24AD80047F094 /* UP.h in Headers */,
 				1FE2963118D24AD80047F094 /* UPAuthViewController.h in Headers */,
 				1FE2963318D24AD80047F094 /* UPPlatform.h in Headers */,
@@ -408,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7FB2631837EA6300F6A596 /* UPSession.h in Headers */,
+				1F7F026A18EA057400F5C39C /* UPBandEventAPI.h in Headers */,
 				1F971807177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch in Headers */,
 				BF7FB2B71837EAF400F6A596 /* UPUserAPI.h in Headers */,
 				BF7FB2B01837EAEC00F6A596 /* UPMoodAPI.h in Headers */,
@@ -446,6 +458,7 @@
 				BF7FB2851837EA9900F6A596 /* UPWorkoutAPI.h in Headers */,
 				BF17C7B318391B6D0081A22C /* UPBaseEventAPI.h in Headers */,
 				BF7FB27E1837EA8F00F6A596 /* UPSleepAPI.h in Headers */,
+				1F7F026518EA053C00F5C39C /* UPBandEventAPI.h in Headers */,
 				BF7FB2481837EA3F00F6A596 /* NSDate+UPPlatform.h in Headers */,
 				BF0E75FD183303050088A315 /* UPPlatformSDK-Prefix.pch in Headers */,
 			);
@@ -514,7 +527,7 @@
 		E3E46BF817173670009CCA56 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Jawbone;
 			};
 			buildConfigurationList = E3E46BFB17173670009CCA56 /* Build configuration list for PBXProject "UPPlatformSDK" */;
@@ -603,6 +616,7 @@
 				1FE2962518D24AD80047F094 /* UPMoveAPI.m in Sources */,
 				1FE2962618D24AD80047F094 /* UPMoodAPI.m in Sources */,
 				1FE2962718D24AD80047F094 /* UPURLRequest.m in Sources */,
+				1F7F026818EA053C00F5C39C /* UPBandEventAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +641,7 @@
 				BF7FB28F1837EAA600F6A596 /* UPMoveAPI.m in Sources */,
 				BF7FB2B21837EAEC00F6A596 /* UPMoodAPI.m in Sources */,
 				BF7FB26C1837EA6C00F6A596 /* UPURLRequest.m in Sources */,
+				1F7F026B18EA057D00F5C39C /* UPBandEventAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +666,7 @@
 				BF7FB28E1837EAA600F6A596 /* UPMoveAPI.m in Sources */,
 				BF7FB2B11837EAEC00F6A596 /* UPMoodAPI.m in Sources */,
 				BF7FB26B1837EA6C00F6A596 /* UPURLRequest.m in Sources */,
+				1F7F026718EA053C00F5C39C /* UPBandEventAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,7 +684,6 @@
 		1FE2963F18D24AD80047F094 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/UPPlatformSDK.dst;
@@ -686,7 +701,6 @@
 		1FE2964018D24AD80047F094 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/UPPlatformSDK.dst;
@@ -794,7 +808,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
@@ -828,7 +842,6 @@
 		E3E46C0F17173670009CCA56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/UPPlatformSDK.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UPPlatformSDK/UPPlatformSDK-Prefix.pch";
@@ -841,7 +854,6 @@
 		E3E46C1017173670009CCA56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/UPPlatformSDK.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UPPlatformSDK/UPPlatformSDK-Prefix.pch";

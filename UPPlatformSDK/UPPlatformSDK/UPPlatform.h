@@ -87,6 +87,11 @@ typedef void(^UPPlatformRequestCompletion)(UPURLRequest *request, UPURLResponse 
 + (NSString *)basePlatformURL;
 
 /**
+ *  The current version of the API.
+ */
++ (NSString *)currentPlatformVersion;
+
+/**
  *  Validates the current session.
  *  
  *  This method is useful in order to prevent any API requests from unexpectedly returning a 401 Unauthorized response when the user's access token is not valid.

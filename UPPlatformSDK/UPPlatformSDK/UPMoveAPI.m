@@ -22,7 +22,7 @@ static NSString *kMoveType = @"moves";
 {
 	if (limit == 0) limit = 10;
 	NSDictionary *params = @{ @"limit" : @(limit) };
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me/moves" params:params];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/moves", [UPPlatform currentPlatformVersion]] params:params];
     
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		
@@ -47,7 +47,7 @@ static NSString *kMoveType = @"moves";
 + (void)getMovesFromStartDate:(NSDate *)startDate toEndDate:(NSDate *)endDate completion:(UPBaseEventAPIArrayCompletion)completion
 {
 	NSDictionary *params = @{ @"start_time" : @([startDate timeIntervalSince1970]), @"end_time" : @([endDate timeIntervalSince1970]) };
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me/moves" params:params];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/moves", [UPPlatform currentPlatformVersion]] params:params];
     
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		
@@ -93,19 +93,24 @@ static NSString *kMoveType = @"moves";
 	});
 }
 
-+ (void)getMoveSnapshot:(UPMove *)move completion:(UPBaseEventAPISnapshotCompletion)completion
++ (void)getMoveTicks:(UPMove *)move completion:(UPBaseEventAPIArrayCompletion)completion
 {
-	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/moves/%@/snapshot", move.xid] params:nil];
+	UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/moves/%@/ticks", [UPPlatform currentPlatformVersion], move.xid] params:nil];
 	[[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
 		
-		UPSnapshot *snapshot = nil;
+		NSMutableArray *ticks = [NSMutableArray array];
 		if (error == nil)
 		{
-			NSArray *data = (NSArray *)response.data;
-			snapshot = [UPSnapshot snapshotWithArray:data];
+			NSArray *data = response.data[@"items"];
+			for (NSDictionary *tickJSON in data)
+            {
+                UPMoveTick *tick = [[UPMoveTick alloc] init];
+                [tick decodeFromDictionary:tickJSON];
+                [ticks addObject:tick];
+            }
 		}
 		
-		if (completion) completion(snapshot, response, error);
+		if (completion) completion(ticks, response, error);
 	}];
 }
 
@@ -138,6 +143,30 @@ static NSString *kMoveType = @"moves";
 - (NSString *)description
 {
 	return [NSString stringWithFormat:@"UPMove: { xid: %@, title: %@, date: %@, activeTime: %@, inactiveTime: %@, restingCalories: %@, activeCalories: %@, totalCalories: %@, distance: %@, steps: %@, longestIdle: %@, longestActive: %@, imageURL: %@ }", self.xid, self.title, self.date, self.activeTime, self.inactiveTime, self.restingCalories, self.activeCalories, self.totalCalories, self.distance, self.steps, self.longestIdle, self.longestActive, self.graphImageURL];
+}
+
+@end
+
+@implementation UPMoveTick
+
+- (void)decodeFromDictionary:(NSDictionary *)dictionary
+{
+	self.activeTime = [dictionary numberForKey:@"active_time"];
+	self.calories = [dictionary numberForKey:@"calories"];
+    self.distance = [dictionary numberForKey:@"distance"];
+    self.speed = [dictionary numberForKey:@"speed"];
+    self.steps = [dictionary numberForKey:@"steps"];
+    self.timestamp = [NSDate dateWithTimeIntervalSince1970:[dictionary numberForKey:@"time"].doubleValue];
+}
+
+- (NSDictionary *)encodeToDictionary
+{
+    return nil;
+}
+
+- (NSString *)description
+{
+	return [NSString stringWithFormat:@"UPMoveTick: { activeTime: %@, calories: %@, distance: %@, speed: %@, steps: %@, timestamp: %@ }", self.activeTime, self.calories, self.distance, self.speed, self.steps, self.timestamp];
 }
 
 @end

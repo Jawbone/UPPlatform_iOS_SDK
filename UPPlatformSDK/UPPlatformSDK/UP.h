@@ -19,3 +19,4 @@
 #import "UPWorkoutAPI.h"
 #import "UPSleepAPI.h"
 #import "UPMealAPI.h"
+#import "UPBandEventAPI.h"

@@ -21,7 +21,7 @@ static NSString *kMoodType = @"mood";
 
 + (void)getCurrentMoodWithCompletion:(UPMoodAPICompletion)completion
 {
-    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:@"nudge/api/users/@me/mood" params:nil];
+    UPURLRequest *request = [UPURLRequest getRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/mood", [UPPlatform currentPlatformVersion]] params:nil];
     [[UPPlatform sharedPlatform] sendRequest:request completion:^(UPURLRequest *request, UPURLResponse *response, NSError *error) {
         
 		UPMood *mood = nil;
@@ -90,20 +90,6 @@ static NSString *kMoodType = @"mood";
 	
 	return dict;
 }
-
-/*(
- typedef NS_ENUM(NSUInteger, UPMoodType)
- {
- UPMoodTypeAmazing          = 1,
- UPMoodTypePumpedUp      = 2,
- UPMoodTypeEnergized     = 3,
- UPMoodTypeMeh           = 4,
- UPMoodTypeDragging      = 5,
- UPMoodTypeExhausted     = 6,
- UPMoodTypeDone          = 7,
- UPMoodTypeGood          = 8
- };
- */
 
 - (UPMoodType)typeFromNumber:(NSNumber *)number
 {

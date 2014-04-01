@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>UPSnapshotTick Class Reference</title>
+		<title>UPBandEventAPI Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">UPSnapshotTick Class Reference</h1>
+				<h1 class="hideInXcode">UPBandEventAPI Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -37,13 +37,11 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/timestamp">&nbsp;&nbsp;&nbsp;&nbsp;timestamp</option>
-	
-	<option value="//api/name/value">&nbsp;&nbsp;&nbsp;&nbsp;value</option>
 	
 	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/getBandEventsFromStartDate:toEndDate:completion:">&nbsp;&nbsp;&nbsp;&nbsp;+ getBandEventsFromStartDate:toEndDate:completion:</option>
 	
 	
 	
@@ -69,15 +67,13 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/timestamp">timestamp</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/value">value</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getBandEventsFromStartDate:toEndDate:completion:">getBandEventsFromStartDate:toEndDate:completion:</a></span></li>
 	
 </ul></li>
-
-
 
 
 
@@ -86,7 +82,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="UPSnapshotTick Class Reference" name="top"></a>
+				<a title="UPBandEventAPI Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -95,7 +91,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">UPSnapshotTick Class Reference</h1>
+						<h1 class="title title-header">UPBandEventAPI Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -106,7 +102,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">UPBaseEventAPI.h<br />UPBaseEventAPI.m</td>
+	<td class="specification-value">UPBandEventAPI.h<br />UPBandEventAPI.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -116,7 +112,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A single snapshot tick, which represents a <a href="#//api/name/timestamp">timestamp</a> and <a href="#//api/name/value">value</a>.</p>
+						<p>Provides an interface for getting UP24 band events.</p>
 					</div>
 					
 					
@@ -134,15 +130,9 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/timestamp">&nbsp;&nbsp;timestamp</a></code>
+		<code><a href="#//api/name/getBandEventsFromStartDate:toEndDate:completion:">+&nbsp;getBandEventsFromStartDate:toEndDate:completion:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -153,25 +143,47 @@
 					
 					
 					
+					
+					
 					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/timestamp" title="timestamp"></a>
-	<h3 class="subsubtitle method-title">timestamp</h3>
+	<a name="//api/name/getBandEventsFromStartDate:toEndDate:completion:" title="getBandEventsFromStartDate:toEndDate:completion:"></a>
+	<h3 class="subsubtitle method-title">getBandEventsFromStartDate:toEndDate:completion:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The timestamp of the tick.</p>
+		<p>Request band events between two points in time for the currently authenticated user.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSDate *timestamp</code></div>
+	<div class="method-subsection method-declaration"><code>+ (void)getBandEventsFromStartDate:(NSDate *)<em>startDate</em> toEndDate:(NSDate *)<em>endDate</em> completion:(UPBaseEventAPIArrayCompletion)<em>completion</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>startDate</em></dt>
+			<dd><p>The earliest date to fetch band events from.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>endDate</em></dt>
+			<dd><p>The date up to which to fetch band events to.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>Block to be executed upon completion. The block is passed the results or any error information.</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
@@ -181,7 +193,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The timestamp of the tick.</p>
+		<p>Request band events between two points in time for the currently authenticated user.</p>
 	</div>
 	
 	
@@ -192,56 +204,13 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPBaseEventAPI.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/value" title="value"></a>
-	<h3 class="subsubtitle method-title">value</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The value of the tick.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *value</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The value of the tick.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPBaseEventAPI.h</code><br />
+		<code class="declared-in-ref">UPBandEventAPI.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
-					
-					
 					
 					
 					

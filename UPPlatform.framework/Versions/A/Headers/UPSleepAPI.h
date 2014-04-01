@@ -67,12 +67,12 @@ typedef void(^UPSleepAPICompletion)(UPSleep *sleep, UPURLResponse *response, NSE
 + (void)getSleepGraphImage:(UPSleep *)sleep completion:(UPBaseEventAPIImageCompletion)completion;
 
 /**
- * Requests a snapshot of the sleep. The snapshot is a series of ticks over the duration of the sleep.
+ * Requests ticks of the sleep. The ticks provide finer detail about the sleep.
  *
  * @param sleep The sleep event to request the snapshot for.
  * @param completion Block to be executed upon completion. The block is passed the result.
  */
-+ (void)getSleepSnapshot:(UPSleep *)sleep completion:(UPBaseEventAPISnapshotCompletion)completion;
++ (void)getSleepTicks:(UPSleep *)sleep completion:(UPBaseEventAPIArrayCompletion)completion;
 
 @end
 
@@ -144,5 +144,22 @@ typedef void(^UPSleepAPICompletion)(UPSleep *sleep, UPURLResponse *response, NSE
  *  The URL to the graph of the sleep event.
  */
 @property (nonatomic, strong) NSString *graphImageURL;
+
+@end
+
+/**
+ *  A sleep tick represents details about the sleep at a small section in time.
+ */
+@interface UPSleepTick : NSObject <UPBaseObject>
+
+/**
+ *  The sleep depth of the tick.
+ */
+@property (nonatomic, strong) NSNumber *depth;
+
+/**
+ *  The timestamp of the tick.
+ */
+@property (nonatomic, strong) NSDate *timestamp;
 
 @end

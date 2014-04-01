@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>UPUser Class Reference</title>
+		<title>UPMoveTick Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">UPUser Class Reference</h1>
+				<h1 class="hideInXcode">UPMoveTick Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -39,19 +39,17 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/firstName">&nbsp;&nbsp;&nbsp;&nbsp;firstName</option>
+	<option value="//api/name/activeTime">&nbsp;&nbsp;&nbsp;&nbsp;activeTime</option>
 	
-	<option value="//api/name/gender">&nbsp;&nbsp;&nbsp;&nbsp;gender</option>
+	<option value="//api/name/calories">&nbsp;&nbsp;&nbsp;&nbsp;calories</option>
 	
-	<option value="//api/name/height">&nbsp;&nbsp;&nbsp;&nbsp;height</option>
+	<option value="//api/name/distance">&nbsp;&nbsp;&nbsp;&nbsp;distance</option>
 	
-	<option value="//api/name/imageURL">&nbsp;&nbsp;&nbsp;&nbsp;imageURL</option>
+	<option value="//api/name/speed">&nbsp;&nbsp;&nbsp;&nbsp;speed</option>
 	
-	<option value="//api/name/lastName">&nbsp;&nbsp;&nbsp;&nbsp;lastName</option>
+	<option value="//api/name/steps">&nbsp;&nbsp;&nbsp;&nbsp;steps</option>
 	
-	<option value="//api/name/weight">&nbsp;&nbsp;&nbsp;&nbsp;weight</option>
-	
-	<option value="//api/name/xid">&nbsp;&nbsp;&nbsp;&nbsp;xid</option>
+	<option value="//api/name/timestamp">&nbsp;&nbsp;&nbsp;&nbsp;timestamp</option>
 	
 	
 	
@@ -88,19 +86,17 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/firstName">firstName</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/activeTime">activeTime</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/gender">gender</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calories">calories</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/height">height</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/distance">distance</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageURL">imageURL</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/speed">speed</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lastName">lastName</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/steps">steps</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/weight">weight</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/xid">xid</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/timestamp">timestamp</a></span></li>
 	
 </ul></li>
 
@@ -121,7 +117,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="UPUser Class Reference" name="top"></a>
+				<a title="UPMoveTick Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -130,7 +126,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">UPUser Class Reference</h1>
+						<h1 class="title title-header">UPMoveTick Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -144,7 +140,7 @@
 	<td class="specification-value"><a href="../Protocols/UPBaseObject.html">UPBaseObject</a></td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">UPUserAPI.h<br />UPUserAPI.m</td>
+	<td class="specification-value">UPMoveAPI.h<br />UPMoveAPI.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -154,7 +150,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Represents a logged in user.</p>
+						<p>A move tick represents details about the move at a small section in time.</p>
 					</div>
 					
 					
@@ -172,43 +168,37 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/xid">&nbsp;&nbsp;xid</a></code>
+		<code><a href="#//api/name/activeTime">&nbsp;&nbsp;activeTime</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/firstName">&nbsp;&nbsp;firstName</a></code>
+		<code><a href="#//api/name/calories">&nbsp;&nbsp;calories</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/lastName">&nbsp;&nbsp;lastName</a></code>
+		<code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/imageURL">&nbsp;&nbsp;imageURL</a></code>
+		<code><a href="#//api/name/speed">&nbsp;&nbsp;speed</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/weight">&nbsp;&nbsp;weight</a></code>
+		<code><a href="#//api/name/steps">&nbsp;&nbsp;steps</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/gender">&nbsp;&nbsp;gender</a></code>
+		<code><a href="#//api/name/timestamp">&nbsp;&nbsp;timestamp</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -246,18 +236,18 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/firstName" title="firstName"></a>
-	<h3 class="subsubtitle method-title">firstName</h3>
+	<a name="//api/name/activeTime" title="activeTime"></a>
+	<h3 class="subsubtitle method-title">activeTime</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The user&rsquo;s first name.</p>
+		<p>The minutes of active time in the tick.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *firstName</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *activeTime</code></div>
 
     
 	
@@ -269,7 +259,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The user&rsquo;s first name.</p>
+		<p>The minutes of active time in the tick.</p>
 	</div>
 	
 	
@@ -280,25 +270,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPUserAPI.h</code><br />
+		<code class="declared-in-ref">UPMoveAPI.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/gender" title="gender"></a>
-	<h3 class="subsubtitle method-title">gender</h3>
+	<a name="//api/name/calories" title="calories"></a>
+	<h3 class="subsubtitle method-title">calories</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The user&rsquo;s gender.</p>
+		<p>The calories burned during the tick.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UPUserGender gender</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *calories</code></div>
 
     
 	
@@ -310,7 +300,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The user&rsquo;s gender.</p>
+		<p>The calories burned during the tick.</p>
 	</div>
 	
 	
@@ -321,25 +311,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPUserAPI.h</code><br />
+		<code class="declared-in-ref">UPMoveAPI.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/height" title="height"></a>
-	<h3 class="subsubtitle method-title">height</h3>
+	<a name="//api/name/distance" title="distance"></a>
+	<h3 class="subsubtitle method-title">distance</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The user&rsquo;s height, in meters.</p>
+		<p>The distance traveled during the tick.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *height</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *distance</code></div>
 
     
 	
@@ -351,7 +341,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The user&rsquo;s height, in meters.</p>
+		<p>The distance traveled during the tick.</p>
 	</div>
 	
 	
@@ -362,25 +352,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPUserAPI.h</code><br />
+		<code class="declared-in-ref">UPMoveAPI.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/imageURL" title="imageURL"></a>
-	<h3 class="subsubtitle method-title">imageURL</h3>
+	<a name="//api/name/speed" title="speed"></a>
+	<h3 class="subsubtitle method-title">speed</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The user&rsquo;s image URL.</p>
+		<p>The average speed during the tick.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *imageURL</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *speed</code></div>
 
     
 	
@@ -392,7 +382,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The user&rsquo;s image URL.</p>
+		<p>The average speed during the tick.</p>
 	</div>
 	
 	
@@ -403,25 +393,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPUserAPI.h</code><br />
+		<code class="declared-in-ref">UPMoveAPI.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/lastName" title="lastName"></a>
-	<h3 class="subsubtitle method-title">lastName</h3>
+	<a name="//api/name/steps" title="steps"></a>
+	<h3 class="subsubtitle method-title">steps</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The user&rsquo;s last name.</p>
+		<p>The total number of steps taken during the tick.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *lastName</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *steps</code></div>
 
     
 	
@@ -433,7 +423,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The user&rsquo;s last name.</p>
+		<p>The total number of steps taken during the tick.</p>
 	</div>
 	
 	
@@ -444,25 +434,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPUserAPI.h</code><br />
+		<code class="declared-in-ref">UPMoveAPI.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/weight" title="weight"></a>
-	<h3 class="subsubtitle method-title">weight</h3>
+	<a name="//api/name/timestamp" title="timestamp"></a>
+	<h3 class="subsubtitle method-title">timestamp</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The user&rsquo;s most recent weight, in kilograms.</p>
+		<p>The timestamp of the tick.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *weight</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSDate *timestamp</code></div>
 
     
 	
@@ -474,7 +464,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The user&rsquo;s most recent weight, in kilograms.</p>
+		<p>The timestamp of the tick.</p>
 	</div>
 	
 	
@@ -485,48 +475,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPUserAPI.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/xid" title="xid"></a>
-	<h3 class="subsubtitle method-title">xid</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The user&rsquo;s unique identifier.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *xid</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The user&rsquo;s unique identifier.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPUserAPI.h</code><br />
+		<code class="declared-in-ref">UPMoveAPI.h</code><br />
 	</div>				
 	
 	

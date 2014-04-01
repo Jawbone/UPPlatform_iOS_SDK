@@ -53,12 +53,12 @@ typedef void(^UPMoveAPICompletion)(UPMove *move, UPURLResponse *response, NSErro
 + (void)getMoveGraphImage:(UPMove *)move completion:(UPBaseEventAPIImageCompletion)completion;
 
 /**
- * Requests a snapshot of the move. The snapshot is a series of ticks over the duration of the move.
+ * Requests individual ticks in the move. Ticks have finer grain detail about the move.
  *
- * @param move The move event to request the snapshot for.
- * @param completion Block to be executed upon completion. The block is passed the snapshot of any error information.
+ * @param move The move event to request the ticks for.
+ * @param completion Block to be executed upon completion. The block is passed the ticks array or any error information.
  */
-+ (void)getMoveSnapshot:(UPMove *)move completion:(UPBaseEventAPISnapshotCompletion)completion;
++ (void)getMoveTicks:(UPMove *)move completion:(UPBaseEventAPIArrayCompletion)completion;
 
 @end
 
@@ -116,5 +116,42 @@ typedef void(^UPMoveAPICompletion)(UPMove *move, UPURLResponse *response, NSErro
  *  The URL for the graph image for the move event.
  */
 @property (nonatomic, strong) NSString *graphImageURL;
+
+@end
+
+/**
+ *  A move tick represents details about the move at a small section in time.
+ */
+@interface UPMoveTick : NSObject <UPBaseObject>
+
+/**
+ *  The minutes of active time in the tick.
+ */
+@property (nonatomic, strong) NSNumber *activeTime;
+
+/**
+ *  The calories burned during the tick.
+ */
+@property (nonatomic, strong) NSNumber *calories;
+
+/**
+ *  The distance traveled during the tick.
+ */
+@property (nonatomic, strong) NSNumber *distance;
+
+/**
+ *  The average speed during the tick.
+ */
+@property (nonatomic, strong) NSNumber *speed;
+
+/**
+ *  The total number of steps taken during the tick.
+ */
+@property (nonatomic, strong) NSNumber *steps;
+
+/**
+ *  The timestamp of the tick.
+ */
+@property (nonatomic, strong) NSDate *timestamp;
 
 @end
