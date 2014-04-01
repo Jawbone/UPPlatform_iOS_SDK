@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>UPMood Class Reference</title>
+		<title>UPMoveTick Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">UPMood Class Reference</h1>
+				<h1 class="hideInXcode">UPMoveTick Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -39,21 +39,24 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/type">&nbsp;&nbsp;&nbsp;&nbsp;type</option>
+	<option value="//api/name/activeTime">&nbsp;&nbsp;&nbsp;&nbsp;activeTime</option>
+	
+	<option value="//api/name/calories">&nbsp;&nbsp;&nbsp;&nbsp;calories</option>
+	
+	<option value="//api/name/distance">&nbsp;&nbsp;&nbsp;&nbsp;distance</option>
+	
+	<option value="//api/name/speed">&nbsp;&nbsp;&nbsp;&nbsp;speed</option>
+	
+	<option value="//api/name/steps">&nbsp;&nbsp;&nbsp;&nbsp;steps</option>
+	
+	<option value="//api/name/timestamp">&nbsp;&nbsp;&nbsp;&nbsp;timestamp</option>
 	
 	
-	
-	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/moodWithType:title:">&nbsp;&nbsp;&nbsp;&nbsp;+ moodWithType:title:</option>
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/apiType">&nbsp;&nbsp;&nbsp;&nbsp;- apiType</option>
 	
 	<option value="//api/name/decodeFromDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;- decodeFromDictionary:</option>
 	
@@ -83,23 +86,25 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/type">type</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/activeTime">activeTime</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calories">calories</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/distance">distance</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/speed">speed</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/steps">steps</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/timestamp">timestamp</a></span></li>
 	
 </ul></li>
 
 
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/moodWithType:title:">moodWithType:title:</a></span></li>
-	
-</ul></li>
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/apiType">apiType</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/decodeFromDictionary:">decodeFromDictionary:</a></span></li>
 	
@@ -112,7 +117,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="UPMood Class Reference" name="top"></a>
+				<a title="UPMoveTick Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -121,7 +126,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">UPMood Class Reference</h1>
+						<h1 class="title title-header">UPMoveTick Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -129,10 +134,13 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/UPBaseEvent.html">UPBaseEvent</a> : NSObject</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value"><a href="../Protocols/UPBaseObject.html">UPBaseObject</a></td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">UPMoodAPI.h<br />UPMoodAPI.m</td>
+	<td class="specification-value">UPMoveAPI.h<br />UPMoveAPI.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -142,7 +150,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>An event that represents how the user is feeling.</p>
+						<p>A move tick represents details about the move at a small section in time.</p>
 					</div>
 					
 					
@@ -160,13 +168,37 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/moodWithType:title:">+&nbsp;moodWithType:title:</a></code>
+		<code><a href="#//api/name/activeTime">&nbsp;&nbsp;activeTime</a></code>
 	</span>
-	
+	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+		<code><a href="#//api/name/calories">&nbsp;&nbsp;calories</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/speed">&nbsp;&nbsp;speed</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/steps">&nbsp;&nbsp;steps</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/timestamp">&nbsp;&nbsp;timestamp</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -179,12 +211,6 @@
 
 						<ul class="task-list">
 							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/apiType">&ndash;&nbsp;apiType</a></code>
-	</span>
-	
-	
-</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/decodeFromDictionary:">&ndash;&nbsp;decodeFromDictionary:</a></code>
 	</span>
@@ -210,18 +236,18 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/type" title="type"></a>
-	<h3 class="subsubtitle method-title">type</h3>
+	<a name="//api/name/activeTime" title="activeTime"></a>
+	<h3 class="subsubtitle method-title">activeTime</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The type of mood, which controls which icon is used.</p>
+		<p>The minutes of active time in the tick.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UPMoodType type</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *activeTime</code></div>
 
     
 	
@@ -233,7 +259,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The type of mood, which controls which icon is used.</p>
+		<p>The minutes of active time in the tick.</p>
 	</div>
 	
 	
@@ -244,50 +270,27 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPMoodAPI.h</code><br />
+		<code class="declared-in-ref">UPMoveAPI.h</code><br />
 	</div>				
 	
 	
 </div>
-						
-					</div>
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/moodWithType:title:" title="moodWithType:title:"></a>
-	<h3 class="subsubtitle method-title">moodWithType:title:</h3>
+	<a name="//api/name/calories" title="calories"></a>
+	<h3 class="subsubtitle method-title">calories</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Create a new mood event.</p>
+		<p>The calories burned during the tick.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (UPMood *)moodWithType:(UPMoodType)<em>type</em> title:(NSString *)<em>title</em></code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *calories</code></div>
 
     
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>type</em></dt>
-			<dd><p>The mood <a href="#//api/name/type">type</a> of new mood event.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completion</em></dt>
-			<dd><p>Block to be executed upon completion. This block is passed the result or any error information.</p></dd>
-		</dl>
-		
-	</div>
 	
 	
 	
@@ -297,7 +300,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Create a new mood event.</p>
+		<p>The calories burned during the tick.</p>
 	</div>
 	
 	
@@ -308,13 +311,179 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPMoodAPI.h</code><br />
+		<code class="declared-in-ref">UPMoveAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/distance" title="distance"></a>
+	<h3 class="subsubtitle method-title">distance</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The distance traveled during the tick.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *distance</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The distance traveled during the tick.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPMoveAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/speed" title="speed"></a>
+	<h3 class="subsubtitle method-title">speed</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The average speed during the tick.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *speed</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The average speed during the tick.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPMoveAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/steps" title="steps"></a>
+	<h3 class="subsubtitle method-title">steps</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The total number of steps taken during the tick.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *steps</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The total number of steps taken during the tick.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPMoveAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/timestamp" title="timestamp"></a>
+	<h3 class="subsubtitle method-title">timestamp</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The timestamp of the tick.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSDate *timestamp</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The timestamp of the tick.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPMoveAPI.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
+					
+					
 					
 					
 					
@@ -323,42 +492,14 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/apiType" title="apiType"></a>
-	<h3 class="subsubtitle method-title">apiType</h3>
-	
-	
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSString *)apiType</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPBaseEventAPI.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/decodeFromDictionary:" title="decodeFromDictionary:"></a>
 	<h3 class="subsubtitle method-title">decodeFromDictionary:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Decodes an object from a JSON dictionary.</p>
+	</div>		
 	
     
 
@@ -371,6 +512,11 @@
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Decodes an object from a JSON dictionary.</p>
+	</div>
 	
 	
 	

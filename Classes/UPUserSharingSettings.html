@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>UPMood Class Reference</title>
+		<title>UPUserSharingSettings Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">UPMood Class Reference</h1>
+				<h1 class="hideInXcode">UPUserSharingSettings Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -39,21 +39,22 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/type">&nbsp;&nbsp;&nbsp;&nbsp;type</option>
+	<option value="//api/name/shareBody">&nbsp;&nbsp;&nbsp;&nbsp;shareBody</option>
+	
+	<option value="//api/name/shareEat">&nbsp;&nbsp;&nbsp;&nbsp;shareEat</option>
+	
+	<option value="//api/name/shareMood">&nbsp;&nbsp;&nbsp;&nbsp;shareMood</option>
+	
+	<option value="//api/name/shareMove">&nbsp;&nbsp;&nbsp;&nbsp;shareMove</option>
+	
+	<option value="//api/name/shareSleep">&nbsp;&nbsp;&nbsp;&nbsp;shareSleep</option>
 	
 	
-	
-	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/moodWithType:title:">&nbsp;&nbsp;&nbsp;&nbsp;+ moodWithType:title:</option>
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/apiType">&nbsp;&nbsp;&nbsp;&nbsp;- apiType</option>
 	
 	<option value="//api/name/decodeFromDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;- decodeFromDictionary:</option>
 	
@@ -83,23 +84,23 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/type">type</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shareBody">shareBody</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shareEat">shareEat</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shareMood">shareMood</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shareMove">shareMove</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shareSleep">shareSleep</a></span></li>
 	
 </ul></li>
 
 
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/moodWithType:title:">moodWithType:title:</a></span></li>
-	
-</ul></li>
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/apiType">apiType</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/decodeFromDictionary:">decodeFromDictionary:</a></span></li>
 	
@@ -112,7 +113,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="UPMood Class Reference" name="top"></a>
+				<a title="UPUserSharingSettings Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -121,7 +122,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">UPMood Class Reference</h1>
+						<h1 class="title title-header">UPUserSharingSettings Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -129,10 +130,13 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/UPBaseEvent.html">UPBaseEvent</a> : NSObject</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value"><a href="../Protocols/UPBaseObject.html">UPBaseObject</a></td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">UPMoodAPI.h<br />UPMoodAPI.m</td>
+	<td class="specification-value">UPUserAPI.h<br />UPUserAPI.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -142,7 +146,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>An event that represents how the user is feeling.</p>
+						<p>The user&rsquo;s sharing settings.</p>
 					</div>
 					
 					
@@ -160,13 +164,31 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/moodWithType:title:">+&nbsp;moodWithType:title:</a></code>
+		<code><a href="#//api/name/shareBody">&nbsp;&nbsp;shareBody</a></code>
 	</span>
-	
+	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+		<code><a href="#//api/name/shareEat">&nbsp;&nbsp;shareEat</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shareMood">&nbsp;&nbsp;shareMood</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shareMove">&nbsp;&nbsp;shareMove</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shareSleep">&nbsp;&nbsp;shareSleep</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -179,12 +201,6 @@
 
 						<ul class="task-list">
 							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/apiType">&ndash;&nbsp;apiType</a></code>
-	</span>
-	
-	
-</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/decodeFromDictionary:">&ndash;&nbsp;decodeFromDictionary:</a></code>
 	</span>
@@ -210,18 +226,18 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/type" title="type"></a>
-	<h3 class="subsubtitle method-title">type</h3>
+	<a name="//api/name/shareBody" title="shareBody"></a>
+	<h3 class="subsubtitle method-title">shareBody</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The type of mood, which controls which icon is used.</p>
+		<p>Whether the user has chosen to share body events.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UPMoodType type</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL shareBody</code></div>
 
     
 	
@@ -233,7 +249,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The type of mood, which controls which icon is used.</p>
+		<p>Whether the user has chosen to share body events.</p>
 	</div>
 	
 	
@@ -244,50 +260,27 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPMoodAPI.h</code><br />
+		<code class="declared-in-ref">UPUserAPI.h</code><br />
 	</div>				
 	
 	
 </div>
-						
-					</div>
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/moodWithType:title:" title="moodWithType:title:"></a>
-	<h3 class="subsubtitle method-title">moodWithType:title:</h3>
+	<a name="//api/name/shareEat" title="shareEat"></a>
+	<h3 class="subsubtitle method-title">shareEat</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Create a new mood event.</p>
+		<p>Whether the user has chosen to meals.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (UPMood *)moodWithType:(UPMoodType)<em>type</em> title:(NSString *)<em>title</em></code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL shareEat</code></div>
 
     
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>type</em></dt>
-			<dd><p>The mood <a href="#//api/name/type">type</a> of new mood event.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completion</em></dt>
-			<dd><p>Block to be executed upon completion. This block is passed the result or any error information.</p></dd>
-		</dl>
-		
-	</div>
 	
 	
 	
@@ -297,7 +290,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Create a new mood event.</p>
+		<p>Whether the user has chosen to meals.</p>
 	</div>
 	
 	
@@ -308,13 +301,138 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPMoodAPI.h</code><br />
+		<code class="declared-in-ref">UPUserAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shareMood" title="shareMood"></a>
+	<h3 class="subsubtitle method-title">shareMood</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Whether the user has chosen to share mood events.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL shareMood</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Whether the user has chosen to share mood events.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPUserAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shareMove" title="shareMove"></a>
+	<h3 class="subsubtitle method-title">shareMove</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Whether the user has chosen to share move events.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL shareMove</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Whether the user has chosen to share move events.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPUserAPI.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shareSleep" title="shareSleep"></a>
+	<h3 class="subsubtitle method-title">shareSleep</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Whether the user has chosen to share sleep events.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL shareSleep</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Whether the user has chosen to share sleep events.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPUserAPI.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
+					
+					
 					
 					
 					
@@ -323,42 +441,14 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/apiType" title="apiType"></a>
-	<h3 class="subsubtitle method-title">apiType</h3>
-	
-	
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSString *)apiType</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UPBaseEventAPI.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/decodeFromDictionary:" title="decodeFromDictionary:"></a>
 	<h3 class="subsubtitle method-title">decodeFromDictionary:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Decodes an object from a JSON dictionary.</p>
+	</div>		
 	
     
 
@@ -371,6 +461,11 @@
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Decodes an object from a JSON dictionary.</p>
+	</div>
 	
 	
 	
