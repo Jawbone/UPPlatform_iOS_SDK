@@ -100,6 +100,11 @@ typedef void(^UPPlatformRequestCompletion)(UPURLRequest *request, UPURLResponse 
  */
 - (void)validateSessionWithCompletion:(UPPlatformSessionCompletion)completion;
 
+/**
+ * Refreshes the current access token.
+ */
+- (void)refreshAccessTokenWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret completion:(UPPlatformSessionCompletion)completion;
+
 #if !TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
 
 - (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret webView:(WebView *)webView completion:(UPPlatformSessionCompletion)completion;

@@ -53,6 +53,16 @@
     }];
 }
 
+- (void)refreshToken
+{
+    NSString *clientID = @"3ZYR1YjGd3Q";
+    NSString *clientSecret = @"4dd5b10b3a3a16dbf3082c86d5faff09e11a682b";
+    
+    [[UPPlatform sharedPlatform] refreshAccessTokenWithClientID:clientID clientSecret:clientSecret completion:^(UPSession *session, NSError *error) {
+        [self showResults:session];
+    }];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	switch (indexPath.row)
@@ -75,6 +85,10 @@
             
         case 4:
 			[self getSettings];
+			break;
+            
+        case 5:
+			[self refreshToken];
 			break;
 			
 		default:

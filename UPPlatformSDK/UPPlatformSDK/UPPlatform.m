@@ -17,6 +17,7 @@
 NSString * const kUPPlatformDefaultRedirectURI      = @"up-platform://redirect";
 NSString * const kUPKeychainAccountKey              = @"com.jawbone.up";
 NSString * const kUPKeychainTokenServiceKey         = @"com.jawbone.up.api_token";
+NSString * const kUPKeychainRefreshTokenServiceKey  = @"com.jawbone.up.refresh_token";
 
 #pragma mark - Keychain
 
@@ -104,6 +105,16 @@ static UPPlatform *_instance = nil;
     [UPKeychain setKeychainItem:token forServiceKey:kUPKeychainTokenServiceKey];
 }
 
+- (NSString *)refreshToken
+{
+    return [UPKeychain keychainItemForService:kUPKeychainRefreshTokenServiceKey];
+}
+
+- (void)setRefreshToken:(NSString *)token
+{
+    [UPKeychain setKeychainItem:token forServiceKey:kUPKeychainRefreshTokenServiceKey];
+}
+
 - (void)validateSessionWithCompletion:(UPPlatformSessionCompletion)completion
 {
     if (self.currentSession == nil)
@@ -123,6 +134,44 @@ static UPPlatform *_instance = nil;
             if (completion) completion(self.currentSession, error);
         }];
     }
+}
+
+- (void)refreshAccessTokenWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret completion:(UPPlatformSessionCompletion)completion
+{
+    NSString *refreshToken = [self refreshToken];
+    
+    NSDictionary *params = @{ @"grant_type" : @"refresh_token", @"refresh_token" : refreshToken, @"client_id" : clientID, @"client_secret" : clientSecret };
+    NSString *refreshURLString = [NSString stringWithFormat:@"%@/auth/oauth2/token", [UPPlatform basePlatformURL]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:refreshURLString]];
+    request.HTTPMethod = @"post";
+    
+    NSMutableArray *paramStrings = [NSMutableArray array];
+    for (NSString *key in params.allKeys)
+    {
+        [paramStrings addObject:[NSString stringWithFormat:@"%@=%@", key, params[key]]];
+    }
+    
+    NSString *fullParamString = [paramStrings componentsJoinedByString:@";"];
+    request.HTTPBody = [fullParamString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        if (error == nil && data.length)
+        {
+            NSDictionary *responseJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSString *authToken = responseJSON[@"access_token"];
+            NSString *refreshToken = responseJSON[@"refresh_token"];
+            
+            [self setExistingAuthToken:authToken];
+            [self setRefreshToken:refreshToken];
+            
+            self.currentSession = [[UPSession alloc] initWithToken:authToken];
+            completion(self.currentSession, nil);
+        }
+        else
+        {
+            completion(nil, error);
+        }
+    }];
 }
 
 #if !TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
@@ -248,6 +297,8 @@ static UPPlatform *_instance = nil;
 - (void)endCurrentSession
 {
     [UPKeychain setKeychainItem:nil forServiceKey:kUPKeychainTokenServiceKey];
+    [UPKeychain setKeychainItem:nil forServiceKey:kUPKeychainRefreshTokenServiceKey];
+    
     self.currentSession = nil;
 }
 
@@ -291,8 +342,11 @@ static UPPlatform *_instance = nil;
         {
             NSDictionary *responseJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             NSString *authToken = responseJSON[@"access_token"];
+            NSString *refreshToken = responseJSON[@"refresh_token"];
             
             [self setExistingAuthToken:authToken];
+            [self setRefreshToken:refreshToken];
+            
             self.currentSession = [[UPSession alloc] initWithToken:authToken];
             self.sessionCompletion(self.currentSession, nil);
         }
