@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>UPUserTrendsBucketSize Constants Reference</title>
+		<title>UPMealSubType Constants Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">UPUserTrendsBucketSize Constants Reference</h1>
+				<h1 class="hideInXcode">UPMealSubType Constants Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -45,7 +45,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="UPUserTrendsBucketSize Constants Reference" name="top"></a>
+				<a title="UPMealSubType Constants Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,7 +54,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">UPUserTrendsBucketSize Constants Reference</h1>
+						<h1 class="title title-header">UPMealSubType Constants Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -62,7 +62,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">UPUserAPI.h</td>
+	<td class="specification-value">UPMealAPI.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -74,11 +74,11 @@
 					
                     
                     
-                    <h3 class="subsubtitle method-title">UPUserTrendsBucketSize</h3>
+                    <h3 class="subsubtitle method-title">UPMealSubType</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>The bucket size to request when getting user trends.</p>
+                        <p>The available sub types of a meal.</p>
 					</div>
 					
 					
@@ -86,15 +86,13 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSUInteger, UPUserTrendsBucketSize ) {<br/>
+                        <code>typedef NS_ENUM(NSUInteger, UPMealSubType ) {<br/>
                             
-                            &nbsp;&nbsp; <a href="">UPUserTrendsBucketSizeDays</a>,<br/>
+                            &nbsp;&nbsp; <a href="">UPMealSubTypeBreakfast</a> = 1,<br/>
                             
-                            &nbsp;&nbsp; <a href="">UPUserTrendsBucketSizeWeeks</a>,<br/>
+                            &nbsp;&nbsp; <a href="">UPMealSubTypeLunch</a> = 2,<br/>
                             
-                            &nbsp;&nbsp; <a href="">UPUserTrendsBucketSizeMonths</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">UPUserTrendsBucketSizeYears</a>,<br/>
+                            &nbsp;&nbsp; <a href="">UPMealSubTypeDinner</a> = 3,<br/>
                             
                             };</code>
                     
@@ -104,11 +102,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="UPUserTrendsBucketSizeDays"></a><code>UPUserTrendsBucketSizeDays</code></dt>
+                            <dt><a name="" title="UPMealSubTypeBreakfast"></a><code>UPMealSubTypeBreakfast</code></dt>
 <dd>
 
 
-<p>The bucket size to request when getting user trends.</p>
+<p>The available sub types of a meal.</p>
 
     
 
@@ -116,16 +114,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">UPUserAPI.h</code>.
+		Declared In <code class="declared-in-ref">UPMealAPI.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="UPUserTrendsBucketSizeWeeks"></a><code>UPUserTrendsBucketSizeWeeks</code></dt>
+                            <dt><a name="" title="UPMealSubTypeLunch"></a><code>UPMealSubTypeLunch</code></dt>
 <dd>
 
 
-<p>The bucket size to request when getting user trends.</p>
+<p>The available sub types of a meal.</p>
 
     
 
@@ -133,16 +131,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">UPUserAPI.h</code>.
+		Declared In <code class="declared-in-ref">UPMealAPI.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="UPUserTrendsBucketSizeMonths"></a><code>UPUserTrendsBucketSizeMonths</code></dt>
+                            <dt><a name="" title="UPMealSubTypeDinner"></a><code>UPMealSubTypeDinner</code></dt>
 <dd>
 
 
-<p>The bucket size to request when getting user trends.</p>
+<p>The available sub types of a meal.</p>
 
     
 
@@ -150,24 +148,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">UPUserAPI.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="UPUserTrendsBucketSizeYears"></a><code>UPUserTrendsBucketSizeYears</code></dt>
-<dd>
-
-
-<p>The bucket size to request when getting user trends.</p>
-
-    
-
-    
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">UPUserAPI.h</code>.
+		Declared In <code class="declared-in-ref">UPMealAPI.h</code>.
 	</p>
 	
 </dd>
@@ -184,7 +165,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <code class="declared-in-ref">UPUserAPI.h</code><br />
+                        <code class="declared-in-ref">UPMealAPI.h</code><br />
                     </div>				
                     
                     
