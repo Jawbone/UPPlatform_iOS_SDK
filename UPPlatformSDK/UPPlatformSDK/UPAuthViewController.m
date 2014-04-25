@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) NSString *redirectURIScheme;
 
+@property (nonatomic, assign) BOOL isHiding;
+
 @end
 
 @implementation UPAuthViewController
@@ -86,6 +88,8 @@
 
 - (void)hideWithCompletion:(void(^)())completion
 {
+    if (self.isHiding) return;
+    self.isHiding = YES;
     [self.rootViewController dismissViewControllerAnimated:YES completion:^{
         if (completion) completion();
     }];
@@ -127,6 +131,7 @@
         
         [self hideWithCompletion:nil];
         [self.delegate authViewController:self didCompleteWithAuthCode:code];
+        
         return NO;
     }
     
