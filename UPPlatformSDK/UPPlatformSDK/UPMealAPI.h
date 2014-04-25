@@ -63,6 +63,16 @@ typedef void(^UPMealAPICompletion)(UPMeal *meal, UPURLResponse *response, NSErro
 @end
 
 /**
+ *  The available sub types of a meal.
+ */
+typedef NS_ENUM(NSUInteger, UPMealSubType)
+{
+	UPMealSubTypeBreakfast          = 1,
+	UPMealSubTypeLunch              = 2,
+	UPMealSubTypeDinner             = 3
+};
+
+/**
  *  Represents a single meal, consisting of multiple meal items.
  */
 @interface UPMeal : UPBaseEvent
@@ -136,6 +146,11 @@ typedef void(^UPMealAPICompletion)(UPMeal *meal, UPURLResponse *response, NSErro
  *  The photo URL for the meal.
  */
 @property (nonatomic, strong) NSString *photoURL;
+
+/**
+ * The sub type of the meal.
+ */
+@property (nonatomic, assign) UPMealSubType subType;
 
 @end
 

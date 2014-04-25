@@ -130,6 +130,7 @@ static NSString *kMealType = @"meals";
 	self.foodCount = [details numberForKey:@"num_foods"];
 	self.drinkCount = [details numberForKey:@"num_drinks"];
 	self.title = [dictionary stringForKey:@"note"];
+    self.subType = [[dictionary numberForKey:@"sub_type"] integerValue];
 	if ([dictionary stringForKey:@"image"].length > 0) self.photoURL = [NSString stringWithFormat:@"%@%@", [UPPlatform basePlatformURL], [dictionary stringForKey:@"image"]];
 	
 	UPMealNutritionInfo *nutrition = [[UPMealNutritionInfo alloc] init];
@@ -162,6 +163,7 @@ static NSString *kMealType = @"meals";
 	if (self.placeLongitude != nil) [dict setObject:self.self.placeLongitude forKey:@"place_lon"];
 	if (self.placeAccuracy != nil) [dict setObject:self.placeAccuracy forKey:@"place_acc"];
 	if (self.photoURL != nil) [dict setObject:self.photoURL forKey:@"image_url"];
+    if (self.subType != 0) [dict setObject:@(self.subType) forKey:@"sub_type"];
 	
 	if (self.items.count > 0)
 	{
@@ -180,7 +182,7 @@ static NSString *kMealType = @"meals";
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"UPMeal: { xid: %@, title: %@, date: %@, placeName: %@, placeLatitude: %@, placeLongitude: %@, placeAccuracy: %@, foodCount: %@, drinkCount: %@, photoURL: %@, overallNutritionInfo: %@, items: %@ }", self.xid, self.title, self.date, self.placeName, self.placeLatitude, self.placeLongitude, self.placeAccuracy, self.foodCount, self.drinkCount, self.photoURL, self.overallNutritionInfo, self.items];
+	return [NSString stringWithFormat:@"UPMeal: { xid: %@, title: %@, date: %@, placeName: %@, placeLatitude: %@, placeLongitude: %@, placeAccuracy: %@, foodCount: %@, drinkCount: %@, photoURL: %@, subType: %@, overallNutritionInfo: %@, items: %@ }", self.xid, self.title, self.date, self.placeName, self.placeLatitude, self.placeLongitude, self.placeAccuracy, self.foodCount, self.drinkCount, self.photoURL, @(self.subType), self.overallNutritionInfo, self.items];
 }
 
 @end
