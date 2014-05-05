@@ -140,7 +140,7 @@ typedef NS_ENUM(NSUInteger, UPMealSubType)
 /**
  *  The photo for the meal.
  */
-@property (nonatomic, strong) UIImage *photo;
+@property (nonatomic, strong) UPImage *photo;
 
 /**
  *  The photo URL for the meal.

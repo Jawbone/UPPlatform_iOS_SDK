@@ -67,7 +67,7 @@ typedef void(^UPCardiacEventAPICompletion)(UPCardiacEvent *event, UPURLResponse 
  * @param diastolicPressure Diastolic pressure.
  * @param image Associated image.
  */
-+ (UPCardiacEvent *)eventWithTitle:(NSString *)title heartRate:(NSNumber *)heartRate systolicPressure:(NSNumber *)systolicPressure diastolicPressure:(NSNumber *)diastolicPressure note:(NSString *)note image:(UIImage *)image;
++ (UPCardiacEvent *)eventWithTitle:(NSString *)title heartRate:(NSNumber *)heartRate systolicPressure:(NSNumber *)systolicPressure diastolicPressure:(NSNumber *)diastolicPressure note:(NSString *)note image:(UPImage *)image;
 
 /**
  * Create a new cardiac event with supplied parameters for the currently authenticated user.

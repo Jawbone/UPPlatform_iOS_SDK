@@ -30,7 +30,7 @@ NSString * const kUPKeychainRefreshTokenServiceKey  = @"com.jawbone.up.refresh_t
 
 #pragma mark - Platform
 
-#if !(!TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR)
+#if !UP_TARGET_OSX
 @interface UPPlatform () <UPAuthViewControllerDelegate>
 #else
 @interface UPPlatform () <NSWindowDelegate>
@@ -44,7 +44,7 @@ NSString * const kUPKeychainRefreshTokenServiceKey  = @"com.jawbone.up.refresh_t
 
 @property (nonatomic, copy) UPPlatformSessionCompletion sessionCompletion;
 
-#if !(!TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR)
+#if !UP_TARGET_OSX
 @property (nonatomic, strong) UPAuthViewController *authViewController;
 #else
 @property (nonatomic, strong) NSWindow *authWindow;
@@ -129,8 +129,11 @@ static UPPlatform *_instance = nil;
             {
                 [self endCurrentSession];
             }
+            else if (user != nil)
+            {
+                self.currentSession.currentUser = user;
+            }
             
-            self.currentSession.currentUser = user;
             if (completion) completion(self.currentSession, error);
         }];
     }
@@ -139,6 +142,13 @@ static UPPlatform *_instance = nil;
 - (void)refreshAccessTokenWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret completion:(UPPlatformSessionCompletion)completion
 {
     NSString *refreshToken = [self refreshToken];
+    
+    if (refreshToken == nil)
+    {
+        NSError *error = [NSError errorWithDomain:@"com.jawbone.up" code:0 userInfo:@{ NSLocalizedDescriptionKey : @"No refresh token found. Cannot refresh the current access token." }];
+        if (completion) completion(nil, error);
+        return;
+    }
     
     NSDictionary *params = @{ @"grant_type" : @"refresh_token", @"refresh_token" : refreshToken, @"client_id" : clientID, @"client_secret" : clientSecret };
     NSString *refreshURLString = [NSString stringWithFormat:@"%@/auth/oauth2/token", [UPPlatform basePlatformURL]];
@@ -174,7 +184,7 @@ static UPPlatform *_instance = nil;
     }];
 }
 
-#if !TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
+#if UP_TARGET_OSX
 
 - (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret webView:(WebView *)webView completion:(UPPlatformSessionCompletion)completion
 {
@@ -214,6 +224,7 @@ static UPPlatform *_instance = nil;
 	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:authURLString]];
 	request.HTTPShouldHandleCookies = NO;
 	[webView setFrameLoadDelegate:self];
+    [webView setPolicyDelegate:self];
 	[webView.mainFrame loadRequest:request];
 }
 
@@ -239,8 +250,11 @@ static UPPlatform *_instance = nil;
 			{
 				NSDictionary *responseJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
 				NSString *authToken = responseJSON[@"access_token"];
+                NSString *refreshToken = responseJSON[@"refresh_token"];
 				
 				[self setExistingAuthToken:authToken];
+                [self setRefreshToken:refreshToken];
+                
 				self.currentSession = [[UPSession alloc] initWithToken:authToken];
 				self.sessionCompletion(self.currentSession, nil);
 			}
@@ -252,10 +266,26 @@ static UPPlatform *_instance = nil;
     }
 }
 
+- (void)webView:(WebView *)webView decidePolicyForNavigationAction:(NSDictionary *)actionInformation
+        request:(NSURLRequest *)request
+          frame:(WebFrame *)frame
+decisionListener:(id<WebPolicyDecisionListener>)listener
+{
+    if ([request.URL.scheme isEqualToString:@"up-platform"])
+    {
+        [listener ignore];
+    }
+    else
+    {
+        [listener use];
+    }
+}
+
 - (BOOL)windowShouldClose:(id)sender
 {
     self.authWindow = nil;
     self.sessionCompletion(nil, [NSError errorWithDomain:@"com.jawbone.up" code:0 userInfo:@{ NSLocalizedDescriptionKey : @"Authentication canceled by user." }]);
+    
     return YES;
 }
 
@@ -296,8 +326,8 @@ static UPPlatform *_instance = nil;
 
 - (void)endCurrentSession
 {
-    [UPKeychain setKeychainItem:nil forServiceKey:kUPKeychainTokenServiceKey];
-    [UPKeychain setKeychainItem:nil forServiceKey:kUPKeychainRefreshTokenServiceKey];
+    [UPKeychain setKeychainItem:@"" forServiceKey:kUPKeychainTokenServiceKey];
+    [UPKeychain setKeychainItem:@"" forServiceKey:kUPKeychainRefreshTokenServiceKey];
     
     self.currentSession = nil;
 }
@@ -330,7 +360,7 @@ static UPPlatform *_instance = nil;
 
 #pragma mark - Auth View Controller Delegate
 
-#if !(!TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR)
+#if !UP_TARGET_OSX
 
 - (void)authViewController:(UPAuthViewController *)viewController didCompleteWithAuthCode:(NSString *)code
 {
@@ -437,20 +467,40 @@ static UPPlatform *_instance = nil;
 
 + (NSString *)keychainItemForService:(NSString *)serviceKey
 {
+    return [self keychainItemForService:serviceKey returnNilIfEmpty:YES];
+}
+
++ (NSString *)keychainItemForService:(NSString *)serviceKey returnNilIfEmpty:(BOOL)returnNilIfEmpty
+{
+    id account = kUPKeychainAccountKey;
+    id service = serviceKey;
+    
+#if !UP_TARGET_OSX
+    account = [account dataUsingEncoding:NSUTF8StringEncoding];
+    service = [service dataUsingEncoding:NSUTF8StringEncoding];
+#endif
+    
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
     dictionary[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
-    dictionary[(__bridge id)kSecAttrAccount] = [kUPKeychainAccountKey dataUsingEncoding:NSUTF8StringEncoding];
-    dictionary[(__bridge id)kSecAttrService] = [serviceKey dataUsingEncoding:NSUTF8StringEncoding];
+    dictionary[(__bridge id)kSecAttrAccount] = account;
+    dictionary[(__bridge id)kSecAttrService] = service;
     dictionary[(__bridge id)kSecMatchLimit] = (__bridge id)kSecMatchLimitOne;
     dictionary[(__bridge id)kSecReturnData] = (__bridge id)kCFBooleanTrue;
     
-    CFDataRef cfResult = nil;
-    OSStatus status = SecItemCopyMatching((__bridge CFDictionaryRef)dictionary, (CFTypeRef *)&cfResult);
-    NSData *result = (__bridge_transfer NSData *)cfResult;
+    CFTypeRef cfResult = NULL;
+    OSStatus status = SecItemCopyMatching((__bridge CFDictionaryRef)dictionary, &cfResult);
     
-    if (status == errSecSuccess && result != nil)
+    if (status == errSecSuccess && cfResult != NULL)
     {
-        return [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+        NSData *result = (__bridge_transfer NSData *)cfResult;
+        NSString *resultString = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+        
+        if (returnNilIfEmpty)
+        {
+            return resultString.length > 0 ? resultString : nil;
+        }
+        
+        return resultString;
     }
     
     return nil;
@@ -458,13 +508,21 @@ static UPPlatform *_instance = nil;
 
 + (void)setKeychainItem:(NSString *)item forServiceKey:(NSString *)serviceKey
 {
+    id account = kUPKeychainAccountKey;
+    id service = serviceKey;
+    
+#if !UP_TARGET_OSX
+    account = [account dataUsingEncoding:NSUTF8StringEncoding];
+    service = [service dataUsingEncoding:NSUTF8StringEncoding];
+#endif
+    
     NSMutableDictionary *existingItemDictionary = [NSMutableDictionary dictionary];
     
     existingItemDictionary[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
-    existingItemDictionary[(__bridge id)kSecAttrAccount] = [kUPKeychainAccountKey dataUsingEncoding:NSUTF8StringEncoding];
-    existingItemDictionary[(__bridge id)kSecAttrService] = [serviceKey dataUsingEncoding:NSUTF8StringEncoding];
+    existingItemDictionary[(__bridge id)kSecAttrAccount] = account;
+    existingItemDictionary[(__bridge id)kSecAttrService] = service;
     
-    NSString *oldItem = [self keychainItemForService:serviceKey];
+    NSString *oldItem = [self keychainItemForService:serviceKey returnNilIfEmpty:NO];
     if (item == nil)
     {
         if (oldItem != nil)

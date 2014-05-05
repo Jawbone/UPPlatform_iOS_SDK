@@ -14,7 +14,7 @@
 
 typedef void(^UPBaseEventAPICompletion)(id result, UPURLResponse *response, NSError *error);
 typedef void(^UPBaseEventAPIArrayCompletion)(NSArray *results, UPURLResponse *response, NSError *error);
-typedef void(^UPBaseEventAPIImageCompletion)(UIImage *image);
+typedef void(^UPBaseEventAPIImageCompletion)(UPImage *image);
 
 /**
  *  The base event API provides a common interface for event management.

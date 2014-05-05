@@ -30,6 +30,11 @@
 		1F7F026A18EA057400F5C39C /* UPBandEventAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7F026318EA053C00F5C39C /* UPBandEventAPI.h */; };
 		1F7F026B18EA057D00F5C39C /* UPBandEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7F026418EA053C00F5C39C /* UPBandEventAPI.m */; };
 		1F971807177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 1F971806177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch */; };
+		1FB7F6A51918246F00777CAD /* UPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB7F6A41918246F00777CAD /* UPDefines.h */; };
+		1FB7F6A61918246F00777CAD /* UPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB7F6A41918246F00777CAD /* UPDefines.h */; };
+		1FB7F6A71918246F00777CAD /* UPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB7F6A41918246F00777CAD /* UPDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FB7F6A81918247900777CAD /* UP.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7FB2FC183918D000F6A596 /* UP.h */; };
+		1FB7F6AA1918287D00777CAD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB7F6A91918287D00777CAD /* WebKit.framework */; };
 		1FE2961718D24AD80047F094 /* UPCardiacEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2921837EAAE00F6A596 /* UPCardiacEventAPI.m */; };
 		1FE2961818D24AD80047F094 /* NSDate+UPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB2451837EA3F00F6A596 /* NSDate+UPPlatform.m */; };
 		1FE2961918D24AD80047F094 /* UPSleepAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7FB27D1837EA8F00F6A596 /* UPSleepAPI.m */; };
@@ -173,6 +178,8 @@
 		1F7F026318EA053C00F5C39C /* UPBandEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPBandEventAPI.h; path = UPPlatformSDK/UPBandEventAPI.h; sourceTree = SOURCE_ROOT; };
 		1F7F026418EA053C00F5C39C /* UPBandEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UPBandEventAPI.m; path = UPPlatformSDK/UPBandEventAPI.m; sourceTree = SOURCE_ROOT; };
 		1F971806177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UPPlatformSDK-OS-X-Prefix.pch"; sourceTree = "<group>"; };
+		1FB7F6A41918246F00777CAD /* UPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPDefines.h; path = UPPlatformSDK/UPDefines.h; sourceTree = SOURCE_ROOT; };
+		1FB7F6A91918287D00777CAD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 		1FE2964118D24AD80047F094 /* libUPPlatform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUPPlatform.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FA5F891768CA7900025723 /* libUPPlatformSDK-OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUPPlatformSDK-OSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FA5F8A1768CA7900025723 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
@@ -234,6 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB7F6AA1918287D00777CAD /* WebKit.framework in Frameworks */,
 				48FA5F8B1768CA7900025723 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +278,7 @@
 				BF7FB2681837EA6C00F6A596 /* UPURLRequest.m */,
 				BF7FB26E1837EA7200F6A596 /* UPURLResponse.h */,
 				BF7FB26F1837EA7200F6A596 /* UPURLResponse.m */,
+				1FB7F6A41918246F00777CAD /* UPDefines.h */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -345,6 +354,7 @@
 		E3E46C0217173670009CCA56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1FB7F6A91918287D00777CAD /* WebKit.framework */,
 				E3E46C0317173670009CCA56 /* Foundation.framework */,
 				48FA5F8A1768CA7900025723 /* Cocoa.framework */,
 				48FA5F9B1768CA7900025723 /* XCTest.framework */,
@@ -407,6 +417,7 @@
 				1FE2963918D24AD80047F094 /* UPWorkoutAPI.h in Headers */,
 				1FE2963A18D24AD80047F094 /* UPBaseEventAPI.h in Headers */,
 				1FE2963B18D24AD80047F094 /* UPSleepAPI.h in Headers */,
+				1FB7F6A71918246F00777CAD /* UPDefines.h in Headers */,
 				1FE2968D18D24EDA0047F094 /* UPCardiacEventAPI.h in Headers */,
 				1FE2963218D24AD80047F094 /* NSDictionary+UPPlatform.h in Headers */,
 				1FE2963C18D24AD80047F094 /* NSDate+UPPlatform.h in Headers */,
@@ -420,6 +431,8 @@
 			files = (
 				BF7FB2631837EA6300F6A596 /* UPSession.h in Headers */,
 				1F7F026A18EA057400F5C39C /* UPBandEventAPI.h in Headers */,
+				1FB7F6A61918246F00777CAD /* UPDefines.h in Headers */,
+				1FB7F6A81918247900777CAD /* UP.h in Headers */,
 				1F971807177B4D470030C2DA /* UPPlatformSDK-OS-X-Prefix.pch in Headers */,
 				BF7FB2B71837EAF400F6A596 /* UPUserAPI.h in Headers */,
 				BF7FB2B01837EAEC00F6A596 /* UPMoodAPI.h in Headers */,
@@ -442,6 +455,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB7F6A51918246F00777CAD /* UPDefines.h in Headers */,
 				BF7FB29A1837EABA00F6A596 /* UPBodyEventAPI.h in Headers */,
 				BF7FB2691837EA6C00F6A596 /* UPURLRequest.h in Headers */,
 				BF7FB28C1837EAA600F6A596 /* UPMoveAPI.h in Headers */,

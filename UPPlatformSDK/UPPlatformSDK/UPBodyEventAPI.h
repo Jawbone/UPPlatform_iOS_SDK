@@ -66,7 +66,7 @@ typedef void(^UPBodyEventAPICompletion)(UPBodyEvent *event, UPURLResponse *respo
  * @param note Notes associated with the event.
  * @param image Image to include in the event.
  */
-+ (UPBodyEvent *)eventWithTitle:(NSString *)title weight:(NSNumber *)weight bodyFat:(NSNumber *)bodyFat leanMass:(NSNumber *)leanMass bmi:(NSNumber *)bmi note:(NSString *)note image:(UIImage *)image;
++ (UPBodyEvent *)eventWithTitle:(NSString *)title weight:(NSNumber *)weight bodyFat:(NSNumber *)bodyFat leanMass:(NSNumber *)leanMass bmi:(NSNumber *)bmi note:(NSString *)note image:(UPImage *)image;
 
 /**
  * Create a new body event with supplied parameters for the currently authenticated user.

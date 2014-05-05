@@ -46,7 +46,7 @@ static NSString *kCardiacEventType = @"cardiac_events";
 
 @implementation UPCardiacEvent
 
-+ (UPCardiacEvent *)eventWithTitle:(NSString *)title heartRate:(NSNumber *)heartRate systolicPressure:(NSNumber *)systolicPressure diastolicPressure:(NSNumber *)diastolicPressure note:(NSString *)note image:(UIImage *)image
++ (UPCardiacEvent *)eventWithTitle:(NSString *)title heartRate:(NSNumber *)heartRate systolicPressure:(NSNumber *)systolicPressure diastolicPressure:(NSNumber *)diastolicPressure note:(NSString *)note image:(UPImage *)image
 {
     UPCardiacEvent *event = [[UPCardiacEvent alloc] init];
     

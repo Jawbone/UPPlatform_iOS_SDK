@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FB7F661191823E500777CAD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB7F660191823E500777CAD /* Cocoa.framework */; };
+		1FB7F66B191823E500777CAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FB7F669191823E500777CAD /* InfoPlist.strings */; };
+		1FB7F66D191823E500777CAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB7F66C191823E500777CAD /* main.m */; };
+		1FB7F671191823E500777CAD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1FB7F66F191823E500777CAD /* Credits.rtf */; };
+		1FB7F674191823E500777CAD /* JBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB7F673191823E500777CAD /* JBAppDelegate.m */; };
+		1FB7F677191823E500777CAD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB7F675191823E500777CAD /* MainMenu.xib */; };
+		1FB7F679191823E500777CAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FB7F678191823E500777CAD /* Images.xcassets */; };
+		1FB7F680191823E500777CAD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB7F67F191823E500777CAD /* XCTest.framework */; };
+		1FB7F681191823E500777CAD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB7F660191823E500777CAD /* Cocoa.framework */; };
+		1FB7F689191823E500777CAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FB7F687191823E500777CAD /* InfoPlist.strings */; };
+		1FB7F68B191823E500777CAD /* Sample_OSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB7F68A191823E500777CAD /* Sample_OSXTests.m */; };
+		1FB7F6A31918240500777CAD /* libUPPlatformSDK-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB7F69E191823EF00777CAD /* libUPPlatformSDK-OSX.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1FB7F682191823E500777CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FB7F655191823E500777CAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FB7F65C191823E500777CAD;
+			remoteInfo = "Sample-OSX";
+		};
+		1FB7F69B191823EF00777CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FB7F694191823EF00777CAD /* UPPlatformSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E3E46C0017173670009CCA56;
+			remoteInfo = UPPlatformSDK;
+		};
+		1FB7F69D191823EF00777CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FB7F694191823EF00777CAD /* UPPlatformSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 48FA5F891768CA7900025723;
+			remoteInfo = "UPPlatformSDK-OSX";
+		};
+		1FB7F69F191823EF00777CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FB7F694191823EF00777CAD /* UPPlatformSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1FE2964118D24AD80047F094;
+			remoteInfo = UPPlatform;
+		};
+		1FB7F6A1191823FB00777CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FB7F694191823EF00777CAD /* UPPlatformSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 48FA5F881768CA7900025723;
+			remoteInfo = "UPPlatformSDK-OSX";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FB7F65D191823E500777CAD /* Sample-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FB7F660191823E500777CAD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1FB7F663191823E500777CAD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1FB7F664191823E500777CAD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1FB7F665191823E500777CAD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1FB7F668191823E500777CAD /* Sample-OSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sample-OSX-Info.plist"; sourceTree = "<group>"; };
+		1FB7F66A191823E500777CAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1FB7F66C191823E500777CAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1FB7F66E191823E500777CAD /* Sample-OSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sample-OSX-Prefix.pch"; sourceTree = "<group>"; };
+		1FB7F670191823E500777CAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1FB7F672191823E500777CAD /* JBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBAppDelegate.h; sourceTree = "<group>"; };
+		1FB7F673191823E500777CAD /* JBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBAppDelegate.m; sourceTree = "<group>"; };
+		1FB7F676191823E500777CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1FB7F678191823E500777CAD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1FB7F67E191823E500777CAD /* Sample-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sample-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FB7F67F191823E500777CAD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1FB7F686191823E500777CAD /* Sample-OSXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sample-OSXTests-Info.plist"; sourceTree = "<group>"; };
+		1FB7F688191823E500777CAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1FB7F68A191823E500777CAD /* Sample_OSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sample_OSXTests.m; sourceTree = "<group>"; };
+		1FB7F694191823EF00777CAD /* UPPlatformSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UPPlatformSDK.xcodeproj; path = ../../UPPlatformSDK/UPPlatformSDK.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FB7F65A191823E500777CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB7F6A31918240500777CAD /* libUPPlatformSDK-OSX.a in Frameworks */,
+				1FB7F661191823E500777CAD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB7F67B191823E500777CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB7F681191823E500777CAD /* Cocoa.framework in Frameworks */,
+				1FB7F680191823E500777CAD /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FB7F654191823E500777CAD = {
+			isa = PBXGroup;
+			children = (
+				1FB7F694191823EF00777CAD /* UPPlatformSDK.xcodeproj */,
+				1FB7F666191823E500777CAD /* Sample-OSX */,
+				1FB7F684191823E500777CAD /* Sample-OSXTests */,
+				1FB7F65F191823E500777CAD /* Frameworks */,
+				1FB7F65E191823E500777CAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1FB7F65E191823E500777CAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FB7F65D191823E500777CAD /* Sample-OSX.app */,
+				1FB7F67E191823E500777CAD /* Sample-OSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FB7F65F191823E500777CAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FB7F660191823E500777CAD /* Cocoa.framework */,
+				1FB7F67F191823E500777CAD /* XCTest.framework */,
+				1FB7F662191823E500777CAD /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1FB7F662191823E500777CAD /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FB7F663191823E500777CAD /* AppKit.framework */,
+				1FB7F664191823E500777CAD /* CoreData.framework */,
+				1FB7F665191823E500777CAD /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1FB7F666191823E500777CAD /* Sample-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				1FB7F672191823E500777CAD /* JBAppDelegate.h */,
+				1FB7F673191823E500777CAD /* JBAppDelegate.m */,
+				1FB7F675191823E500777CAD /* MainMenu.xib */,
+				1FB7F678191823E500777CAD /* Images.xcassets */,
+				1FB7F667191823E500777CAD /* Supporting Files */,
+			);
+			path = "Sample-OSX";
+			sourceTree = "<group>";
+		};
+		1FB7F667191823E500777CAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FB7F668191823E500777CAD /* Sample-OSX-Info.plist */,
+				1FB7F669191823E500777CAD /* InfoPlist.strings */,
+				1FB7F66C191823E500777CAD /* main.m */,
+				1FB7F66E191823E500777CAD /* Sample-OSX-Prefix.pch */,
+				1FB7F66F191823E500777CAD /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FB7F684191823E500777CAD /* Sample-OSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FB7F68A191823E500777CAD /* Sample_OSXTests.m */,
+				1FB7F685191823E500777CAD /* Supporting Files */,
+			);
+			path = "Sample-OSXTests";
+			sourceTree = "<group>";
+		};
+		1FB7F685191823E500777CAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FB7F686191823E500777CAD /* Sample-OSXTests-Info.plist */,
+				1FB7F687191823E500777CAD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FB7F695191823EF00777CAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FB7F69C191823EF00777CAD /* libUPPlatformSDK.a */,
+				1FB7F69E191823EF00777CAD /* libUPPlatformSDK-OSX.a */,
+				1FB7F6A0191823EF00777CAD /* libUPPlatform.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FB7F65C191823E500777CAD /* Sample-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FB7F68E191823E500777CAD /* Build configuration list for PBXNativeTarget "Sample-OSX" */;
+			buildPhases = (
+				1FB7F659191823E500777CAD /* Sources */,
+				1FB7F65A191823E500777CAD /* Frameworks */,
+				1FB7F65B191823E500777CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FB7F6A2191823FB00777CAD /* PBXTargetDependency */,
+			);
+			name = "Sample-OSX";
+			productName = "Sample-OSX";
+			productReference = 1FB7F65D191823E500777CAD /* Sample-OSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FB7F67D191823E500777CAD /* Sample-OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FB7F691191823E500777CAD /* Build configuration list for PBXNativeTarget "Sample-OSXTests" */;
+			buildPhases = (
+				1FB7F67A191823E500777CAD /* Sources */,
+				1FB7F67B191823E500777CAD /* Frameworks */,
+				1FB7F67C191823E500777CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FB7F683191823E500777CAD /* PBXTargetDependency */,
+			);
+			name = "Sample-OSXTests";
+			productName = "Sample-OSXTests";
+			productReference = 1FB7F67E191823E500777CAD /* Sample-OSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FB7F655191823E500777CAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Jawbone;
+				TargetAttributes = {
+					1FB7F67D191823E500777CAD = {
+						TestTargetID = 1FB7F65C191823E500777CAD;
+					};
+				};
+			};
+			buildConfigurationList = 1FB7F658191823E500777CAD /* Build configuration list for PBXProject "Sample-OSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FB7F654191823E500777CAD;
+			productRefGroup = 1FB7F65E191823E500777CAD /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1FB7F695191823EF00777CAD /* Products */;
+					ProjectRef = 1FB7F694191823EF00777CAD /* UPPlatformSDK.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1FB7F65C191823E500777CAD /* Sample-OSX */,
+				1FB7F67D191823E500777CAD /* Sample-OSXTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1FB7F69C191823EF00777CAD /* libUPPlatformSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUPPlatformSDK.a;
+			remoteRef = 1FB7F69B191823EF00777CAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FB7F69E191823EF00777CAD /* libUPPlatformSDK-OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libUPPlatformSDK-OSX.a";
+			remoteRef = 1FB7F69D191823EF00777CAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FB7F6A0191823EF00777CAD /* libUPPlatform.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUPPlatform.a;
+			remoteRef = 1FB7F69F191823EF00777CAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FB7F65B191823E500777CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB7F66B191823E500777CAD /* InfoPlist.strings in Resources */,
+				1FB7F679191823E500777CAD /* Images.xcassets in Resources */,
+				1FB7F671191823E500777CAD /* Credits.rtf in Resources */,
+				1FB7F677191823E500777CAD /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB7F67C191823E500777CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB7F689191823E500777CAD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FB7F659191823E500777CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB7F674191823E500777CAD /* JBAppDelegate.m in Sources */,
+				1FB7F66D191823E500777CAD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB7F67A191823E500777CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB7F68B191823E500777CAD /* Sample_OSXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FB7F683191823E500777CAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FB7F65C191823E500777CAD /* Sample-OSX */;
+			targetProxy = 1FB7F682191823E500777CAD /* PBXContainerItemProxy */;
+		};
+		1FB7F6A2191823FB00777CAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UPPlatformSDK-OSX";
+			targetProxy = 1FB7F6A1191823FB00777CAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1FB7F669191823E500777CAD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FB7F66A191823E500777CAD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1FB7F66F191823E500777CAD /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FB7F670191823E500777CAD /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		1FB7F675191823E500777CAD /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FB7F676191823E500777CAD /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		1FB7F687191823E500777CAD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FB7F688191823E500777CAD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FB7F68C191823E500777CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1FB7F68D191823E500777CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1FB7F68F191823E500777CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sample-OSX/Sample-OSX-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../UPPlatformSDK/UPPlatformSDK,
+				);
+				INFOPLIST_FILE = "Sample-OSX/Sample-OSX-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1FB7F690191823E500777CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sample-OSX/Sample-OSX-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../UPPlatformSDK/UPPlatformSDK,
+				);
+				INFOPLIST_FILE = "Sample-OSX/Sample-OSX-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1FB7F692191823E500777CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sample-OSX.app/Contents/MacOS/Sample-OSX";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sample-OSX/Sample-OSX-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sample-OSXTests/Sample-OSXTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1FB7F693191823E500777CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sample-OSX.app/Contents/MacOS/Sample-OSX";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sample-OSX/Sample-OSX-Prefix.pch";
+				INFOPLIST_FILE = "Sample-OSXTests/Sample-OSXTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FB7F658191823E500777CAD /* Build configuration list for PBXProject "Sample-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FB7F68C191823E500777CAD /* Debug */,
+				1FB7F68D191823E500777CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FB7F68E191823E500777CAD /* Build configuration list for PBXNativeTarget "Sample-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FB7F68F191823E500777CAD /* Debug */,
+				1FB7F690191823E500777CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FB7F691191823E500777CAD /* Build configuration list for PBXNativeTarget "Sample-OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FB7F692191823E500777CAD /* Debug */,
+				1FB7F693191823E500777CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FB7F655191823E500777CAD /* Project object */;
+}

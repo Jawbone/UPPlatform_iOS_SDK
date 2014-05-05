@@ -64,7 +64,7 @@ typedef void(^UPGenericEventAPICompletion)(UPGenericEvent *event, UPURLResponse 
  * @param note Description of the event.
  * @param image Image to include in the event.
  */
-+ (UPGenericEvent *)eventWithTitle:(NSString *)title verb:(NSString *)verb attributes:(NSDictionary *)attributes note:(NSString *)note image:(UIImage *)image;
++ (UPGenericEvent *)eventWithTitle:(NSString *)title verb:(NSString *)verb attributes:(NSDictionary *)attributes note:(NSString *)note image:(UPImage *)image;
 
 /**
  * Create a new generic event with supplied parameters for the currently authenticated user.
@@ -100,6 +100,6 @@ typedef void(^UPGenericEventAPICompletion)(UPGenericEvent *event, UPURLResponse 
 /**
  * Event image.
  */
-@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) UPImage *image;
 
 @end

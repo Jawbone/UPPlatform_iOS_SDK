@@ -46,7 +46,7 @@ static NSString *kBodyEventType = @"body_events";
 
 @implementation UPBodyEvent
 
-+ (UPBodyEvent *)eventWithTitle:(NSString *)title weight:(NSNumber *)weight bodyFat:(NSNumber *)bodyFat leanMass:(NSNumber *)leanMass bmi:(NSNumber *)bmi note:(NSString *)note image:(UIImage *)image
++ (UPBodyEvent *)eventWithTitle:(NSString *)title weight:(NSNumber *)weight bodyFat:(NSNumber *)bodyFat leanMass:(NSNumber *)leanMass bmi:(NSNumber *)bmi note:(NSString *)note image:(UPImage *)image
 {
     UPBodyEvent *event = [[UPBodyEvent alloc] init];
     

@@ -20,3 +20,4 @@
 #import "UPSleepAPI.h"
 #import "UPMealAPI.h"
 #import "UPBandEventAPI.h"
+#import "UPDefines.h"

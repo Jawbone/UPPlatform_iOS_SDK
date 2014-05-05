@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "UPDefines.h"
+
 /**
  *  The base URLRequest object that contains the necessary headers for OAuth.
  */
@@ -44,6 +46,6 @@
  *  @param params   A dictionary of paramters to send with the request.
  *  @param image    An image to post along with the params.
  */
-+ (UPURLRequest *)postRequestWithEndpoint:(NSString *)endpoint params:(NSDictionary *)params image:(UIImage *)image;
++ (UPURLRequest *)postRequestWithEndpoint:(NSString *)endpoint params:(NSDictionary *)params image:(UPImage *)image;
 
 @end

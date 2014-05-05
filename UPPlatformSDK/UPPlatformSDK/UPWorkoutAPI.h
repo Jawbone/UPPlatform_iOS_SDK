@@ -171,6 +171,6 @@ typedef NS_ENUM(NSUInteger, UPWorkoutIntensity)
 /**
  *  The workout's image.
  */
-@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) UPImage *image;
 
 @end

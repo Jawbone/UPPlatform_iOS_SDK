@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import "UPDefines.h"
+
+#if UP_TARGET_OSX
+#import <WebKit/WebKit.h>
+#endif
+
 extern NSString * const kUPPlatformDefaultRedirectURI;
 
 @class UPSession, UPURLRequest, UPURLResponse;
@@ -105,9 +111,33 @@ typedef void(^UPPlatformRequestCompletion)(UPURLRequest *request, UPURLResponse 
  */
 - (void)refreshAccessTokenWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret completion:(UPPlatformSessionCompletion)completion;
 
-#if !TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
+#if UP_TARGET_OSX
 
+/**
+ * Starts a user's session.
+ *
+ * This will present a WebView to perform the OAuth authentication flow, taking care of getting access token for HTTP requests.
+ * An existing WebView can be provided, or one will be created in a new window if nil is provided.
+ *
+ * @param clientID     The client ID provided during application signup.
+ * @param clientSecret The client secret provided during application signup.
+ * @param webView      An existing WebView to perform authentication. Will create a new window with a single WebView if nil.
+ * @param completion   The session completion block.
+ */
 - (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret webView:(WebView *)webView completion:(UPPlatformSessionCompletion)completion;
+
+/**
+ * Starts a user's session.
+ *
+ * This will present a WebView to perform the OAuth authentication flow, taking care of getting access token for HTTP requests.
+ * An existing WebView can be provided, or one will be created in a new window if nil is provided.
+ *
+ * @param clientID     The client ID provided during application signup.
+ * @param clientSecret The client secret provided during application signup.
+ * @param webView      An existing WebView to perform authentication. Will create a new window with a single WebView if nil.
+ * @param authScope    Options to request specific auth scopes during authentication. Defaults to UPPlatformAuthScopeBasicRead.
+ * @param completion   The session completion block.
+ */
 - (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret webView:(WebView *)webView authScope:(UPPlatformAuthScope)authScope completion:(UPPlatformSessionCompletion)completion;
 
 #else

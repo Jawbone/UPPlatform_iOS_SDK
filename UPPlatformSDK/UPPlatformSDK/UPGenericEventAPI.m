@@ -50,7 +50,7 @@ static NSString *kGenericEventType = @"generic_events";
 
 @implementation UPGenericEvent
 
-+ (UPGenericEvent *)eventWithTitle:(NSString *)title verb:(NSString *)verb attributes:(NSDictionary *)attributes note:(NSString *)note image:(UIImage *)image
++ (UPGenericEvent *)eventWithTitle:(NSString *)title verb:(NSString *)verb attributes:(NSDictionary *)attributes note:(NSString *)note image:(UPImage *)image
 {
     UPGenericEvent *event = [[UPGenericEvent alloc] init];
     

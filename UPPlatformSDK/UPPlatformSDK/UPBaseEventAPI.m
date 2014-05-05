@@ -38,7 +38,7 @@
 + (void)updateEvent:(UPBaseEvent *)event completion:(UPBaseEventAPICompletion)completion
 {
     NSDictionary *params = [event encodeToDictionary];
-	UIImage *image = [event respondsToSelector:@selector(image)] ? [event performSelector:@selector(image)] : nil;
+	UPImage *image = [event respondsToSelector:@selector(image)] ? [event performSelector:@selector(image)] : nil;
 	if (image == nil && [event respondsToSelector:@selector(photo)]) image = [event performSelector:@selector(photo)];
 	
 	UPURLRequest *request = [UPURLRequest postRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/%@/%@/partialUpdate", [UPPlatform currentPlatformVersion], event.apiType, event.xid] params:params image:image];
@@ -55,7 +55,7 @@
 + (void)postEvent:(UPBaseEvent *)event completion:(UPBaseEventAPICompletion)completion
 {
 	NSDictionary *params = [event encodeToDictionary];
-	UIImage *image = [event respondsToSelector:@selector(image)] ? [event performSelector:@selector(image)] : nil;
+	UPImage *image = [event respondsToSelector:@selector(image)] ? [event performSelector:@selector(image)] : nil;
 	if (image == nil && [event respondsToSelector:@selector(photo)]) image = [event performSelector:@selector(photo)];
 	
 	UPURLRequest *request = [UPURLRequest postRequestWithEndpoint:[NSString stringWithFormat:@"nudge/api/%@/users/@me/%@", [UPPlatform currentPlatformVersion], event.apiType] params:params image:image];

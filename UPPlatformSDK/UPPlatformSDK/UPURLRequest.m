@@ -9,7 +9,6 @@
 #import "UPURLRequest.h"
 #import "UPPlatform.h"
 #import "UPSession.h"
-#import <UIKit/UIKit.h>
 
 NSTimeInterval const kDefaultRequestTimeout     = 30.0;
 NSString const *APIMultipartBoundary = @"t5abJf886c95bfexhOzryaoq2xuedO34ru8osiqbSrg9pqbeTf";
@@ -32,7 +31,7 @@ NSString const *APIMultipartBoundary = @"t5abJf886c95bfexhOzryaoq2xuedO34ru8osiq
     return [[UPURLRequest alloc] initWithEndpoint:endpoint params:params method:@"POST" image:nil];
 }
 
-+ (UPURLRequest *)postRequestWithEndpoint:(NSString *)endpoint params:(NSDictionary *)params image:(UIImage *)image
++ (UPURLRequest *)postRequestWithEndpoint:(NSString *)endpoint params:(NSDictionary *)params image:(UPImage *)image
 {
     return [[UPURLRequest alloc] initWithEndpoint:endpoint params:params method:@"POST" image:image];
 }
@@ -42,7 +41,7 @@ NSString const *APIMultipartBoundary = @"t5abJf886c95bfexhOzryaoq2xuedO34ru8osiq
     return [[UPURLRequest alloc] initWithEndpoint:endpoint params:params method:@"DELETE" image:nil];
 }
 
-- (id)initWithEndpoint:(NSString *)endpoint params:(NSDictionary *)params method:(NSString *)method image:(UIImage *)image
+- (id)initWithEndpoint:(NSString *)endpoint params:(NSDictionary *)params method:(NSString *)method image:(UPImage *)image
 {
     if ([UPPlatform sharedPlatform].currentSession == nil)
     {
@@ -70,7 +69,12 @@ NSString const *APIMultipartBoundary = @"t5abJf886c95bfexhOzryaoq2xuedO34ru8osiq
                 [body appendData:[[NSString stringWithFormat:@"%@\r\n", params[key]] dataUsingEncoding:NSUTF8StringEncoding]];
             }
             
-            NSData *imageData = UIImageJPEGRepresentation(image, 1.0f);
+            NSData *imageData = nil;
+#if UP_TARGET_OSX
+            imageData = image.TIFFRepresentation;
+#else
+            imageData = UIImageJPEGRepresentation(image, 1.0f);
+#endif
 
             if (imageData)
             {
