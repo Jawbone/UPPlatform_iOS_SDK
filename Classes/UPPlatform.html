@@ -73,6 +73,10 @@
 	
 	<option value="//api/name/startSessionWithClientID:clientSecret:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- startSessionWithClientID:clientSecret:completion:</option>
 	
+	<option value="//api/name/startSessionWithClientID:clientSecret:webView:authScope:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- startSessionWithClientID:clientSecret:webView:authScope:completion:</option>
+	
+	<option value="//api/name/startSessionWithClientID:clientSecret:webView:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- startSessionWithClientID:clientSecret:webView:completion:</option>
+	
 	<option value="//api/name/validateSessionWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- validateSessionWithCompletion:</option>
 	
 	
@@ -134,6 +138,10 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startSessionWithClientID:clientSecret:authScope:redirectURI:completion:">startSessionWithClientID:clientSecret:authScope:redirectURI:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startSessionWithClientID:clientSecret:completion:">startSessionWithClientID:clientSecret:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startSessionWithClientID:clientSecret:webView:authScope:completion:">startSessionWithClientID:clientSecret:webView:authScope:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startSessionWithClientID:clientSecret:webView:completion:">startSessionWithClientID:clientSecret:webView:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validateSessionWithCompletion:">validateSessionWithCompletion:</a></span></li>
 	
@@ -235,6 +243,18 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/refreshAccessTokenWithClientID:clientSecret:completion:">&ndash;&nbsp;refreshAccessTokenWithClientID:clientSecret:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startSessionWithClientID:clientSecret:webView:completion:">&ndash;&nbsp;startSessionWithClientID:clientSecret:webView:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startSessionWithClientID:clientSecret:webView:authScope:completion:">&ndash;&nbsp;startSessionWithClientID:clientSecret:webView:authScope:completion:</a></code>
 	</span>
 	
 	
@@ -886,6 +906,149 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/startSessionWithClientID:clientSecret:webView:authScope:completion:" title="startSessionWithClientID:clientSecret:webView:authScope:completion:"></a>
+	<h3 class="subsubtitle method-title">startSessionWithClientID:clientSecret:webView:authScope:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts a user&rsquo;s session.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startSessionWithClientID:(NSString *)<em>clientID</em> clientSecret:(NSString *)<em>clientSecret</em> webView:(WebView *)<em>webView</em> authScope:(UPPlatformAuthScope)<em>authScope</em> completion:(UPPlatformSessionCompletion)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>clientID</em></dt>
+			<dd><p>The client ID provided during application signup.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>clientSecret</em></dt>
+			<dd><p>The client secret provided during application signup.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>webView</em></dt>
+			<dd><p>An existing WebView to perform authentication. Will create a new window with a single WebView if nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>authScope</em></dt>
+			<dd><p>Options to request specific auth scopes during authentication. Defaults to UPPlatformAuthScopeBasicRead.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>The session completion block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Starts a user&rsquo;s session.</p>
+
+<p>This will present a WebView to perform the OAuth authentication flow, taking care of getting access token for HTTP requests.
+An existing WebView can be provided, or one will be created in a new window if nil is provided.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPPlatform.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startSessionWithClientID:clientSecret:webView:completion:" title="startSessionWithClientID:clientSecret:webView:completion:"></a>
+	<h3 class="subsubtitle method-title">startSessionWithClientID:clientSecret:webView:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts a user&rsquo;s session.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startSessionWithClientID:(NSString *)<em>clientID</em> clientSecret:(NSString *)<em>clientSecret</em> webView:(WebView *)<em>webView</em> completion:(UPPlatformSessionCompletion)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>clientID</em></dt>
+			<dd><p>The client ID provided during application signup.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>clientSecret</em></dt>
+			<dd><p>The client secret provided during application signup.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>webView</em></dt>
+			<dd><p>An existing WebView to perform authentication. Will create a new window with a single WebView if nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>The session completion block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Starts a user&rsquo;s session.</p>
+
+<p>This will present a WebView to perform the OAuth authentication flow, taking care of getting access token for HTTP requests.
+An existing WebView can be provided, or one will be created in a new window if nil is provided.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UPPlatform.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/validateSessionWithCompletion:" title="validateSessionWithCompletion:"></a>
 	<h3 class="subsubtitle method-title">validateSessionWithCompletion:</h3>
 	
@@ -953,7 +1116,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Jawbone. All rights reserved. (Last updated: 2014-04-25)</span><br />
+						<p><span class="copyright">&copy; 2014 Jawbone. All rights reserved. (Last updated: 2014-05-05)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						
