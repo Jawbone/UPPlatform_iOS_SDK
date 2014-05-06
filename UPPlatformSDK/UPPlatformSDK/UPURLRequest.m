@@ -71,7 +71,9 @@ NSString const *APIMultipartBoundary = @"t5abJf886c95bfexhOzryaoq2xuedO34ru8osiq
             
             NSData *imageData = nil;
 #if UP_TARGET_OSX
-            imageData = image.TIFFRepresentation;
+            CGImageRef cgImage = [image CGImageForProposedRect:NULL context:nil hints:nil];
+            NSBitmapImageRep *bitmap = [[NSBitmapImageRep alloc] initWithCGImage:cgImage];
+            imageData = [bitmap representationUsingType:NSPNGFileType properties:nil];
 #else
             imageData = UIImageJPEGRepresentation(image, 1.0f);
 #endif
