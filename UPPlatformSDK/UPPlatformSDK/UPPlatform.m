@@ -384,6 +384,8 @@ decisionListener:(id<WebPolicyDecisionListener>)listener
         {
             self.sessionCompletion(nil, error);
         }
+        
+        self.authViewController = nil;
     }];
 }
 

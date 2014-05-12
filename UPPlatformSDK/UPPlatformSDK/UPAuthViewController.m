@@ -15,7 +15,6 @@
 
 @property (nonatomic, weak) id<UPAuthViewControllerDelegate> delegate;
 
-@property (nonatomic, strong) UIViewController *contentViewController;
 @property (nonatomic, strong) UIViewController *rootViewController;
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) NSURL *authURL;
@@ -92,6 +91,7 @@
 {
     if (self.isHiding) return;
     self.isHiding = YES;
+    
     [self.rootViewController dismissViewControllerAnimated:YES completion:^{
         if (completion) completion();
     }];
