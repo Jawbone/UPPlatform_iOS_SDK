@@ -63,6 +63,12 @@
     }];
 }
 
+- (void)logout
+{
+    [[UPPlatform sharedPlatform] endCurrentSession];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	switch (indexPath.row)
@@ -89,6 +95,10 @@
             
         case 5:
 			[self refreshToken];
+			break;
+            
+        case 6:
+			[self logout];
 			break;
 			
 		default:
