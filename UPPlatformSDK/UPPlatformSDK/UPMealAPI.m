@@ -266,7 +266,8 @@ static NSString *kMealType = @"meals";
 	self.amount = [dictionary numberForKey:@"amount"];
 	self.measurementUnits = [dictionary stringForKey:@"measurement"];
 	self.servingType = [self servingTypeFromString:[dictionary stringForKey:@"type"]];
-	self.foodType = [[dictionary numberForKey:@"sub_type"] intValue];
+	self.foodType = [[dictionary numberForKey:@"food_type"] intValue];
+    self.subType = [[dictionary numberForKey:@"sub_type"] intValue];
 	self.category = [dictionary stringForKey:@"category"];
 	
 	UPMealNutritionInfo *nutrition = [[UPMealNutritionInfo alloc] init];
@@ -284,6 +285,7 @@ static NSString *kMealType = @"meals";
 	if (self.measurementUnits != nil) [dictionary setObject:self.measurementUnits forKey:@"measurement"];
 	if (self.servingType != 0) [dictionary setObject:@(self.servingType) forKey:@"type"];
 	if (self.foodType != 0) [dictionary setObject:@(self.foodType) forKey:@"food_type"];
+    if (self.subType != 0) [dictionary setObject:@(self.subType) forKey:@"sub_type"];
 	if (self.category != nil) [dictionary setObject:self.category forKey:@"category"];
 	if (self.nutritionInfo != nil) [dictionary addEntriesFromDictionary:[self.nutritionInfo encodeToDictionary]];
 	
@@ -302,7 +304,7 @@ static NSString *kMealType = @"meals";
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"UPMealItem: { name: %@, itemDescription: %@, amount: %@, measurementUnits: %@, servingType: %d, foodType: %d, category: %@, nutritionInfo: %@ }", self.name, self.itemDescription, self.amount, self.measurementUnits, (int)self.servingType, (int)self.foodType, self.category, self.nutritionInfo ];
+	return [NSString stringWithFormat:@"UPMealItem: { name: %@, itemDescription: %@, amount: %@, measurementUnits: %@, servingType: %d, foodType: %d, subType: %d, category: %@, nutritionInfo: %@ }", self.name, self.itemDescription, self.amount, self.measurementUnits, (int)self.servingType, (int)self.foodType, (int)self.subType, self.category, self.nutritionInfo ];
 }
 
 @end
