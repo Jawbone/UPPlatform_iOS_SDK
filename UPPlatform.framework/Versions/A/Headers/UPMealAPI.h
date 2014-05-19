@@ -270,6 +270,15 @@ typedef NS_ENUM(NSUInteger, UPMealItemFoodType)
 };
 
 /**
+ *  The available sub types of a meal item.
+ */
+typedef NS_ENUM(NSUInteger, UPMealItemSubType)
+{
+	UPMealItemSubTypeDrink              = 1,
+	UPMealItemSubTypeFood               = 2
+};
+
+/**
  *  A single item making up a portion of a meal.
  */
 @interface UPMealItem : NSObject <UPBaseObject>
@@ -316,6 +325,11 @@ typedef NS_ENUM(NSUInteger, UPMealItemFoodType)
  *  The food type of the meal item.
  */
 @property (nonatomic, assign) UPMealItemFoodType foodType;
+
+/**
+ *  The sub type of the meal item (food or drink).
+ */
+@property (nonatomic, assign) UPMealItemSubType subType;
 
 /**
  *  The category of the meal item.
