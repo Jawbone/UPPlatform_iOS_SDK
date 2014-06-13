@@ -311,7 +311,16 @@ decisionListener:(id<WebPolicyDecisionListener>)listener
     if (token != nil)
     {
         self.currentSession = [[UPSession alloc] initWithToken:token];
-        self.sessionCompletion(self.currentSession, nil);
+        
+        [UPUserAPI getCurrentUserWithCompletion:^(UPUser *user, UPURLResponse *response, NSError *error) {
+            if (user != nil)
+            {
+                self.currentSession.currentUser = user;
+            }
+            
+            self.sessionCompletion(self.currentSession, nil);
+        }];
+        
         return;
     }
     
@@ -371,14 +380,32 @@ decisionListener:(id<WebPolicyDecisionListener>)listener
         if (error == nil && data.length)
         {
             NSDictionary *responseJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            NSString *authToken = responseJSON[@"access_token"];
-            NSString *refreshToken = responseJSON[@"refresh_token"];
             
-            [self setExistingAuthToken:authToken];
-            [self setRefreshToken:refreshToken];
-            
-            self.currentSession = [[UPSession alloc] initWithToken:authToken];
-            self.sessionCompletion(self.currentSession, nil);
+            NSString *jsonError = responseJSON[@"error"];
+            if (jsonError.length == 0)
+            {
+                NSString *authToken = responseJSON[@"access_token"];
+                NSString *refreshToken = responseJSON[@"refresh_token"];
+                
+                [self setExistingAuthToken:authToken];
+                [self setRefreshToken:refreshToken];
+                
+                self.currentSession = [[UPSession alloc] initWithToken:authToken];
+                
+                [UPUserAPI getCurrentUserWithCompletion:^(UPUser *user, UPURLResponse *response, NSError *error) {
+                    if (user != nil)
+                    {
+                        self.currentSession.currentUser = user;
+                    }
+                    
+                    self.sessionCompletion(self.currentSession, nil);
+                }];
+            }
+            else
+            {
+                NSString *errorDescription = responseJSON[@"error_description"];
+                self.sessionCompletion(nil, [NSError errorWithDomain:@"com.jawbone.up" code:0 userInfo:@{ NSLocalizedDescriptionKey : errorDescription }]);
+            }
         }
         else
         {

@@ -10,8 +10,8 @@
 
 #import "UP.h"
 
-NSString *const kAPIExplorerID = @"3ZYR1YjGd3Q";
-NSString *const kAPIExplorerSecret = @"4dd5b10b3a3a16dbf3082c86d5faff09e11a682b";
+NSString *const kAPIExplorerID = @"pHekFTFd7qA";
+NSString *const kAPIExplorerSecret = @"93ff020364207ebe820c4215c8f3a694b1b4ff63";
 
 @interface JBLandingViewController ()
 
@@ -37,6 +37,7 @@ NSString *const kAPIExplorerSecret = @"4dd5b10b3a3a16dbf3082c86d5faff09e11a682b"
 		
 		if (session != nil)
 		{
+            NSLog(@"Continued session for %@ %@", session.currentUser.firstName, session.currentUser.lastName);
 			[self performSegueWithIdentifier:@"LoggedIn" sender:nil];
 		}
 	}];
@@ -55,6 +56,7 @@ NSString *const kAPIExplorerSecret = @"4dd5b10b3a3a16dbf3082c86d5faff09e11a682b"
 		
 		if (session != nil)
 		{
+            NSLog(@"Started session for %@ %@", session.currentUser.firstName, session.currentUser.lastName);
 			[self performSegueWithIdentifier:@"LoggedIn" sender:nil];
 		}
 		else
