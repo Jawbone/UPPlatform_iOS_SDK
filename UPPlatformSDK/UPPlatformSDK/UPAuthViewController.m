@@ -38,9 +38,13 @@
         self.delegate = delegate;
         
         // Setup the auth view
-        UIWindow *keyWindow = [UIApplication sharedApplication].delegate.window;
-        if (!keyWindow) keyWindow = [UIApplication sharedApplication].keyWindow;
-        self.rootViewController = keyWindow.rootViewController;
+        UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
+        
+        while (topController.presentedViewController) {
+            //make sure it can be presented by this controller
+            topController = topController.presentedViewController;
+        }
+        self.rootViewController = topController;
         
         NSAssert(self.rootViewController != nil, @"Application must have a root view controller.");
     }
