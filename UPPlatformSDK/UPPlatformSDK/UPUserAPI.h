@@ -285,6 +285,11 @@ typedef NS_ENUM(NSUInteger, UPUserGender)
 @property (nonatomic, strong) NSNumber *eatSaturatedFat;
 
 /**
+ *  The user's unsaturated fat eaten.
+ */
+@property (nonatomic, strong) NSNumber *eatUnsaturatedFat;
+
+/**
  *  The user's calories eaten.
  */
 @property (nonatomic, strong) NSNumber *eatCalories;
