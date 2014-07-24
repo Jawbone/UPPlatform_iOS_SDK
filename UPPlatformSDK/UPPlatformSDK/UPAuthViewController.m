@@ -12,7 +12,9 @@
 #import "UPAuthViewController.h"
 
 @interface UPAuthViewController () <UIWebViewDelegate>
-
+{
+    UIViewController *_placeholder;
+}
 @property (nonatomic, weak) id<UPAuthViewControllerDelegate> delegate;
 
 @property (nonatomic, strong) UIViewController *rootViewController;
@@ -58,13 +60,14 @@
     
     self.navigationBar.tintColor = [UIColor darkGrayColor];
     self.navigationBar.translucent = NO;
-    [self pushViewController:[[UIViewController alloc] init] animated:NO];
+    _placeholder = [[UIViewController alloc] init];
+    [self pushViewController:_placeholder animated:NO];
     
-    self.topViewController.view.backgroundColor = [UIColor whiteColor];
-    self.topViewController.view.frame = [UIScreen mainScreen].applicationFrame;
+    _placeholder.view.backgroundColor = [UIColor whiteColor];
+    [_placeholder.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(cancel)];
-    self.topViewController.navigationItem.leftBarButtonItem = cancelButton;
+    _placeholder.navigationItem.leftBarButtonItem = cancelButton;
     
     for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:[UPPlatform basePlatformURL]]])
     {
@@ -79,7 +82,7 @@
 {
     [super viewDidAppear:animated];
     
-    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.topViewController.view.bounds.size.width, self.topViewController.view.bounds.size.height)];
+    self.webView = [[UIWebView alloc] initWithFrame:_placeholder.view.bounds];
     self.webView.delegate = self;
     self.webView.backgroundColor = [UIColor whiteColor];
 }
