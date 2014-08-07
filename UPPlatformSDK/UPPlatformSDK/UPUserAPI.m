@@ -247,6 +247,7 @@
 	self.sleepAwake = [values numberForKey:@"s_awake"];
 	self.sleepTimeAsleep = [values numberForKey:@"s_asleep_time"];
 	self.sleepTimeAwake = [values numberForKey:@"s_awake_time"];
+    self.sleepDuration = [values numberForKey:@"s_duration"];
 	self.eatProtein = [values numberForKey:@"e_protein"];
 	self.eatCalcium = [values numberForKey:@"e_calcium"];
 	self.eatSaturatedFat = [values numberForKey:@"e_sat_fat"];
