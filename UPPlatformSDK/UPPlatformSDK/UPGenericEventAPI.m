@@ -99,7 +99,7 @@ static NSString *kGenericEventType = @"generic_events";
 	if (self.attributes != nil) [dict setObject:[self dictionaryToString:self.attributes] forKey:@"attributes"];
 	if (self.note != nil) [dict setObject:self.note forKey:@"note"];
 	if (self.imageURL != nil) [dict setObject:self.imageURL forKey:@"image_url"];
-	
+	if (self.isShared != nil) [dict setObject:self.isShared forKey:@"share"];
 	return dict;
 }
 
