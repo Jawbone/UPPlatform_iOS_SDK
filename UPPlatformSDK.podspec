@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "UPPlatformSDK"
-  s.version      = "1.1.5.5"
+  s.version      = "1.1.5.6"
   s.summary      = "Jawbone's UP Platform SDK."
   s.homepage     = "https://github.com/Jawbone/UPPlatform_iOS_SDK"
 
