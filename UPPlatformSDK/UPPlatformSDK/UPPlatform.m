@@ -95,6 +95,13 @@ static UPPlatform *_instance = nil;
 
 #pragma mark - Auth Flow
 
+- (void)restoreWithAuthToken:(NSString *)authToken refreshToken:(NSString *)refreshToken
+{
+    self.currentSession = [[UPSession alloc] initWithToken:authToken];
+    [self setExistingAuthToken:authToken];
+    [self setRefreshToken:refreshToken];
+}
+
 - (NSString *)existingAuthToken
 {
     return [UPKeychain keychainItemForService:kUPKeychainTokenServiceKey];
