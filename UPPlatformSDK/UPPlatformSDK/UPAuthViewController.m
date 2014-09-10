@@ -80,9 +80,13 @@
     self.webView.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)show
+- (void)presentWithViewController:(UIViewController*)presentingViewController;
 {
-    [self.rootViewController presentViewController:self animated:YES completion:^{
+    if (presentingViewController == nil) {
+        presentingViewController = self.rootViewController;
+    }
+    
+    [presentingViewController presentViewController:self animated:YES completion:^{
         [self.webView loadRequest:[NSURLRequest requestWithURL:self.authURL]];
     }];
 }

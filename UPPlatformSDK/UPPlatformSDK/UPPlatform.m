@@ -303,6 +303,11 @@ decisionListener:(id<WebPolicyDecisionListener>)listener
 
 - (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret authScope:(UPPlatformAuthScope)authScope redirectURI:(NSString *)redirectURI completion:(UPPlatformSessionCompletion)completion
 {
+    [self startSessionWithClientID:clientID clientSecret:clientSecret authScope:authScope redirectURI:redirectURI presentingViewController:nil completion:completion];
+}
+
+- (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret authScope:(UPPlatformAuthScope)authScope redirectURI:(NSString *)redirectURI presentingViewController:(UIViewController*)presentingViewController completion:(UPPlatformSessionCompletion)completion
+{
     self.sessionCompletion = completion;
     self.clientID = clientID;
     self.clientSecret = clientSecret;
@@ -328,7 +333,7 @@ decisionListener:(id<WebPolicyDecisionListener>)listener
     NSMutableString *authURLString = [NSMutableString stringWithFormat:@"%@/auth/oauth2/auth?response_type=code&client_id=%@&scope=%@&redirect_uri=%@", [UPPlatform basePlatformURL], self.clientID, [self stringFromAuthScope:authScope], redirectURI];
     
     self.authViewController = [[UPAuthViewController alloc] initWithURL:[NSURL URLWithString:authURLString] delegate:self];
-    [self.authViewController show];
+    [self.authViewController presentWithViewController:presentingViewController];
 }
 
 #endif
