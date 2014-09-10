@@ -447,6 +447,11 @@ decisionListener:(id<WebPolicyDecisionListener>)listener
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *urlResponse, NSData *data, NSError *error) {
         
+        if (data == nil) { // no network
+            completion(request, nil, error);
+            return;
+        }
+        
         NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         
         if (self.enableNetworkLogging)
