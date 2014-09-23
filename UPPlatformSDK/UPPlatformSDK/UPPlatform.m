@@ -447,6 +447,18 @@ decisionListener:(id<WebPolicyDecisionListener>)listener
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *urlResponse, NSData *data, NSError *error) {
         
+        /*
+         when request timeout or some other errors, the data object is nil, and it will crashed when call function:
+             NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+         so you need to handle this error.
+         */
+        if (error) {
+            if (completion != nil) {
+                completion(request, nil, error);
+            }
+            return;
+        }
+        
         NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         
         if (self.enableNetworkLogging)
