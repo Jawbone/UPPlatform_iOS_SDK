@@ -453,6 +453,15 @@ decisionListener:(id<WebPolicyDecisionListener>)listener
     }
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *urlResponse, NSData *data, NSError *error) {
+        if (!data)
+        {
+            if (!error)
+            {
+                error = [NSError errorWithDomain:@"com.jawbone.up" code:-1 userInfo:@{ NSLocalizedDescriptionKey : @"Data parameter is nil" }];
+            }
+            if (completion != nil) completion(request, nil, error);
+            return;
+        }
         
         NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         
