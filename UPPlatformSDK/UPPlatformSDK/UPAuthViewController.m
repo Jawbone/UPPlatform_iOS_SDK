@@ -51,8 +51,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.navigationBar.tintColor = [UIColor darkGrayColor];
+
+    UIColor *barColor = [UIColor darkGrayColor];
+    if ([self.navigationBar respondsToSelector:@selector(setBarTintColor:)]) {
+        self.navigationBar.barTintColor = barColor;
+    } else {
+        self.navigationBar.tintColor = barColor;
+    }
     self.navigationBar.translucent = NO;
     [self pushViewController:[[UIViewController alloc] init] animated:NO];
     
