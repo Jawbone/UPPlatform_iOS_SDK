@@ -247,9 +247,11 @@
 	self.sleepAwake = [values numberForKey:@"s_awake"];
 	self.sleepTimeAsleep = [values numberForKey:@"s_asleep_time"];
 	self.sleepTimeAwake = [values numberForKey:@"s_awake_time"];
+    self.sleepDuration = [values numberForKey:@"s_duration"];
 	self.eatProtein = [values numberForKey:@"e_protein"];
 	self.eatCalcium = [values numberForKey:@"e_calcium"];
 	self.eatSaturatedFat = [values numberForKey:@"e_sat_fat"];
+    self.eatUnsaturatedFat = [values numberForKey:@"e_unsat_fat"];
 	self.eatCalories = [values numberForKey:@"e_calories"];
 	self.eatSodium = [values numberForKey:@"e_sodium"];
 	self.eatSugar = [values numberForKey:@"e_sugar"];
@@ -282,6 +284,7 @@
 			"eatProtein: %@, " \
 			"eatCalcium: %@, " \
 			"eatSaturatedFat: %@, " \
+            "eatUnSaturatedFat: %@, " \
 			"eatCalories: %@, " \
 			"eatSodium: %@, " \
 			"eatSugar: %@, " \
@@ -306,6 +309,7 @@
 			self.eatProtein,
 			self.eatCalcium,
 			self.eatSaturatedFat,
+            self.eatUnsaturatedFat,
 			self.eatCalories,
 			self.eatSodium,
 			self.eatSugar,

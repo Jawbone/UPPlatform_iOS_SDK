@@ -95,6 +95,13 @@ static UPPlatform *_instance = nil;
 
 #pragma mark - Auth Flow
 
+- (void)restoreWithAuthToken:(NSString *)authToken refreshToken:(NSString *)refreshToken
+{
+    self.currentSession = [[UPSession alloc] initWithToken:authToken];
+    [self setExistingAuthToken:authToken];
+    [self setRefreshToken:refreshToken];
+}
+
 - (NSString *)existingAuthToken
 {
     return [UPKeychain keychainItemForService:kUPKeychainTokenServiceKey];
@@ -451,6 +458,15 @@ decisionListener:(id<WebPolicyDecisionListener>)listener
     }
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *urlResponse, NSData *data, NSError *error) {
+        if (!data)
+        {
+            if (!error)
+            {
+                error = [NSError errorWithDomain:@"com.jawbone.up" code:-1 userInfo:@{ NSLocalizedDescriptionKey : @"Data parameter is nil" }];
+            }
+            if (completion != nil) completion(request, nil, error);
+            return;
+        }
         
         if (data == nil) { // no network
             completion(request, nil, error);

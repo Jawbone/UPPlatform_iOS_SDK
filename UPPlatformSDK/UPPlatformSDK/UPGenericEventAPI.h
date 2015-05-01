@@ -102,4 +102,9 @@ typedef void(^UPGenericEventAPICompletion)(UPGenericEvent *event, UPURLResponse 
  */
 @property (nonatomic, strong) UPImage *image;
 
+/**
+ * Wether this event is shared with friends.
+ */
+@property (nonatomic, strong, getter = isShared) NSNumber *shared;
+
 @end

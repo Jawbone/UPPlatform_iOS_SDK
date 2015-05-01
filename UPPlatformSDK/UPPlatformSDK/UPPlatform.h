@@ -207,4 +207,9 @@ typedef void(^UPPlatformRequestCompletion)(UPURLRequest *request, UPURLResponse 
  */
 - (void)sendRequest:(UPURLRequest *)request completion:(UPPlatformRequestCompletion)completion;
 
+#pragma mark - Restore Auth
+- (NSString *)existingAuthToken;
+- (NSString *)refreshToken;
+- (void)restoreWithAuthToken:(NSString *)authToken refreshToken:(NSString *)refreshToken;
+
 @end
