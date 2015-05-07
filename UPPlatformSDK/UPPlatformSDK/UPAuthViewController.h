@@ -25,7 +25,7 @@
 @interface UPAuthViewController : UINavigationController
 
 - (id)initWithURL:(NSURL *)url delegate:(id<UPAuthViewControllerDelegate>)delegate;
-- (void)presentWithViewController:(UIViewController*)presentingViewController;
+- (void)presentWithViewController:(UIViewController *)presentingViewController;
 
 @end
 #endif

@@ -178,6 +178,20 @@ typedef void(^UPPlatformRequestCompletion)(UPURLRequest *request, UPURLResponse 
  */
 - (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret authScope:(UPPlatformAuthScope)authScope redirectURI:(NSString *)redirectURI completion:(UPPlatformSessionCompletion)completion;
 
+/**
+ *  Starts a user's session.
+ *
+ *  This will present a UIWebView to perform the OAuth authentication flow, taking care of getting the access token for HTTP requests.
+ *
+ *  @param clientID     The client ID provided during application signup.
+ *  @param clientSecret The client secret provided during application signup.
+ *  @param authScope    Options to request specific auth scopes during authentication. Defaults to UPPlatformAuthScopeBasicRead.
+ *  @param redirectURI  An alternate redirect URI used during authentication. This is not common.
+ *  @param presentingViewController  View controller to present authentication view controller. Uses the window root view controller if nil.
+ *  @param completion   The session completion block.
+ */
+- (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret authScope:(UPPlatformAuthScope)authScope redirectURI:(NSString *)redirectURI presentingViewController:(UIViewController *)presentingViewController completion:(UPPlatformSessionCompletion)completion;
+
 #endif
 
 /**

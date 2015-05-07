@@ -270,6 +270,11 @@ typedef NS_ENUM(NSUInteger, UPUserGender)
 @property (nonatomic, strong) NSNumber *sleepTimeAwake;
 
 /**
+ *  Total number of seconds of sleep during the sleep period
+ */
+@property (nonatomic, strong) NSNumber *sleepDuration;
+
+/**
  *  The user's protein eaten.
  */
 @property (nonatomic, strong) NSNumber *eatProtein;
@@ -283,6 +288,11 @@ typedef NS_ENUM(NSUInteger, UPUserGender)
  *  The user's saturated fat eaten.
  */
 @property (nonatomic, strong) NSNumber *eatSaturatedFat;
+
+/**
+ *  The user's unsaturated fat eaten.
+ */
+@property (nonatomic, strong) NSNumber *eatUnsaturatedFat;
 
 /**
  *  The user's calories eaten.

@@ -85,7 +85,7 @@
     self.webView.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)presentWithViewController:(UIViewController*)presentingViewController;
+- (void)presentWithViewController:(UIViewController *)presentingViewController;
 {
     if (presentingViewController == nil) {
         presentingViewController = self.rootViewController;

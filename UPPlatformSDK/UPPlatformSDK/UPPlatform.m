@@ -306,7 +306,7 @@ decisionListener:(id<WebPolicyDecisionListener>)listener
     [self startSessionWithClientID:clientID clientSecret:clientSecret authScope:authScope redirectURI:redirectURI presentingViewController:nil completion:completion];
 }
 
-- (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret authScope:(UPPlatformAuthScope)authScope redirectURI:(NSString *)redirectURI presentingViewController:(UIViewController*)presentingViewController completion:(UPPlatformSessionCompletion)completion
+- (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret authScope:(UPPlatformAuthScope)authScope redirectURI:(NSString *)redirectURI presentingViewController:(UIViewController *)presentingViewController completion:(UPPlatformSessionCompletion)completion
 {
     self.sessionCompletion = completion;
     self.clientID = clientID;

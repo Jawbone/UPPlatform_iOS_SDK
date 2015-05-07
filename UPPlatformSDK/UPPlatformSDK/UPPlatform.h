@@ -190,7 +190,7 @@ typedef void(^UPPlatformRequestCompletion)(UPURLRequest *request, UPURLResponse 
  *  @param presentingViewController  View controller to present authentication view controller. Uses the window root view controller if nil.
  *  @param completion   The session completion block.
  */
-- (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret authScope:(UPPlatformAuthScope)authScope redirectURI:(NSString *)redirectURI presentingViewController:(UIViewController*)presentingViewController completion:(UPPlatformSessionCompletion)completion;
+- (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret authScope:(UPPlatformAuthScope)authScope redirectURI:(NSString *)redirectURI presentingViewController:(UIViewController *)presentingViewController completion:(UPPlatformSessionCompletion)completion;
 
 #endif
 
