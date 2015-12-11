@@ -101,7 +101,7 @@
     if (self.isHiding) return;
     self.isHiding = YES;
     
-    [self.rootViewController dismissViewControllerAnimated:YES completion:^{
+    [self dismissViewControllerAnimated:YES completion:^{
         if (completion) completion();
     }];
 }
