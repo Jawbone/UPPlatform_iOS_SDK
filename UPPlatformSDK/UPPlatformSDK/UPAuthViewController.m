@@ -13,7 +13,7 @@
 
 @interface UPAuthViewController () <UIWebViewDelegate>
 
-@property (nonatomic, weak) id<UPAuthViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<UPAuthViewControllerDelegate> authDelegate;
 
 @property (nonatomic, strong) UIViewController *rootViewController;
 @property (nonatomic, strong) UIWebView *webView;
@@ -35,7 +35,7 @@
     if (self)
     {
         self.authURL = url;
-        self.delegate = delegate;
+        self.authDelegate = delegate;
         
         // Setup the auth view
         UIWindow *keyWindow = [UIApplication sharedApplication].delegate.window;
@@ -109,7 +109,7 @@
 - (void)cancel
 {
     [self hideWithCompletion:^{
-        [self.delegate authViewControllerDidCancel:self];
+        [self.authDelegate authViewControllerDidCancel:self];
     }];
 }
 
@@ -141,7 +141,7 @@
         NSString *code = [query stringByReplacingOccurrencesOfString:@"code=" withString:@""];
         
         [self hideWithCompletion:nil];
-        [self.delegate authViewController:self didCompleteWithAuthCode:code];
+        [self.authDelegate authViewController:self didCompleteWithAuthCode:code];
         
         return NO;
     }
@@ -152,7 +152,7 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     [self hideWithCompletion:nil];
-    [self.delegate authViewController:self didFailWithError:error];
+    [self.authDelegate authViewController:self didFailWithError:error];
 }
 
 @end
